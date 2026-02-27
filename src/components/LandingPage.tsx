@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
-import { ArrowRight, CheckCircle2, ShieldCheck, Zap, BarChart3 } from 'lucide-react';
+import { ArrowRight, CheckCircle2, ShieldCheck, Zap, BarChart3, Instagram } from 'lucide-react';
 
 export default function LandingPage() {
   const [email, setEmail] = useState('');
@@ -12,7 +12,7 @@ export default function LandingPage() {
     if (!email) return;
 
     setIsLoading(true);
-    
+
     // Simulating API call
     setTimeout(() => {
       setIsLoading(false);
@@ -27,18 +27,18 @@ export default function LandingPage() {
       {/* Header */}
       <header className="fixed w-full top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-end">
-          <button 
-            onClick={() => alert("Área do cliente em breve!")}
+          <a
+            href="https://dash.pagit.com.br/auth/signin"
             className="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors px-4 py-2 rounded-lg hover:bg-slate-100"
           >
-            Já sou cliente
-          </button>
+            Já sou cliente!
+          </a>
         </div>
       </header>
 
       <main className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          
+
           {/* Hero Section */}
           <div className="text-center max-w-3xl mx-auto mb-16">
             <motion.div
@@ -57,11 +57,11 @@ export default function LandingPage() {
                 </span>
                 Chegando em breve
               </div>
-              
+
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 mb-6 leading-tight">
                 A revolução na <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600">gestão de cobranças</span> para o seu negócio.
               </h1>
-              
+
               <p className="text-lg sm:text-xl text-slate-600 mb-8 leading-relaxed">
                 Pare de perder tempo cobrando clientes manualmente. A Pagit automatiza seu fluxo financeiro, reduz a inadimplência e organiza suas contas, tudo em uma plataforma simples feita para PMEs e autônomos.
               </p>
@@ -75,7 +75,7 @@ export default function LandingPage() {
               className="max-w-md mx-auto"
             >
               {isSubmitted ? (
-                <motion.div 
+                <motion.div
                   initial={{ scale: 0.9, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   className="bg-green-50 border border-green-200 rounded-2xl p-6 text-center"
@@ -89,28 +89,37 @@ export default function LandingPage() {
                   </p>
                 </motion.div>
               ) : (
-                <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
+                <form
+                  action="https://pagit.us10.list-manage.com/subscribe/post?u=7ef237749f523932ab865cf02&amp;id=c744d35c97&amp;f_id=005428e3f0"
+                  method="post"
+                  id="mc-embedded-subscribe-form"
+                  name="mc-embedded-subscribe-form"
+                  className="flex flex-col sm:flex-row gap-3"
+                  target="_blank"
+                  noValidate
+                >
                   <input
                     type="email"
+                    name="EMAIL"
+                    id="mce-EMAIL"
                     required
                     placeholder="Seu melhor e-mail profissional"
                     className="flex-1 px-4 py-3.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-all placeholder:text-slate-400 bg-white shadow-sm"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                   />
+                  {/* real people should not fill this in and expect good things - do not remove this or risk form bot signups */}
+                  <div style={{ position: 'absolute', left: '-5000px' }} aria-hidden="true">
+                    <input type="text" name="b_7ef237749f523932ab865cf02_c744d35c97" tabIndex={-1} defaultValue="" />
+                  </div>
                   <button
                     type="submit"
-                    disabled={isLoading}
-                    className="px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold shadow-lg shadow-emerald-600/20 transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed whitespace-nowrap"
+                    name="subscribe"
+                    id="mc-embedded-subscribe"
+                    className="px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold shadow-lg shadow-emerald-600/20 transition-all flex items-center justify-center gap-2 whitespace-nowrap"
                   >
-                    {isLoading ? (
-                      <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                    ) : (
-                      <>
-                        Entrar na lista de espera
-                        <ArrowRight className="w-4 h-4" />
-                      </>
-                    )}
+                    Entrar na lista de espera
+                    <ArrowRight className="w-4 h-4" />
                   </button>
                 </form>
               )}
@@ -122,17 +131,17 @@ export default function LandingPage() {
 
           {/* Features Grid */}
           <div className="grid md:grid-cols-3 gap-8 mt-24">
-            <FeatureCard 
+            <FeatureCard
               icon={<Zap className="w-6 h-6 text-amber-500" />}
               title="Automação Inteligente"
               description="Configure réguas de cobrança automáticas via e-mail e WhatsApp. Nunca mais esqueça de cobrar um cliente."
             />
-            <FeatureCard 
+            <FeatureCard
               icon={<ShieldCheck className="w-6 h-6 text-emerald-500" />}
               title="Segurança Bancária"
               description="Seus dados e transações protegidos com criptografia de ponta a ponta e conformidade com o Banco Central."
             />
-            <FeatureCard 
+            <FeatureCard
               icon={<BarChart3 className="w-6 h-6 text-blue-500" />}
               title="Gestão Descomplicada"
               description="Dashboard intuitivo para visualizar fluxo de caixa, inadimplência e previsibilidade financeira em tempo real."
@@ -145,7 +154,20 @@ export default function LandingPage() {
       {/* Footer */}
       <footer className="bg-white border-t border-slate-200 py-12 mt-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
-          <img src="/logo.svg" alt="Pagit" className="h-6 w-auto" />
+          <div className="flex flex-col items-center md:items-start gap-4">
+            <img src="/logo.svg" alt="Pagit" className="h-6 w-auto" />
+            <a
+              href="https://instagram.com/pagit.fin"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-sm font-medium group transition-all"
+            >
+              <Instagram className="w-5 h-5 text-pink-500" />
+              <span className="text-slate-400 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-tr group-hover:from-yellow-400 group-hover:via-pink-500 group-hover:to-purple-600 transition-all">
+                @pagit.fin
+              </span>
+            </a>
+          </div>
           <div className="text-sm text-slate-500 text-center md:text-right">
             <p>&copy; {new Date().getFullYear()} Pagit Tecnologia Financeira. Todos os direitos reservados.</p>
             <p className="mt-1">Feito para impulsionar negócios brasileiros.</p>
