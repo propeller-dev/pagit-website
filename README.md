@@ -18,3 +18,22 @@ View your app in AI Studio: https://ai.studio/apps/bb3bfc2f-3607-405d-b467-93dc2
 2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
 3. Run the app:
    `npm run dev`
+
+## Deployment
+
+This project uses GitHub Actions for CI/CD, triggering a deployment in Coolify whenever code is pushed to the `main` branch.
+
+### Setup
+
+1. **In Coolify:**
+   - Go to your Resource (Application) settings.
+   - Find the **Webhooks** section.
+   - Copy the **Deploy Webhook** URL.
+
+2. **In GitHub:**
+   - Go to your repository **Settings** > **Secrets and variables** > **Actions**.
+   - Create a new **Repository secret**.
+   - Name: `COOLIFY_WEBHOOK`
+   - Value: Paste the URL from Coolify.
+
+The deployment will automatically run on every push to `main`, validating the build first to ensure no regressions are introduced.
