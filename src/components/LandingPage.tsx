@@ -170,6 +170,8 @@ export default function LandingPage() {
               </a>
               <a
                 href="mailto:contato@pagit.com.br"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-2 text-sm font-medium group transition-all"
               >
                 <Mail className="w-5 h-5 text-emerald-500" />
