@@ -23,7 +23,7 @@ export default function LandingPage() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-emerald-100 selection:text-emerald-900">
+    <div className="min-h-screen flex flex-col bg-slate-50 text-slate-900 font-sans selection:bg-emerald-100 selection:text-emerald-900">
       {/* Header */}
       <header className="fixed w-full top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-end">
@@ -36,8 +36,8 @@ export default function LandingPage() {
         </div>
       </header>
 
-      <main className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <main className="flex-grow pt-32 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto flex flex-col h-full">
 
           {/* Hero Section */}
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -130,7 +130,7 @@ export default function LandingPage() {
           </div>
 
           {/* Features Grid */}
-          <div className="grid md:grid-cols-3 gap-8 mt-24">
+          <div className="grid md:grid-cols-3 gap-8 mt-auto">
             <FeatureCard
               icon={<Zap className="w-6 h-6 text-amber-500" />}
               title="Automação Inteligente"
@@ -152,7 +152,7 @@ export default function LandingPage() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-white border-t border-slate-200 py-12 mt-12">
+      <footer className="bg-white border-t border-slate-200 py-12 mt-12 w-full">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex flex-col items-center md:items-start gap-4">
             <img src="/logo.svg" alt="Pagit" className="h-6 w-auto" />
