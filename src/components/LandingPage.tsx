@@ -6,20 +6,39 @@ export default function LandingPage() {
   const [email, setEmail] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [emailError, setEmailError] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!email) return;
 
+    // Regular expression for basic email validation
+    if (!email || !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(email)) {
+      setEmailError(true);
+      return;
+    }
+
+    setEmailError(false);
     setIsLoading(true);
 
-    // Simulating API call
-    setTimeout(() => {
-      setIsLoading(false);
-      setIsSubmitted(true);
-      // Here you would typically send the event to GTM/Analytics
-      // window.dataLayer.push({ event: 'lead_signup', email: email });
-    }, 1000);
+    const url = 'https://pagit.us10.list-manage.com/subscribe/post?u=7ef237749f523932ab865cf02&id=c744d35c97&f_id=005428e3f0';
+    const formData = new FormData();
+    formData.append('EMAIL', email);
+    formData.append('b_7ef237749f523932ab865cf02_c744d35c97', ''); // Honeypot
+
+    try {
+      // Submitting via fetch with 'no-cors' allows us to send the data without 
+      // getting CORS blocked, avoiding the new tab redirect.
+      await fetch(url, {
+        method: 'POST',
+        body: formData,
+        mode: 'no-cors'
+      });
+    } catch (err) {
+      console.error('Erro ao enviar e-mail:', err);
+    }
+
+    setIsLoading(false);
+    setIsSubmitted(true);
   };
 
   return (
@@ -72,7 +91,7 @@ export default function LandingPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="max-w-md mx-auto"
+              className="max-w-xl mx-auto"
             >
               {isSubmitted ? (
                 <motion.div
@@ -90,24 +109,35 @@ export default function LandingPage() {
                 </motion.div>
               ) : (
                 <form
-                  action="https://pagit.us10.list-manage.com/subscribe/post?u=7ef237749f523932ab865cf02&amp;id=c744d35c97&amp;f_id=005428e3f0"
-                  method="post"
+                  onSubmit={handleSubmit}
                   id="mc-embedded-subscribe-form"
                   name="mc-embedded-subscribe-form"
-                  className="flex flex-col sm:flex-row gap-3"
-                  target="_blank"
+                  className="flex flex-col sm:flex-row gap-3 items-start"
                   noValidate
                 >
-                  <input
-                    type="email"
-                    name="EMAIL"
-                    id="mce-EMAIL"
-                    required
-                    placeholder="Seu melhor e-mail profissional"
-                    className="flex-1 px-4 py-3.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-all placeholder:text-slate-400 bg-white shadow-sm"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                  />
+                  <div className="flex-1 w-full flex flex-col gap-1 text-left">
+                    <input
+                      type="email"
+                      name="EMAIL"
+                      id="mce-EMAIL"
+                      required
+                      placeholder="Seu melhor e-mail profissional"
+                      className={`w-full px-4 py-3.5 rounded-xl border focus:ring-2 focus:outline-none transition-all placeholder:text-slate-400 bg-white shadow-sm ${emailError
+                          ? 'border-red-400 focus:ring-red-400/20 focus:border-red-400'
+                          : 'border-slate-300 focus:ring-emerald-500 focus:border-emerald-500'
+                        }`}
+                      value={email}
+                      onChange={(e) => {
+                        setEmail(e.target.value);
+                        if (emailError) setEmailError(false);
+                      }}
+                    />
+                    {emailError && (
+                      <span className="text-red-500 text-sm font-medium px-2">
+                        Por favor, insira um e-mail válido.
+                      </span>
+                    )}
+                  </div>
                   {/* real people should not fill this in and expect good things - do not remove this or risk form bot signups */}
                   <div style={{ position: 'absolute', left: '-5000px' }} aria-hidden="true">
                     <input type="text" name="b_7ef237749f523932ab865cf02_c744d35c97" tabIndex={-1} defaultValue="" />
@@ -116,10 +146,11 @@ export default function LandingPage() {
                     type="submit"
                     name="subscribe"
                     id="mc-embedded-subscribe"
-                    className="px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold shadow-lg shadow-emerald-600/20 transition-all flex items-center justify-center gap-2 whitespace-nowrap"
+                    disabled={isLoading}
+                    className="px-6 h-[54px] rounded-xl bg-emerald-600 hover:bg-emerald-700 disabled:bg-emerald-400 disabled:cursor-not-allowed text-white font-semibold shadow-lg shadow-emerald-600/20 transition-all flex items-center justify-center gap-2 whitespace-nowrap"
                   >
-                    Entrar na lista de espera
-                    <ArrowRight className="w-4 h-4" />
+                    {isLoading ? 'Enviando...' : 'Entrar na lista de espera'}
+                    {!isLoading && <ArrowRight className="w-4 h-4" />}
                   </button>
                 </form>
               )}
