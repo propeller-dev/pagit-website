@@ -4,11 +4,11 @@ import { ArrowRight, CheckCircle2, ShieldCheck, Zap, BarChart3, Instagram, Mail 
 
 export default function LandingPage() {
   const [email, setEmail] = useState('');
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [statusMessage, setStatusMessage] = useState<{ type: 'success' | 'error' | 'info'; text: string } | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [emailError, setEmailError] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
     // Regular expression for basic email validation
@@ -20,25 +20,54 @@ export default function LandingPage() {
     setEmailError(false);
     setIsLoading(true);
 
-    const url = 'https://pagit.us10.list-manage.com/subscribe/post?u=7ef237749f523932ab865cf02&id=c744d35c97&f_id=005428e3f0';
-    const formData = new FormData();
-    formData.append('EMAIL', email);
-    formData.append('b_7ef237749f523932ab865cf02_c744d35c97', ''); // Honeypot
+    const mchimpUrl = 'https://pagit.us10.list-manage.com/subscribe/post-json?u=7ef237749f523932ab865cf02&id=c744d35c97&f_id=005428e3f0';
+    const callbackName = 'mailchimpCallback_' + Math.round(100000 * Math.random());
+    const fullUrl = `${mchimpUrl}&EMAIL=${encodeURIComponent(email)}&c=${callbackName}&b_7ef237749f523932ab865cf02_c744d35c97=`;
 
-    try {
-      // Submitting via fetch with 'no-cors' allows us to send the data without 
-      // getting CORS blocked, avoiding the new tab redirect.
-      await fetch(url, {
-        method: 'POST',
-        body: formData,
-        mode: 'no-cors'
-      });
-    } catch (err) {
-      console.error('Erro ao enviar e-mail:', err);
-    }
+    // Define the global callback function
+    (window as any)[callbackName] = (data: any) => {
+      setIsLoading(false);
 
-    setIsLoading(false);
-    setIsSubmitted(true);
+      if (data.result === 'success') {
+        if (data.msg && (data.msg.includes('já está inscrito') || data.msg.includes('already subscribed') || data.msg.includes('already'))) {
+          setStatusMessage({
+            type: 'info',
+            text: 'Este e-mail já está inscrito na nossa lista VIP! Não se preocupe, avisaremos você em breve.'
+          });
+        } else {
+          setStatusMessage({
+            type: 'success',
+            text: 'Você está na nossa lista VIP. Avisaremos assim que a Pagit estiver disponível para transformar seu financeiro.'
+          });
+        }
+      } else {
+        // Mailchimp error messages can contain HTML and other warnings
+        if (data.msg && (data.msg.includes('já está inscrito') || data.msg.includes('already subscribed'))) {
+          setStatusMessage({
+            type: 'info',
+            text: 'Este e-mail já está inscrito na nossa lista VIP! Não se preocupe, avisaremos você em breve.'
+          });
+        } else {
+          setStatusMessage({
+            type: 'error',
+            text: 'Ocorreu um erro ao tentar se inscrever. Tente novamente mais tarde.'
+          });
+        }
+      }
+
+      // Clean up the script and callback
+      delete (window as any)[callbackName];
+      const scriptElement = document.getElementById(callbackName);
+      if (scriptElement) {
+        document.body.removeChild(scriptElement);
+      }
+    };
+
+    // Create script tag for JSONP request
+    const script = document.createElement('script');
+    script.src = fullUrl;
+    script.id = callbackName;
+    document.body.appendChild(script);
   };
 
   return (
@@ -93,19 +122,47 @@ export default function LandingPage() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="max-w-xl mx-auto"
             >
-              {isSubmitted ? (
+              {statusMessage ? (
                 <motion.div
                   initial={{ scale: 0.9, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
-                  className="bg-green-50 border border-green-200 rounded-2xl p-6 text-center"
+                  className={`border rounded-2xl p-6 text-center ${statusMessage.type === 'success' ? 'bg-green-50 border-green-200' :
+                    statusMessage.type === 'error' ? 'bg-red-50 border-red-200' :
+                      'bg-blue-50 border-blue-200'
+                    }`}
                 >
-                  <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <CheckCircle2 className="w-6 h-6 text-green-600" />
+                  <div className={`w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 ${statusMessage.type === 'success' ? 'bg-green-100 text-green-600' :
+                    statusMessage.type === 'error' ? 'bg-red-100 text-red-600' :
+                      'bg-blue-100 text-blue-600'
+                    }`}>
+                    {statusMessage.type === 'success' && <CheckCircle2 className="w-6 h-6" />}
+                    {statusMessage.type === 'info' && <CheckCircle2 className="w-6 h-6" />}
+                    {statusMessage.type === 'error' && <Zap className="w-6 h-6" />}
                   </div>
-                  <h3 className="text-lg font-semibold text-green-900 mb-2">Obrigado pelo interesse!</h3>
-                  <p className="text-green-700">
-                    Você está na nossa lista VIP. Avisaremos assim que a Pagit estiver disponível para transformar seu financeiro.
+                  <h3 className={`text-lg font-semibold mb-2 ${statusMessage.type === 'success' ? 'text-green-900' :
+                    statusMessage.type === 'error' ? 'text-red-900' :
+                      'text-blue-900'
+                    }`}>
+                    {statusMessage.type === 'success' ? 'Obrigado pelo interesse!' :
+                      statusMessage.type === 'info' ? 'Você já está na lista!' :
+                        'Ops, algo deu errado'}
+                  </h3>
+                  <p className={
+                    statusMessage.type === 'success' ? 'text-green-700' :
+                      statusMessage.type === 'error' ? 'text-red-700' :
+                        'text-blue-700'
+                  }>
+                    {statusMessage.text}
                   </p>
+
+                  {statusMessage.type === 'error' && (
+                    <button
+                      onClick={() => setStatusMessage(null)}
+                      className="mt-4 px-4 py-2 text-sm font-medium text-red-600 bg-red-100/50 hover:bg-red-100 rounded-lg transition-colors"
+                    >
+                      Tentar novamente
+                    </button>
+                  )}
                 </motion.div>
               ) : (
                 <form
@@ -123,8 +180,8 @@ export default function LandingPage() {
                       required
                       placeholder="Seu melhor e-mail profissional"
                       className={`w-full px-4 py-3.5 rounded-xl border focus:ring-2 focus:outline-none transition-all placeholder:text-slate-400 bg-white shadow-sm ${emailError
-                          ? 'border-red-400 focus:ring-red-400/20 focus:border-red-400'
-                          : 'border-slate-300 focus:ring-emerald-500 focus:border-emerald-500'
+                        ? 'border-red-400 focus:ring-red-400/20 focus:border-red-400'
+                        : 'border-slate-300 focus:ring-emerald-500 focus:border-emerald-500'
                         }`}
                       value={email}
                       onChange={(e) => {
