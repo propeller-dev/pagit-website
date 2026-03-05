@@ -76,7 +76,7 @@ export default function LandingPage() {
       <header className="fixed w-full top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-end">
           <a
-            href="https://dash.pagit.com.br/auth/signin"
+            href="https://dash.pagit.com.br"
             className="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors px-4 py-2 rounded-lg hover:bg-slate-100"
           >
             Já sou cliente!
