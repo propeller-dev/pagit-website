@@ -4,25 +4,63 @@ import { ArrowRight, CheckCircle2, ShieldCheck, Zap, BarChart3, Instagram, Mail 
 
 export default function LandingPage() {
   const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
   const [statusMessage, setStatusMessage] = useState<{ type: 'success' | 'error' | 'info'; text: string } | null>(null);
   const [isLoading, setIsLoading] = useState(false);
-  const [emailError, setEmailError] = useState(false);
+  const [emailError, setEmailError] = useState<string | false>(false);
+  const [phoneError, setPhoneError] = useState<string | false>(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Regular expression for basic email validation
-    if (!email || !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(email)) {
-      setEmailError(true);
+    // Permitir envio se pelo menos um dos campos estiver preenchido e válido
+    let hasError = false;
+    const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+    const phoneDigits = phone.replace(/\D/g, '');
+    let emailValid = false;
+    let phoneValid = false;
+
+    // Validação de e-mail
+    if (email) {
+      if (!emailRegex.test(email)) {
+        setEmailError('Formato de e-mail inválido.');
+        hasError = true;
+      } else {
+        setEmailError(false);
+        emailValid = true;
+      }
+    } else {
+      setEmailError(false);
+    }
+
+    // Validação de telefone
+    if (phone) {
+      if (!/^\d{11}$/.test(phoneDigits) || !/^\d{2}9\d{8}$/.test(phoneDigits)) {
+        setPhoneError('Formato de WhatsApp inválido. Use DDD + 9 dígitos.');
+        hasError = true;
+      } else {
+        setPhoneError(false);
+        phoneValid = true;
+      }
+    } else {
+      setPhoneError(false);
+    }
+
+    // Se nenhum campo válido, erro geral
+    if (!emailValid && !phoneValid) {
+      setEmailError('Preencha pelo menos e-mail ou WhatsApp válido.');
+      setPhoneError('Preencha pelo menos WhatsApp ou e-mail válido.');
       return;
     }
 
-    setEmailError(false);
+    if (hasError) return;
+
     setIsLoading(true);
 
     const mchimpUrl = 'https://pagit.us10.list-manage.com/subscribe/post-json?u=7ef237749f523932ab865cf02&id=c744d35c97&f_id=005428e3f0';
     const callbackName = 'mailchimpCallback_' + Math.round(100000 * Math.random());
-    const fullUrl = `${mchimpUrl}&EMAIL=${encodeURIComponent(email)}&c=${callbackName}&b_7ef237749f523932ab865cf02_c744d35c97=`;
+    // O campo de telefone customizado do Mailchimp geralmente é "PHONE" ou similar. Confirme no painel do Mailchimp se necessário.
+    const fullUrl = `${mchimpUrl}&EMAIL=${encodeURIComponent(email)}&PHONE=${encodeURIComponent(phone)}&c=${callbackName}&b_7ef237749f523932ab865cf02_c744d35c97=`;
 
     // Define the global callback function
     (window as any)[callbackName] = (data: any) => {
@@ -169,7 +207,7 @@ export default function LandingPage() {
                   onSubmit={handleSubmit}
                   id="mc-embedded-subscribe-form"
                   name="mc-embedded-subscribe-form"
-                  className="flex flex-col sm:flex-row gap-3 items-start"
+                  className="flex flex-col sm:flex-row gap-3 items-center justify-center w-full"
                   noValidate
                 >
                   <div className="flex-1 w-full flex flex-col gap-1 text-left">
@@ -177,9 +215,8 @@ export default function LandingPage() {
                       type="email"
                       name="EMAIL"
                       id="mce-EMAIL"
-                      required
                       placeholder="Seu melhor e-mail profissional"
-                      className={`w-full px-4 py-3.5 rounded-xl border focus:ring-2 focus:outline-none transition-all placeholder:text-slate-400 bg-white shadow-sm ${emailError
+                      className={`w-full min-w-[280px] px-6 py-4 rounded-xl border focus:ring-2 focus:outline-none transition-all placeholder:text-slate-400 bg-white shadow-sm ${emailError
                         ? 'border-red-400 focus:ring-red-400/20 focus:border-red-400'
                         : 'border-slate-300 focus:ring-emerald-500 focus:border-emerald-500'
                         }`}
@@ -191,7 +228,29 @@ export default function LandingPage() {
                     />
                     {emailError && (
                       <span className="text-red-500 text-sm font-medium px-2">
-                        Por favor, insira um e-mail válido.
+                        {emailError}
+                      </span>
+                    )}
+                  </div>
+                  <div className="flex-1 w-full flex flex-col gap-1 text-left">
+                    <input
+                      type="tel"
+                      name="PHONE"
+                      id="mce-PHONE"
+                      placeholder="Whatsapp (com DDD)"
+                      className={`w-full min-w-[280px] px-6 py-4 rounded-xl border focus:ring-2 focus:outline-none transition-all placeholder:text-slate-400 bg-white shadow-sm ${phoneError
+                        ? 'border-red-400 focus:ring-red-400/20 focus:border-red-400'
+                        : 'border-slate-300 focus:ring-emerald-500 focus:border-emerald-500'
+                        }`}
+                      value={phone}
+                      onChange={(e) => {
+                        setPhone(e.target.value);
+                        if (phoneError) setPhoneError(false);
+                      }}
+                    />
+                    {phoneError && (
+                      <span className="text-red-500 text-sm font-medium px-2">
+                        {phoneError}
                       </span>
                     )}
                   </div>
