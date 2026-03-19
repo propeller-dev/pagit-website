@@ -1,0 +1,514 @@
+{
+  "url": "https://abacatepay.com",
+  "extractedAt": "2026-03-18T21:08:04.572Z",
+  "transitions": [
+    {
+      "element": "html",
+      "transition": "all",
+      "property": "all",
+      "duration": "0s",
+      "timingFunction": "ease",
+      "delay": "0s"
+    },
+    {
+      "element": "a.text-[16px].font-fustat.font-semibold",
+      "transition": "0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+      "property": "all",
+      "duration": "0.3s",
+      "timingFunction": "cubic-bezier(0.4, 0, 0.2, 1)",
+      "delay": "0s"
+    },
+    {
+      "element": "div.grid.desktopDefault:grid-cols-2.hero-bg",
+      "transition": "opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s, transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s",
+      "property": "opacity, transform",
+      "duration": "0.7s",
+      "timingFunction": "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+      "delay": "0.1s"
+    },
+    {
+      "element": "a.bg-white.overflow-hidden.rounded-lg",
+      "transition": "color 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), fill 0.3s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+      "property": "color, background-color, border-color, text-decoration-color, fill, stroke",
+      "duration": "0.3s",
+      "timingFunction": "cubic-bezier(0.4, 0, 0.2, 1)",
+      "delay": "0s"
+    },
+    {
+      "element": "div.group.inline-block.hover:scale-[102%]",
+      "transition": "transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)",
+      "property": "transform",
+      "duration": "0.5s",
+      "timingFunction": "cubic-bezier(0.4, 0, 0.2, 1)",
+      "delay": "0s"
+    },
+    {
+      "element": "div.p-6.flex.items-center",
+      "transition": "color 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1), fill 0.15s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.15s cubic-bezier(0.4, 0, 0.2, 1)",
+      "property": "color, background-color, border-color, text-decoration-color, fill, stroke",
+      "duration": "0.15s",
+      "timingFunction": "cubic-bezier(0.4, 0, 0.2, 1)",
+      "delay": "0s"
+    },
+    {
+      "element": "svg.size-6.text-[#9EEA6C].transition-transform",
+      "transition": "transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+      "property": "transform",
+      "duration": "0.3s",
+      "timingFunction": "cubic-bezier(0.4, 0, 0.2, 1)",
+      "delay": "0s"
+    },
+    {
+      "element": "a.hover:text-[#58C411].transition-colors.duration-500",
+      "transition": "color 0.5s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.5s cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 0.5s cubic-bezier(0.4, 0, 0.2, 1), fill 0.5s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.5s cubic-bezier(0.4, 0, 0.2, 1)",
+      "property": "color, background-color, border-color, text-decoration-color, fill, stroke",
+      "duration": "0.5s",
+      "timingFunction": "cubic-bezier(0.4, 0, 0.2, 1)",
+      "delay": "0s"
+    },
+    {
+      "element": "div.woot-widget-holder.woot--hide.woot-elements--right",
+      "transition": "opacity 0.2s linear, transform 0.25s linear",
+      "property": "opacity, transform",
+      "duration": "0.2s, 0.25s",
+      "timingFunction": "linear, linear",
+      "delay": "0s, 0s"
+    }
+  ],
+  "animations": {
+    "active": [
+      {
+        "name": "skeleton",
+        "duration": "1.8s",
+        "timingFunction": "ease-in-out",
+        "delay": "0s",
+        "iterationCount": "infinite",
+        "direction": "normal",
+        "fillMode": "none"
+      },
+      {
+        "name": "pulse",
+        "duration": "3.5s",
+        "timingFunction": "cubic-bezier(0.4, 0, 0.6, 1)",
+        "delay": "0s",
+        "iterationCount": "infinite",
+        "direction": "normal",
+        "fillMode": "none"
+      },
+      {
+        "name": "draw-main",
+        "duration": "4s",
+        "timingFunction": "ease-in-out",
+        "delay": "0s",
+        "iterationCount": "infinite",
+        "direction": "normal",
+        "fillMode": "none"
+      },
+      {
+        "name": "draw-arrow",
+        "duration": "4s",
+        "timingFunction": "ease-in-out",
+        "delay": "0s",
+        "iterationCount": "infinite",
+        "direction": "normal",
+        "fillMode": "none"
+      },
+      {
+        "name": "blink",
+        "duration": "1s",
+        "timingFunction": "ease-in-out",
+        "delay": "0s",
+        "iterationCount": "infinite",
+        "direction": "normal",
+        "fillMode": "none"
+      },
+      {
+        "name": "marquee",
+        "duration": "30s",
+        "timingFunction": "linear",
+        "delay": "0s",
+        "iterationCount": "infinite",
+        "direction": "normal",
+        "fillMode": "none"
+      },
+      {
+        "name": "marquee-reverse",
+        "duration": "30s",
+        "timingFunction": "linear",
+        "delay": "0s",
+        "iterationCount": "infinite",
+        "direction": "normal",
+        "fillMode": "none"
+      }
+    ],
+    "keyframes": [
+      {
+        "name": "button-pop",
+        "steps": [
+          {
+            "keyText": "0%",
+            "properties": "transform: scale(var(--btn-focus-scale,.98));"
+          },
+          {
+            "keyText": "40%",
+            "properties": "transform: scale(1.02);"
+          },
+          {
+            "keyText": "100%",
+            "properties": "transform: scale(1);"
+          }
+        ]
+      },
+      {
+        "name": "checkmark",
+        "steps": [
+          {
+            "keyText": "0%",
+            "properties": "background-position-y: 5px;"
+          },
+          {
+            "keyText": "50%",
+            "properties": "background-position-y: -2px;"
+          },
+          {
+            "keyText": "100%",
+            "properties": "background-position-y: 0px;"
+          }
+        ]
+      },
+      {
+        "name": "modal-pop",
+        "steps": [
+          {
+            "keyText": "0%",
+            "properties": "opacity: 0;"
+          }
+        ]
+      },
+      {
+        "name": "progress-loading",
+        "steps": [
+          {
+            "keyText": "50%",
+            "properties": "background-position-x: -115%;"
+          }
+        ]
+      },
+      {
+        "name": "radiomark",
+        "steps": [
+          {
+            "keyText": "0%",
+            "properties": "box-shadow: 0 0 0 12px var(--fallback-b1,oklch(var(--b1)/1)) inset,0 0 0 12px var(--fallback-b1,oklch(var(--b1)/1)) inset;"
+          },
+          {
+            "keyText": "50%",
+            "properties": "box-shadow: 0 0 0 3px var(--fallback-b1,oklch(var(--b1)/1)) inset,0 0 0 3px var(--fallback-b1,oklch(var(--b1)/1)) inset;"
+          },
+          {
+            "keyText": "100%",
+            "properties": "box-shadow: 0 0 0 4px var(--fallback-b1,oklch(var(--b1)/1)) inset,0 0 0 4px var(--fallback-b1,oklch(var(--b1)/1)) inset;"
+          }
+        ]
+      },
+      {
+        "name": "rating-pop",
+        "steps": [
+          {
+            "keyText": "0%",
+            "properties": "transform: translateY(-0.125em);"
+          },
+          {
+            "keyText": "40%",
+            "properties": "transform: translateY(-0.125em);"
+          },
+          {
+            "keyText": "100%",
+            "properties": "transform: translateY(0px);"
+          }
+        ]
+      },
+      {
+        "name": "skeleton",
+        "steps": [
+          {
+            "keyText": "0%",
+            "properties": "background-position: 150% center;"
+          },
+          {
+            "keyText": "100%",
+            "properties": "background-position: -50% center;"
+          }
+        ]
+      },
+      {
+        "name": "toast-pop",
+        "steps": [
+          {
+            "keyText": "0%",
+            "properties": "transform: scale(0.9); opacity: 0;"
+          },
+          {
+            "keyText": "100%",
+            "properties": "transform: scale(1); opacity: 1;"
+          }
+        ]
+      },
+      {
+        "name": "pulse",
+        "steps": [
+          {
+            "keyText": "50%",
+            "properties": "opacity: 0.5;"
+          }
+        ]
+      },
+      {
+        "name": "marquee",
+        "steps": [
+          {
+            "keyText": "0%",
+            "properties": "transform: translateX(0px);"
+          },
+          {
+            "keyText": "100%",
+            "properties": "transform: translateX(-50%);"
+          }
+        ]
+      },
+      {
+        "name": "marquee-reverse",
+        "steps": [
+          {
+            "keyText": "0%",
+            "properties": "transform: translateX(-50%);"
+          },
+          {
+            "keyText": "100%",
+            "properties": "transform: translateX(0px);"
+          }
+        ]
+      },
+      {
+        "name": "autoRunBrand",
+        "steps": [
+          {
+            "keyText": "0%",
+            "properties": "left: 100%;"
+          },
+          {
+            "keyText": "100%",
+            "properties": "left: calc(var(--width) * -1);"
+          }
+        ]
+      },
+      {
+        "name": "draw-main",
+        "steps": [
+          {
+            "keyText": "0%, 70%",
+            "properties": "stroke-dashoffset: 380;"
+          },
+          {
+            "keyText": "30%, 70%",
+            "properties": "stroke-dashoffset: 0;"
+          }
+        ]
+      },
+      {
+        "name": "draw-arrow",
+        "steps": [
+          {
+            "keyText": "0%, 30%",
+            "properties": "stroke-dashoffset: 70;"
+          },
+          {
+            "keyText": "40%, 70%",
+            "properties": "stroke-dashoffset: 0;"
+          }
+        ]
+      },
+      {
+        "name": "draw-underline",
+        "steps": [
+          {
+            "keyText": "0%, 70%",
+            "properties": "stroke-dashoffset: 450;"
+          },
+          {
+            "keyText": "30%, 70%",
+            "properties": "stroke-dashoffset: 0;"
+          }
+        ]
+      }
+    ]
+  },
+  "timingFunctions": [
+    {
+      "function": "ease",
+      "count": 10186
+    },
+    {
+      "function": "cubic-bezier(0.4, 0, 0.2, 1)",
+      "count": 82
+    },
+    {
+      "function": "ease-in-out",
+      "count": 6
+    },
+    {
+      "function": "cubic-bezier(0.4, 0, 0.6, 1)",
+      "count": 6
+    },
+    {
+      "function": "linear",
+      "count": 2
+    },
+    {
+      "function": "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+      "count": 1
+    },
+    {
+      "function": "linear, linear",
+      "count": 1
+    }
+  ],
+  "scrollBehavior": {
+    "smoothScroll": true,
+    "scrollBehavior": "smooth",
+    "stickyElements": [
+      {
+        "element": "div.woot-widget-holder.woot--hide",
+        "position": "fixed",
+        "top": "1520px"
+      }
+    ]
+  },
+  "hoverStates": [
+    {
+      "element": "a.text-[16px].font-fustat",
+      "selector": "a[href]",
+      "changes": {
+        "bg": {
+          "before": "rgba(0, 0, 0, 0)",
+          "after": "rgb(246, 248, 250)"
+        },
+        "transform": {
+          "before": "none",
+          "after": "matrix(1.02, 0, 0, 1.02, 0, 0)"
+        }
+      }
+    },
+    {
+      "element": "a.text-[16px].font-fustat",
+      "selector": "a[href]",
+      "changes": {
+        "bg": {
+          "before": "rgba(0, 0, 0, 0)",
+          "after": "rgb(246, 248, 250)"
+        },
+        "transform": {
+          "before": "none",
+          "after": "matrix(1.02, 0, 0, 1.02, 0, 0)"
+        }
+      }
+    },
+    {
+      "element": "a.text-[16px].font-fustat",
+      "selector": "a[href]",
+      "changes": {
+        "bg": {
+          "before": "rgba(0, 0, 0, 0)",
+          "after": "rgb(246, 248, 250)"
+        },
+        "transform": {
+          "before": "none",
+          "after": "matrix(1.02, 0, 0, 1.02, 0, 0)"
+        }
+      }
+    }
+  ],
+  "loadingPatterns": [
+    {
+      "type": "skeleton",
+      "selector": "[class*=\"skeleton\"]",
+      "count": 2,
+      "animation": "1.8s ease-in-out infinite skeleton"
+    },
+    {
+      "type": "placeholder",
+      "selector": "[class*=\"placeholder\"]",
+      "count": 1,
+      "animation": "none"
+    },
+    {
+      "type": "pulse",
+      "selector": "[class*=\"pulse\"]",
+      "count": 6,
+      "animation": "3.5s cubic-bezier(0.4, 0, 0.6, 1) infinite pulse"
+    }
+  ],
+  "microInteractions": [
+    {
+      "type": "focus-ring",
+      "description": "Custom focus styles",
+      "samples": [
+        {
+          "selector": ".card:focus",
+          "outline": "transparent solid 2px",
+          "boxShadow": ""
+        },
+        {
+          "selector": ".card:focus-visible",
+          "outline": "currentcolor solid 2px",
+          "boxShadow": ""
+        },
+        {
+          "selector": ".input input:focus",
+          "outline": "transparent solid 2px",
+          "boxShadow": ""
+        },
+        {
+          "selector": ".link:focus",
+          "outline": "transparent solid 2px",
+          "boxShadow": ""
+        },
+        {
+          "selector": ".link:focus-visible",
+          "outline": "currentcolor solid 2px",
+          "boxShadow": ""
+        }
+      ]
+    },
+    {
+      "type": "will-change",
+      "description": "Elementos com GPU acceleration",
+      "samples": [
+        {
+          "element": "span.skeleton.clip-text",
+          "willChange": "background-position"
+        },
+        {
+          "element": "span.skeleton.clip-text",
+          "willChange": "background-position"
+        },
+        {
+          "element": "div.woot-widget-holder.woot--hide",
+          "willChange": "transform, opacity"
+        }
+      ]
+    }
+  ],
+  "pageStructure": {
+    "navHeight": "99px",
+    "heroHeight": "733px",
+    "totalHeight": "8916px",
+    "viewportRatio": 8,
+    "sections": 10,
+    "hasBackToTop": false
+  },
+  "motionPreferences": {
+    "respectsReducedMotion": true,
+    "note": "Site respeita prefers-reduced-motion ✅"
+  }
+}

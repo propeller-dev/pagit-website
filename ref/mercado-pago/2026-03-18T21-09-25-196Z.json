@@ -1,0 +1,72 @@
+{
+  "url": "https://www.mercadopago.com.br/",
+  "extractedAt": "2026-03-18T21:09:25.195Z",
+  "logo": null,
+  "favicons": [
+    {
+      "type": "favicon.ico",
+      "url": "https://mercadopago.com.br/favicon.ico",
+      "sizes": null
+    }
+  ],
+  "colors": {
+    "semantic": {},
+    "palette": [],
+    "cssVariables": {}
+  },
+  "typography": {
+    "styles": [],
+    "sources": {
+      "googleFonts": [],
+      "adobeFonts": false,
+      "variableFonts": false
+    }
+  },
+  "spacing": {
+    "scaleType": "8px",
+    "commonValues": [
+      {
+        "px": "8px",
+        "rem": "0.50rem",
+        "count": 2,
+        "numericValue": 8
+      },
+      {
+        "px": "12px",
+        "rem": "0.75rem",
+        "count": 2,
+        "numericValue": 12
+      }
+    ]
+  },
+  "borderRadius": {
+    "values": []
+  },
+  "borders": {
+    "combinations": []
+  },
+  "shadows": [],
+  "components": {
+    "buttons": [],
+    "inputs": {
+      "text": [],
+      "checkbox": [],
+      "radio": [],
+      "select": []
+    },
+    "links": [],
+    "badges": {
+      "all": [],
+      "byVariant": {
+        "error": [],
+        "warning": [],
+        "success": [],
+        "info": [],
+        "neutral": []
+      }
+    }
+  },
+  "breakpoints": [],
+  "iconSystem": [],
+  "frameworks": []
+}

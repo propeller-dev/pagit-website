@@ -1,0 +1,222 @@
+{
+  "url": "https://nubank.com.br",
+  "extractedAt": "2026-03-18T21:07:52.048Z",
+  "transitions": [
+    {
+      "element": "html.__variable_2c76d6.__variable_94be80.__variable_2f67ac",
+      "transition": "all",
+      "property": "all",
+      "duration": "0s",
+      "timingFunction": "ease",
+      "delay": "0s"
+    },
+    {
+      "element": "div.swiper-wrapper",
+      "transition": "transform",
+      "property": "transform",
+      "duration": "0s",
+      "timingFunction": "ease",
+      "delay": "0s"
+    },
+    {
+      "element": "div.swiper-slide.swiper-slide-visible.swiper-slide-fully-visible",
+      "transition": "transform, opacity, height",
+      "property": "transform, opacity, height",
+      "duration": "0s",
+      "timingFunction": "ease",
+      "delay": "0s"
+    },
+    {
+      "element": "label.chakra-form__label.css-uvho5g",
+      "transition": "0.15s ease-out",
+      "property": "all",
+      "duration": "0.15s",
+      "timingFunction": "ease-out",
+      "delay": "0s"
+    },
+    {
+      "element": "div.css-1elzuo1",
+      "transition": "1s",
+      "property": "all",
+      "duration": "1s",
+      "timingFunction": "ease",
+      "delay": "0s"
+    },
+    {
+      "element": "div.swiper-slide.swiper-slide-visible.swiper-slide-fully-visible",
+      "transition": "opacity",
+      "property": "opacity",
+      "duration": "0s",
+      "timingFunction": "ease",
+      "delay": "0s"
+    },
+    {
+      "element": "div.css-1mse5is",
+      "transition": "width 0.35s cubic-bezier(0.21, 0, 0.25, 0.99)",
+      "property": "width",
+      "duration": "0.35s",
+      "timingFunction": "cubic-bezier(0.21, 0, 0.25, 0.99)",
+      "delay": "0s"
+    },
+    {
+      "element": "div.css-18uonoj",
+      "transition": "0.65s",
+      "property": "all",
+      "duration": "0.65s",
+      "timingFunction": "ease",
+      "delay": "0s"
+    }
+  ],
+  "animations": {
+    "active": [],
+    "keyframes": []
+  },
+  "timingFunctions": [
+    {
+      "function": "ease",
+      "count": 2028
+    },
+    {
+      "function": "cubic-bezier(0.21, 0, 0.25, 0.99)",
+      "count": 4
+    },
+    {
+      "function": "ease-out",
+      "count": 2
+    }
+  ],
+  "scrollBehavior": {
+    "smoothScroll": true,
+    "scrollBehavior": "smooth",
+    "stickyElements": [
+      {
+        "element": "header.css-x8sfzv",
+        "position": "fixed",
+        "top": "0px"
+      },
+      {
+        "element": "div.css-110tpna",
+        "position": "fixed",
+        "top": "-100%"
+      },
+      {
+        "element": "div.css-110tpna",
+        "position": "fixed",
+        "top": "-100%"
+      },
+      {
+        "element": "div.css-110tpna",
+        "position": "fixed",
+        "top": "-100%"
+      },
+      {
+        "element": "div.css-110tpna",
+        "position": "fixed",
+        "top": "-100%"
+      },
+      {
+        "element": "div.css-110tpna",
+        "position": "fixed",
+        "top": "-100%"
+      },
+      {
+        "element": "div.chakra-slide",
+        "position": "fixed",
+        "top": "561px"
+      },
+      {
+        "element": "div",
+        "position": "fixed",
+        "top": "0px"
+      },
+      {
+        "element": "div",
+        "position": "fixed",
+        "top": "0px"
+      },
+      {
+        "element": "div",
+        "position": "fixed",
+        "top": "0px"
+      }
+    ]
+  },
+  "hoverStates": [
+    {
+      "element": "a.chakra-link.css-1et45qw",
+      "selector": "a[href]",
+      "changes": {
+        "color": {
+          "before": "rgb(0, 0, 0)",
+          "after": "rgb(130, 10, 209)"
+        }
+      }
+    },
+    {
+      "element": "a.chakra-link.css-1et45qw",
+      "selector": "a[href]",
+      "changes": {
+        "color": {
+          "before": "rgb(0, 0, 0)",
+          "after": "rgb(130, 10, 209)"
+        }
+      }
+    },
+    {
+      "element": "a.chakra-link.css-1et45qw",
+      "selector": "a[href]",
+      "changes": {
+        "color": {
+          "before": "rgb(0, 0, 0)",
+          "after": "rgb(130, 10, 209)"
+        }
+      }
+    }
+  ],
+  "loadingPatterns": [],
+  "microInteractions": [
+    {
+      "type": "focus-ring",
+      "description": "Custom focus styles",
+      "samples": [
+        {
+          "selector": "[data-js-focus-visible] :focus:not([data-focus-visible-added]):not([data-focus-visible-disabled])",
+          "outline": "none",
+          "boxShadow": "none"
+        },
+        {
+          "selector": "[data-js-focus-visible] :focus:not([data-focus-visible-added]):not([data-focus-visible-disabled])",
+          "outline": "none",
+          "boxShadow": "none"
+        },
+        {
+          "selector": "[data-js-focus-visible] :focus:not([data-focus-visible-added]):not([data-focus-visible-disabled])",
+          "outline": "none",
+          "boxShadow": "none"
+        },
+        {
+          "selector": "[data-js-focus-visible] :focus:not([data-focus-visible-added]):not([data-focus-visible-disabled])",
+          "outline": "none",
+          "boxShadow": "none"
+        },
+        {
+          "selector": "[data-js-focus-visible] :focus:not([data-focus-visible-added]):not([data-focus-visible-disabled])",
+          "outline": "none",
+          "boxShadow": "none"
+        }
+      ]
+    }
+  ],
+  "pageStructure": {
+    "navHeight": "80px",
+    "heroHeight": "792px",
+    "totalHeight": "6122px",
+    "viewportRatio": 8,
+    "sections": 7,
+    "hasBackToTop": false
+  },
+  "motionPreferences": {
+    "respectsReducedMotion": false,
+    "note": "Site não implementa prefers-reduced-motion ⚠️"
+  }
+}

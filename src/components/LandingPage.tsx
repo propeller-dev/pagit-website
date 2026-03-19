@@ -10,13 +10,41 @@ export default function LandingPage() {
   const [emailError, setEmailError] = useState<string | false>(false);
   const [phoneError, setPhoneError] = useState<string | false>(false);
 
+  // Mailchimp merge tags are case-sensitive. Confirm the correct value under Audience → Settings → Audience fields and *|MERGE|* tags.
+  const MAILCHIMP_EMAIL_MERGE_TAG = 'EMAIL';
+  const MAILCHIMP_PHONE_MERGE_TAG = 'PHONE';
+
+  // Normalize and format Brazilian phone numbers for UI while sending only digits.
+  const normalizeBrazilPhoneDigits = (input: string) => {
+    const digits = input.replace(/\D/g, '');
+    // Strip country code +55 if present, keeping the 11-digit national number.
+    return (digits.length === 13 || digits.length === 12) && digits.startsWith('55')
+      ? digits.slice(-11)
+      : digits;
+  };
+
+  const formatPhoneForInput = (value: string) => {
+    const digits = normalizeBrazilPhoneDigits(value);
+    const ddd = digits.slice(0, 2);
+    const first = digits.slice(2, 3);
+    const mid = digits.slice(3, 7);
+    const last = digits.slice(7, 11);
+
+    let formatted = '';
+    if (ddd) formatted += `(${ddd})`;
+    if (first) formatted += ` ${first}`;
+    if (mid) formatted += ` ${mid}`;
+    if (last) formatted += `-${last}`;
+    return formatted.trim();
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
     // Permitir envio se pelo menos um dos campos estiver preenchido e válido
     let hasError = false;
     const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
-    const phoneDigits = phone.replace(/\D/g, '');
+    const normalizedPhoneDigits = normalizeBrazilPhoneDigits(phone);
     let emailValid = false;
     let phoneValid = false;
 
@@ -35,7 +63,7 @@ export default function LandingPage() {
 
     // Validação de telefone
     if (phone) {
-      if (!/^\d{11}$/.test(phoneDigits) || !/^\d{2}9\d{8}$/.test(phoneDigits)) {
+      if (!/^\d{11}$/.test(normalizedPhoneDigits) || !/^\d{2}9\d{8}$/.test(normalizedPhoneDigits)) {
         setPhoneError('Formato de WhatsApp inválido. Use DDD + 9 dígitos.');
         hasError = true;
       } else {
@@ -59,8 +87,12 @@ export default function LandingPage() {
 
     const mchimpUrl = 'https://pagit.us10.list-manage.com/subscribe/post-json?u=7ef237749f523932ab865cf02&id=c744d35c97&f_id=005428e3f0';
     const callbackName = 'mailchimpCallback_' + Math.round(100000 * Math.random());
-    // O campo de telefone customizado do Mailchimp geralmente é "PHONE" ou similar. Confirme no painel do Mailchimp se necessário.
-    const fullUrl = `${mchimpUrl}&EMAIL=${encodeURIComponent(email)}&PHONE=${encodeURIComponent(phone)}&c=${callbackName}&b_7ef237749f523932ab865cf02_c744d35c97=`;
+
+    // Only send merge tags if the values are valid to avoid overwriting existing data with blank values.
+    const emailQueryParam = emailValid ? `&${MAILCHIMP_EMAIL_MERGE_TAG}=${encodeURIComponent(email)}` : '';
+    const phoneQueryParam = phoneValid ? `&${MAILCHIMP_PHONE_MERGE_TAG}=${encodeURIComponent(normalizedPhoneDigits)}` : '';
+
+    const fullUrl = `${mchimpUrl}${emailQueryParam}${phoneQueryParam}&c=${callbackName}&b_7ef237749f523932ab865cf02_c744d35c97=`;
 
     // Define the global callback function
     (window as any)[callbackName] = (data: any) => {
@@ -213,8 +245,8 @@ export default function LandingPage() {
                   <div className="flex-1 w-full flex flex-col gap-1 text-left">
                     <input
                       type="email"
-                      name="EMAIL"
-                      id="mce-EMAIL"
+                      name={MAILCHIMP_EMAIL_MERGE_TAG}
+                      id={`mce-${MAILCHIMP_EMAIL_MERGE_TAG}`}
                       placeholder="Seu melhor e-mail profissional"
                       className={`w-full min-w-[280px] px-6 py-4 rounded-xl border focus:ring-2 focus:outline-none transition-all placeholder:text-slate-400 bg-white shadow-sm ${emailError
                         ? 'border-red-400 focus:ring-red-400/20 focus:border-red-400'
@@ -235,8 +267,8 @@ export default function LandingPage() {
                   <div className="flex-1 w-full flex flex-col gap-1 text-left">
                     <input
                       type="tel"
-                      name="PHONE"
-                      id="mce-PHONE"
+                      name={MAILCHIMP_PHONE_MERGE_TAG}
+                      id={`mce-${MAILCHIMP_PHONE_MERGE_TAG}`}
                       placeholder="Whatsapp (com DDD)"
                       className={`w-full min-w-[280px] px-6 py-4 rounded-xl border focus:ring-2 focus:outline-none transition-all placeholder:text-slate-400 bg-white shadow-sm ${phoneError
                         ? 'border-red-400 focus:ring-red-400/20 focus:border-red-400'
@@ -244,7 +276,7 @@ export default function LandingPage() {
                         }`}
                       value={phone}
                       onChange={(e) => {
-                        setPhone(e.target.value);
+                        setPhone(formatPhoneForInput(e.target.value));
                         if (phoneError) setPhoneError(false);
                       }}
                     />
