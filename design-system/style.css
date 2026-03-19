@@ -3,10 +3,19 @@
    ============================================================ */
 
 :root {
+  /* === PRIMARY (EMERALD) === */
   --pagit-blue:        #059669;
   --pagit-blue-dark:   #047857;
   --pagit-blue-light:  #34D399;
   --pagit-blue-subtle: #ECFDF5;
+
+  /* === SECONDARY (GOLD/AMBER) === */
+  --pagit-gold:        #D97706;
+  --pagit-gold-dark:   #B45309;
+  --pagit-gold-light:  #FBBF24;
+  --pagit-gold-subtle: #FFFBEB;
+
+  /* === SEMANTICS === */
   --pagit-success:     #16A34A;
   --pagit-warning:     #D97706;
   --pagit-danger:      #D01D1C;
