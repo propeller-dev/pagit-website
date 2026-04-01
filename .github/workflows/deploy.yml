@@ -34,8 +34,8 @@ jobs:
     steps:
       - name: Trigger Coolify Webhook
         run: |
-          if [ -z "${{ secrets.COOLIFY_WEBHOOK }}" ]; then
-            echo "Error: COOLIFY_WEBHOOK secret is not set."
+          if [ -z "${{ vars.COOLIFY_WEBHOOK }}" ]; then
+            echo "Error: COOLIFY_WEBHOOK variable is not set."
             exit 1
           fi
-          curl -X GET "${{ secrets.COOLIFY_WEBHOOK }}"
+          curl -X GET "${{ vars.COOLIFY_WEBHOOK }}"
