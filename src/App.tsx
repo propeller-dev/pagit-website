@@ -6,6 +6,7 @@
 import LandingPage from './components/LandingPage';
 import PrivacyPolicyPage from './components/PrivacyPolicyPage';
 import TermsOfServicePage from './components/TermsOfServicePage';
+import WhatsAppRedirectPage from './components/WhatsAppRedirectPage';
 
 function getCurrentPathname() {
   if (typeof window === 'undefined') {
@@ -24,6 +25,10 @@ export default function App() {
 
   if (pathname === '/termos-de-servico' || pathname === '/terms-of-service') {
     return <TermsOfServicePage />;
+  }
+
+  if (pathname === '/whatsapp' || pathname === '/contato-whatsapp') {
+    return <WhatsAppRedirectPage />;
   }
 
   return <LandingPage />;
