@@ -1,9 +1,10 @@
-import {
+﻿import {
   AlertTriangle,
   BookOpen,
   CalendarClock,
   Copyright,
   FileText,
+  Lock,
   Mail,
   RefreshCcw,
   ShieldCheck,
@@ -21,6 +22,7 @@ const iconMap: Record<TermsIconKey, ComponentType<{ className?: string }>> = {
   'book-open': BookOpen,
   'user-check': UserCheck,
   'shield-check': ShieldCheck,
+  lock: Lock,
   wallet: Wallet,
   copyright: Copyright,
   'alert-triangle': AlertTriangle,
@@ -76,12 +78,15 @@ export default function TermsOfServicePage() {
                   {section.title}
                 </a>
               ))}
-              <a
-                href="#contato-contratual"
-                className="block text-sm text-slate-600 hover:text-emerald-700 hover:bg-emerald-50 rounded-lg px-3 py-2 transition-colors"
-              >
-                10. Contato contratual
-              </a>
+
+              {termsOfServiceContent.contact ? (
+                <a
+                  href="#contato-contratual"
+                  className="block text-sm text-slate-600 hover:text-emerald-700 hover:bg-emerald-50 rounded-lg px-3 py-2 transition-colors"
+                >
+                  Contato contratual
+                </a>
+              ) : null}
             </nav>
           </aside>
 
@@ -102,11 +107,13 @@ export default function TermsOfServicePage() {
                     <h3 className="text-xl sm:text-2xl font-semibold text-slate-900">{section.title}</h3>
                   </div>
 
-                  <div className="space-y-4 text-slate-600 leading-relaxed">
-                    {section.paragraphs.map((paragraph, paragraphIndex) => (
-                      <p key={`${section.id}-paragraph-${paragraphIndex}`}>{paragraph}</p>
-                    ))}
-                  </div>
+                  {section.paragraphs.length > 0 ? (
+                    <div className="space-y-4 text-slate-600 leading-relaxed">
+                      {section.paragraphs.map((paragraph, paragraphIndex) => (
+                        <p key={`${section.id}-paragraph-${paragraphIndex}`}>{paragraph}</p>
+                      ))}
+                    </div>
+                  ) : null}
 
                   {section.bullets ? (
                     <ul className="mt-5 space-y-2 text-slate-600 list-disc pl-5">
@@ -127,29 +134,31 @@ export default function TermsOfServicePage() {
               );
             })}
 
-            <section
-              id="contato-contratual"
-              className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 shadow-sm"
-            >
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-xl bg-emerald-50 border border-emerald-100 text-emerald-700 flex items-center justify-center">
-                  <Mail className="w-5 h-5" />
+            {termsOfServiceContent.contact ? (
+              <section
+                id="contato-contratual"
+                className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 shadow-sm"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-xl bg-emerald-50 border border-emerald-100 text-emerald-700 flex items-center justify-center">
+                    <Mail className="w-5 h-5" />
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-semibold text-slate-900">Contato contratual</h3>
                 </div>
-                <h3 className="text-xl sm:text-2xl font-semibold text-slate-900">10. Contato contratual</h3>
-              </div>
 
-              <p className="text-slate-600 leading-relaxed">
-                <span className="font-semibold">{termsOfServiceContent.contact.label}:</span>{' '}
-                para dúvidas sobre este contrato, envie mensagem para{' '}
-                <a
-                  href={`mailto:${termsOfServiceContent.contact.email}`}
-                  className="font-semibold text-emerald-700 hover:text-emerald-800 underline decoration-emerald-300 underline-offset-2"
-                >
-                  {termsOfServiceContent.contact.email}
-                </a>
-                .
-              </p>
-            </section>
+                <p className="text-slate-600 leading-relaxed">
+                  <span className="font-semibold">{termsOfServiceContent.contact.label}:</span>{' '}
+                  para dúvidas sobre este contrato, envie mensagem para{' '}
+                  <a
+                    href={`mailto:${termsOfServiceContent.contact.email}`}
+                    className="font-semibold text-emerald-700 hover:text-emerald-800 underline decoration-emerald-300 underline-offset-2"
+                  >
+                    {termsOfServiceContent.contact.email}
+                  </a>
+                  .
+                </p>
+              </section>
+            ) : null}
           </div>
         </section>
       </main>

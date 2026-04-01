@@ -3,6 +3,7 @@ export type TermsIconKey =
   | 'book-open'
   | 'user-check'
   | 'shield-check'
+  | 'lock'
   | 'wallet'
   | 'copyright'
   | 'alert-triangle'
@@ -24,7 +25,7 @@ export interface TermsOfServiceContent {
   lastUpdated: string;
   intro: string[];
   sections: TermsSection[];
-  contact: {
+  contact?: {
     label: string;
     email: string;
   };

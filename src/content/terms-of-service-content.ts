@@ -1,102 +1,114 @@
-import type { TermsOfServiceContent } from '../types/terms-of-service';
+﻿import type { TermsOfServiceContent } from '../types/terms-of-service';
 
 export const termsOfServiceContent: TermsOfServiceContent = {
-  title: 'Contrato de Termos de Serviço - Pagit',
-  lastUpdated: 'Lorem Ipsum',
+  title: 'Termos de Uso e Serviços - Plataforma Pagit',
+  lastUpdated: 'Não informado no documento de referência',
   intro: [
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum volutpat, justo sit amet sagittis imperdiet, lorem lectus varius augue, in porta urna sapien in lacus.',
-    'Mauris faucibus sem eu nibh convallis, nec interdum nibh tristique. Fusce in suscipit ligula. Praesent et varius tortor. Donec luctus gravida ipsum, sed posuere lectus gravida non.',
+    'Estes Termos de Uso ("Contrato") regem a relação entre a PAGIT TECNOLOGIA E PAGAMENTOS LTDA ("Pagit") e você, pessoa jurídica ou profissional liberal ("Contratante"), que utiliza nossa plataforma de faturamento, gestão financeira e serviços de pagamento.',
+    'Ao acessar ou utilizar os serviços, você declara estar de acordo com as cláusulas aqui descritas.',
   ],
   sections: [
     {
-      id: 'objeto',
-      title: '1. Objeto',
+      id: 'objeto-natureza-servicos',
+      title: '1. Objeto e Natureza dos Serviços',
       icon: 'file-text',
-      paragraphs: [
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc posuere, turpis nec ultricies congue, lorem nibh tempor eros, ac eleifend sem lectus at metus.',
-        'Sed sed tincidunt velit. Morbi tincidunt sem eu ex tristique, a tincidunt augue blandit. Aenean iaculis condimentum urna, ac pretium augue malesuada non.',
-      ],
-    },
-    {
-      id: 'definicoes',
-      title: '2. Definições',
-      icon: 'book-open',
-      paragraphs: [
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur faucibus lorem ut iaculis finibus. Ut mollis libero sed lorem iaculis, eget accumsan nulla dictum.',
-      ],
       bullets: [
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        'Integer pellentesque nulla vitae nibh egestas, in volutpat mi pulvinar.',
-        'Vivamus eu risus et arcu malesuada dictum non ut nisl.',
+        '1.1. Modelo SaaS: a Pagit concede ao Contratante uma licença de uso, por assinatura, de seu software como serviço (SaaS) hospedado em nuvem, focado em automação de billing, gestão de recorrência e conciliação fiscal.',
+        '1.2. Intermediação de Pagamentos: a Pagit atua como Instituição de Pagamento (IP), especificamente nas modalidades de credenciadora ou subadquirente, facilitando a aceitação de instrumentos de pagamento (Pix, Boleto, Cartão) e a liquidação das transações em favor do Contratante.',
       ],
+      paragraphs: [],
     },
     {
-      id: 'cadastro-acesso',
-      title: '3. Cadastro e Acesso',
+      id: 'cadastro-compliance-kyc',
+      title: '2. Cadastro e Compliance (KYC)',
+      icon: 'book-open',
+      bullets: [
+        '2.1. Verificação de Identidade: o Contratante deverá fornecer dados verídicos para o processo de Know Your Customer (KYC).',
+        '2.2. Gatilhos Regulatórios: a Pagit reserva-se o direito de solicitar informações adicionais ou suspender a conta caso o volume transacional atinja os limites previstos na Resolução BCB nº 80/2021 (ex.: R$ 250 milhões/ano em 2025) sem a devida autorização ou atualização cadastral.',
+      ],
+      paragraphs: [],
+    },
+    {
+      id: 'mandato-gestao-financeira',
+      title: '3. Cláusula de Mandato e Gestão Financeira',
       icon: 'user-check',
-      paragraphs: [
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vehicula, est sed mattis pretium, felis tellus tincidunt felis, et lobortis arcu lorem id lorem.',
-        'Aliquam malesuada magna in diam laoreet posuere. Sed laoreet semper egestas.',
+      bullets: [
+        '3.1. Outorga de Poderes: o Contratante nomeia a Pagit como sua mandatária para atuar em seu nome perante arranjos de pagamento, bancos e adquirentes, conferindo-lhe poderes para receber valores, emitir cobranças e realizar a liquidação financeira.',
+        '3.2. Segregação Patrimonial: os recursos do Contratante são mantidos em subcontas individualizadas. Conforme as normas de novembro de 2025, a Pagit proíbe o uso de "contas-bolsão" sem identificação, garantindo que os recursos dos clientes não se confundam com o patrimônio da plataforma.',
       ],
+      paragraphs: [],
     },
     {
-      id: 'uso-permitido',
-      title: '4. Uso Permitido da Plataforma',
-      icon: 'shield-check',
-      paragraphs: [
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel est vitae risus posuere facilisis eu id lectus. Cras id lorem ac justo malesuada pretium.',
-      ],
-      orderedBullets: [
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        'Fusce gravida arcu in ligula feugiat pretium.',
-        'Curabitur pharetra eros at orci tincidunt, vitae elementum ipsum aliquet.',
-      ],
-    },
-    {
-      id: 'planos-pagamentos',
-      title: '5. Planos, Preços e Pagamentos',
+      id: 'remuneracao-custos-operacionais',
+      title: '4. Remuneração e Custos Operacionais',
       icon: 'wallet',
-      paragraphs: [
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel nunc sit amet justo cursus mollis. Pellentesque sed tortor ut purus accumsan hendrerit.',
-        'Suspendisse potenti. In at enim in velit sagittis interdum et et est.',
+      bullets: [
+        '4.1. Taxas e Tarifas: o Contratante pagará as taxas por transação e assinaturas conforme o plano contratado no ato da adesão.',
+        '4.2. Repasse de Custos (Boleto/Pix): o repasse de taxas de emissão de boleto ao consumidor final é vedado pelo CDC. O custo deve ser absorvido pelo Contratante ou incorporado no preço do produto/serviço.',
+        '4.3. Comunicação via WhatsApp: o envio de notificações segue a política da Meta vigente desde 1º de julho de 2025. Mensagens de "Utilidade" (faturas, alertas) possuem custo reduzido, enquanto mensagens de "Marketing" possuem custo superior. A reclassificação automática pela Meta será repassada ao Contratante.',
       ],
+      paragraphs: [],
     },
     {
-      id: 'propriedade-intelectual',
-      title: '6. Propriedade Intelectual',
-      icon: 'copyright',
-      paragraphs: [
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dignissim, sem at consectetur posuere, velit tortor faucibus erat, in posuere magna dolor ut est.',
+      id: 'automacao-fiscal-certificado-digital',
+      title: '5. Automação Fiscal e Certificado Digital',
+      icon: 'shield-check',
+      bullets: [
+        '5.1. Responsabilidade Técnica: a Pagit atua como facilitadora tecnológica para emissão de NFS-e. O Contratante é o único responsável pela validade do Certificado Digital e pela configuração correta dos parâmetros tributários (alíquotas e retenções).',
+        '5.2. Padrão Nacional: a plataforma compromete-se com a atualização para o padrão da NFS-e Nacional previsto para 2026, mas não responde por instabilidades em portais governamentais.',
       ],
+      paragraphs: [],
     },
     {
-      id: 'responsabilidades',
-      title: '7. Responsabilidades e Limitações',
+      id: 'regua-cobranca-negativacao',
+      title: '6. Régua de Cobrança e Negativação',
       icon: 'alert-triangle',
-      paragraphs: [
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et vulputate magna, vel egestas est. Maecenas nec dictum elit, ac tincidunt felis.',
-        'Nullam id faucibus ipsum. Duis aliquam, nisl ut fringilla tempor, elit arcu semper dui, vel feugiat felis justo sit amet erat.',
+      bullets: [
+        '6.1. Boas Práticas: o Contratante deve configurar automações que não exponham o devedor a ridículo ou constrangimento, sob pena de violação do Art. 42 do CDC.',
+        '6.2. Negativação Automática: a funcionalidade de negativação via API exige que o Contratante comprove a notificação prévia do devedor mediante correspondência física enviada ao endereço do devedor, conforme jurisprudência do STJ que invalida notificações exclusivas por e-mail/SMS.',
       ],
+      paragraphs: [],
     },
     {
-      id: 'vigencia-rescisao',
-      title: '8. Vigência e Rescisão',
-      icon: 'calendar-clock',
-      paragraphs: [
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pharetra, lacus sit amet luctus blandit, risus ipsum aliquam est, et gravida ipsum arcu nec risus.',
-      ],
-    },
-    {
-      id: 'alteracoes-termos',
-      title: '9. Alterações dos Termos',
+      id: 'inteligencia-artificial-fluid-ia',
+      title: '7. Inteligência Artificial e "Fluid IA"',
       icon: 'refresh-ccw',
-      paragraphs: [
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra volutpat risus, in feugiat felis iaculis a. Integer hendrerit auctor commodo.',
+      bullets: [
+        '7.1. Autonomia do Usuário: ao utilizar ferramentas de IA para criar regras de negócio ou integrar serviços terceiros não homologados ("Fluid IA"), o Contratante assume integral responsabilidade pelos resultados gerados e pela conformidade dessas ações com a legislação vigente.',
       ],
+      paragraphs: [],
+    },
+    {
+      id: 'responsabilidade-civil-fraudes',
+      title: '8. Responsabilidade Civil e Fraudes',
+      icon: 'alert-triangle',
+      bullets: [
+        '8.1. Risco da Atividade: a Pagit responde objetivamente por danos decorrentes de falhas de segurança internas (fortuito interno), conforme a Súmula 479 do STJ.',
+        '8.2. Chargebacks: em caso de contestação de compra (chargeback), a responsabilidade recairá sobre o Contratante se demonstrada falta de cautela em transações visivelmente suspeitas ou fraudulentas.',
+        '8.3. Dever de Monitoramento: a Pagit poderá bloquear transações que destoem do perfil de uso do Contratante para mitigar riscos de fraudes sistêmicas.',
+      ],
+      paragraphs: [],
+    },
+    {
+      id: 'protecao-dados-lgpd',
+      title: '9. Proteção de Dados (LGPD)',
+      icon: 'lock',
+      bullets: [
+        '9.1. Base Legal para Crédito: o tratamento de dados para fins de cobrança e negativação fundamenta-se na "Proteção do Crédito" (Art. 7º, X da LGPD), permitindo o compartilhamento necessário com birôs de crédito e órgãos de proteção.',
+        '9.2. Decisões Automatizadas: o Contratante tem o direito de solicitar a revisão de decisões tomadas unicamente com base em tratamento automatizado que afetem seus interesses financeiros.',
+      ],
+      paragraphs: [],
+    },
+    {
+      id: 'disposicoes-gerais',
+      title: '10. Disposições Gerais',
+      icon: 'calendar-clock',
+      bullets: [
+        '10.1. Disponibilidade (SLA): a Pagit envidará esforços para manter a disponibilidade de 99,5% para suas APIs, ressalvadas manutenções programadas.',
+        '10.2. Alterações nos Termos: estes termos podem ser atualizados unilateralmente pela Pagit para refletir mudanças regulatórias do Banco Central ou novas políticas de parceiros (ex.: Meta), com notificação prévia ao Contratante.',
+        '10.3. Foro: fica eleito o foro da sede da Pagit para dirimir quaisquer controvérsias oriundas deste Contrato.',
+      ],
+      paragraphs: [],
     },
   ],
-  contact: {
-    label: 'Contato para assuntos contratuais',
-    email: 'contato@pagit.com.br',
-  },
 };
