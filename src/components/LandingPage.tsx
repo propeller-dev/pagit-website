@@ -11,7 +11,7 @@ export default function LandingPage() {
   const [emailError, setEmailError] = useState<string | false>(false);
   const [phoneError, setPhoneError] = useState<string | false>(false);
 
-  // Mailchimp merge tags are case-sensitive. Confirm the correct value under Audience â†’ Settings â†’ Audience fields and *|MERGE|* tags.
+  // Mailchimp merge tags are case-sensitive. Confirm the correct value under Audience → Settings → Audience fields and *|MERGE|* tags.
   const MAILCHIMP_EMAIL_MERGE_TAG = 'EMAIL';
   const MAILCHIMP_PHONE_MERGE_TAG = 'PHONE';
 
@@ -42,17 +42,17 @@ export default function LandingPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Permitir envio se pelo menos um dos campos estiver preenchido e vÃ¡lido
+    // Permitir envio se pelo menos um dos campos estiver preenchido e válido
     let hasError = false;
     const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
     const normalizedPhoneDigits = normalizeBrazilPhoneDigits(phone);
     let emailValid = false;
     let phoneValid = false;
 
-    // ValidaÃ§Ã£o de e-mail
+    // Validação de e-mail
     if (email) {
       if (!emailRegex.test(email)) {
-        setEmailError('Formato de e-mail invÃ¡lido.');
+        setEmailError('Formato de e-mail inválido.');
         hasError = true;
       } else {
         setEmailError(false);
@@ -62,10 +62,10 @@ export default function LandingPage() {
       setEmailError(false);
     }
 
-    // ValidaÃ§Ã£o de telefone
+    // Validação de telefone
     if (phone) {
       if (!/^\d{11}$/.test(normalizedPhoneDigits) || !/^\d{2}9\d{8}$/.test(normalizedPhoneDigits)) {
-        setPhoneError('Formato de WhatsApp invÃ¡lido. Use DDD + 9 dÃ­gitos.');
+        setPhoneError('Formato de WhatsApp inválido. Use DDD + 9 dígitos.');
         hasError = true;
       } else {
         setPhoneError(false);
@@ -75,10 +75,10 @@ export default function LandingPage() {
       setPhoneError(false);
     }
 
-    // Se nenhum campo vÃ¡lido, erro geral
+    // Se nenhum campo válido, erro geral
     if (!emailValid && !phoneValid) {
-      setEmailError('Preencha pelo menos e-mail ou WhatsApp vÃ¡lido.');
-      setPhoneError('Preencha pelo menos WhatsApp ou e-mail vÃ¡lido.');
+      setEmailError('Preencha pelo menos e-mail ou WhatsApp válido.');
+      setPhoneError('Preencha pelo menos WhatsApp ou e-mail válido.');
       return;
     }
 
@@ -100,23 +100,23 @@ export default function LandingPage() {
       setIsLoading(false);
 
       if (data.result === 'success') {
-        if (data.msg && (data.msg.includes('jÃ¡ estÃ¡ inscrito') || data.msg.includes('already subscribed') || data.msg.includes('already'))) {
+        if (data.msg && (data.msg.includes('já está inscrito') || data.msg.includes('already subscribed') || data.msg.includes('already'))) {
           setStatusMessage({
             type: 'info',
-            text: 'Este e-mail jÃ¡ estÃ¡ inscrito na nossa lista VIP! NÃ£o se preocupe, avisaremos vocÃª em breve.'
+            text: 'Este e-mail já está inscrito na nossa lista VIP! Não se preocupe, avisaremos você em breve.'
           });
         } else {
           setStatusMessage({
             type: 'success',
-            text: 'VocÃª estÃ¡ na nossa lista VIP. Avisaremos assim que a Pagit estiver disponÃ­vel para transformar seu financeiro.'
+            text: 'Você está na nossa lista VIP. Avisaremos assim que a Pagit estiver disponível para transformar seu financeiro.'
           });
         }
       } else {
         // Mailchimp error messages can contain HTML and other warnings
-        if (data.msg && (data.msg.includes('jÃ¡ estÃ¡ inscrito') || data.msg.includes('already subscribed'))) {
+        if (data.msg && (data.msg.includes('já está inscrito') || data.msg.includes('already subscribed'))) {
           setStatusMessage({
             type: 'info',
-            text: 'Este e-mail jÃ¡ estÃ¡ inscrito na nossa lista VIP! NÃ£o se preocupe, avisaremos vocÃª em breve.'
+            text: 'Este e-mail já está inscrito na nossa lista VIP! Não se preocupe, avisaremos você em breve.'
           });
         } else {
           setStatusMessage({
@@ -150,7 +150,7 @@ export default function LandingPage() {
             href="https://dash.pagit.com.br"
             className="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors px-4 py-2 rounded-lg hover:bg-slate-100"
           >
-            JÃ¡ sou cliente!
+            Já sou cliente!
           </a>
         </div>
       </header>
@@ -178,11 +178,11 @@ export default function LandingPage() {
               </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 mb-6 leading-tight">
-                A revoluÃ§Ã£o na <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600">gestÃ£o de cobranÃ§as</span> para o seu negÃ³cio.
+                A revolução na <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600">gestão de cobranças</span> para o seu negócio.
               </h1>
 
               <p className="text-lg sm:text-xl text-slate-600 mb-8 leading-relaxed">
-                Pare de perder tempo cobrando clientes manualmente. A Pagit automatiza seu fluxo financeiro, reduz a inadimplÃªncia e organiza suas contas, tudo em uma plataforma simples feita para PMEs e autÃ´nomos.
+                Pare de perder tempo cobrando clientes manualmente. A Pagit automatiza seu fluxo financeiro, reduz a inadimplência e organiza suas contas, tudo em uma plataforma simples feita para PMEs e autônomos.
               </p>
             </motion.div>
 
@@ -215,7 +215,7 @@ export default function LandingPage() {
                       'text-blue-900'
                     }`}>
                     {statusMessage.type === 'success' ? 'Obrigado pelo interesse!' :
-                      statusMessage.type === 'info' ? 'VocÃª jÃ¡ estÃ¡ na lista!' :
+                      statusMessage.type === 'info' ? 'Você já está na lista!' :
                         'Ops, algo deu errado'}
                   </h3>
                   <p className={
@@ -304,7 +304,7 @@ export default function LandingPage() {
                 </form>
               )}
               <p className="mt-4 text-xs text-slate-500">
-                Junte-se a inÃºmeros empreendedores aguardando o lanÃ§amento. Sem spam, compromisso nosso.
+                Junte-se a inúmeros empreendedores aguardando o lançamento. Sem spam, compromisso nosso.
               </p>
             </motion.div>
           </div>
@@ -313,18 +313,18 @@ export default function LandingPage() {
           <div className="grid md:grid-cols-3 gap-8 mt-auto">
             <FeatureCard
               icon={<Zap className="w-6 h-6 text-amber-500" />}
-              title="AutomaÃ§Ã£o Inteligente"
-              description="Configure rÃ©guas de cobranÃ§a automÃ¡ticas via e-mail e WhatsApp. Nunca mais esqueÃ§a de cobrar um cliente."
+              title="Automação Inteligente"
+              description="Configure réguas de cobrança automáticas via e-mail e WhatsApp. Nunca mais esqueça de cobrar um cliente."
             />
             <FeatureCard
               icon={<ShieldCheck className="w-6 h-6 text-emerald-500" />}
-              title="SeguranÃ§a BancÃ¡ria"
-              description="Seus dados e transaÃ§Ãµes protegidos com criptografia de ponta a ponta e conformidade com o Banco Central."
+              title="Segurança Bancária"
+              description="Seus dados e transações protegidos com criptografia de ponta a ponta e conformidade com o Banco Central."
             />
             <FeatureCard
               icon={<BarChart3 className="w-6 h-6 text-blue-500" />}
-              title="GestÃ£o Descomplicada"
-              description="Dashboard intuitivo para visualizar fluxo de caixa, inadimplÃªncia e previsibilidade financeira em tempo real."
+              title="Gestão Descomplicada"
+              description="Dashboard intuitivo para visualizar fluxo de caixa, inadimplência e previsibilidade financeira em tempo real."
             />
           </div>
 
@@ -349,4 +349,3 @@ function FeatureCard({ icon, title, description }: { icon: React.ReactNode, titl
     </div>
   );
 }
-
