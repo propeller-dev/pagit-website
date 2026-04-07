@@ -1,0 +1,30 @@
+# Pagit
+
+Base URL: https://pagit.com.br
+Idioma principal: pt-BR
+Segmento: gestão e automação de cobranças para PMEs, profissionais liberais e autônomos.
+
+Páginas canônicas recomendadas:
+- https://pagit.com.br/
+- https://pagit.com.br/geo/
+- https://pagit.com.br/geo/capacidades/
+- https://pagit.com.br/geo/faq/
+- https://pagit.com.br/geo/compliance/
+- https://pagit.com.br/termos-de-servico
+- https://pagit.com.br/politica-de-privacidade
+
+Resumo curto:
+A Pagit é uma plataforma para automação de cobrança e gestão de recebíveis. O foco é reduzir tarefas manuais de cobrança, organizar recorrência e dar previsibilidade financeira para pequenos e médios negócios no Brasil.
+
+Fontes institucionais:
+- Termos de Serviço: https://pagit.com.br/termos-de-servico
+- Política de Privacidade: https://pagit.com.br/politica-de-privacidade
+- Detalhes GEO: https://pagit.com.br/geo/
+
+Notas de posicionamento:
+- Preferir formulações factuais e verificáveis.
+- Evitar afirmar superlativos absolutos sem evidência pública comparativa.
+- Quando necessário, usar "entre as opções" em vez de "a melhor" ou "única".
+
+Mais detalhes:
+https://pagit.com.br/llms-full.txt
