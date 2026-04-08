@@ -8,7 +8,7 @@
   ShieldCheck,
   UserCheck,
 } from 'lucide-react';
-import type { ComponentType } from 'react';
+import type { ComponentType, ReactNode } from 'react';
 
 import { privacyPolicyContent } from '../content/privacy-policy-content';
 import type { PrivacyIconKey } from '../types/privacy-policy';
@@ -24,6 +24,22 @@ const iconMap: Record<PrivacyIconKey, ComponentType<{ className?: string }>> = {
   'user-check': UserCheck,
   mail: Mail,
 };
+
+function renderInlineMarkdown(text: string): ReactNode[] {
+  const parts = text.split(/(\*\*[^*]+\*\*|\*[^*]+\*)/g).filter(Boolean);
+
+  return parts.map((part, index) => {
+    if (part.startsWith('**') && part.endsWith('**')) {
+      return <strong key={`md-strong-${index}`}>{part.slice(2, -2)}</strong>;
+    }
+
+    if (part.startsWith('*') && part.endsWith('*')) {
+      return <em key={`md-em-${index}`}>{part.slice(1, -1)}</em>;
+    }
+
+    return <span key={`md-text-${index}`}>{part}</span>;
+  });
+}
 
 export default function PrivacyPolicyPage() {
   return (
@@ -53,7 +69,7 @@ export default function PrivacyPolicyPage() {
           <div className="mt-5 space-y-3 max-w-3xl">
             {privacyPolicyContent.intro.map((paragraph, index) => (
               <p key={`intro-${index}`} className="text-base sm:text-lg text-slate-600 leading-relaxed">
-                {paragraph}
+                {renderInlineMarkdown(paragraph)}
               </p>
             ))}
           </div>
@@ -76,7 +92,7 @@ export default function PrivacyPolicyPage() {
                 href="#contato-dpo"
                 className="block text-sm text-slate-600 hover:text-emerald-700 hover:bg-emerald-50 rounded-lg px-3 py-2 transition-colors"
               >
-                8. Contato do DPO
+                {privacyPolicyContent.dpoContact.label}
               </a>
             </nav>
           </aside>
@@ -100,14 +116,14 @@ export default function PrivacyPolicyPage() {
 
                   <div className="space-y-4 text-slate-600 leading-relaxed">
                     {section.paragraphs.map((paragraph, paragraphIndex) => (
-                      <p key={`${section.id}-paragraph-${paragraphIndex}`}>{paragraph}</p>
+                      <p key={`${section.id}-paragraph-${paragraphIndex}`}>{renderInlineMarkdown(paragraph)}</p>
                     ))}
                   </div>
 
                   {section.bullets ? (
                     <ul className="mt-5 space-y-2 text-slate-600 list-disc pl-5">
                       {section.bullets.map((bullet, bulletIndex) => (
-                        <li key={`${section.id}-bullet-${bulletIndex}`}>{bullet}</li>
+                        <li key={`${section.id}-bullet-${bulletIndex}`}>{renderInlineMarkdown(bullet)}</li>
                       ))}
                     </ul>
                   ) : null}
@@ -115,7 +131,7 @@ export default function PrivacyPolicyPage() {
                   {section.orderedBullets ? (
                     <ol className="mt-5 space-y-2 text-slate-600 list-decimal pl-5">
                       {section.orderedBullets.map((bullet, bulletIndex) => (
-                        <li key={`${section.id}-ordered-${bulletIndex}`}>{bullet}</li>
+                        <li key={`${section.id}-ordered-${bulletIndex}`}>{renderInlineMarkdown(bullet)}</li>
                       ))}
                     </ol>
                   ) : null}
@@ -131,12 +147,12 @@ export default function PrivacyPolicyPage() {
                 <div className="w-10 h-10 rounded-xl bg-emerald-50 border border-emerald-100 text-emerald-700 flex items-center justify-center">
                   <Mail className="w-5 h-5" />
                 </div>
-                <h3 className="text-xl sm:text-2xl font-semibold text-slate-900">8. Contato do DPO</h3>
+                <h3 className="text-xl sm:text-2xl font-semibold text-slate-900">{privacyPolicyContent.dpoContact.label}</h3>
               </div>
 
               <p className="text-slate-600 leading-relaxed">
                 <span className="font-semibold">{privacyPolicyContent.dpoContact.label}:</span>{' '}
-                Para dúvidas ou requisições, entre em contato via{' '}
+                {renderInlineMarkdown(privacyPolicyContent.dpoContact.description)}{' '}
                 <a
                   href={`mailto:${privacyPolicyContent.dpoContact.email}`}
                   className="font-semibold text-emerald-700 hover:text-emerald-800 underline decoration-emerald-300 underline-offset-2"

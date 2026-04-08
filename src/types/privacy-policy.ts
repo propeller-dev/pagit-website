@@ -24,6 +24,7 @@ export interface PrivacyPolicyContent {
   sections: PrivacySection[];
   dpoContact: {
     label: string;
+    description: string;
     email: string;
   };
 }
