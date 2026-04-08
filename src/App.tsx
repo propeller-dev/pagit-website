@@ -23,7 +23,16 @@ export default function App() {
     return <PrivacyPolicyPage />;
   }
 
-  if (pathname === '/termos-de-servico' || pathname === '/terms-of-service') {
+  if (pathname === '/terms-of-service') {
+    if (typeof window !== 'undefined') {
+      const targetPath = `/termos-de-servico${window.location.search}${window.location.hash}`;
+      window.location.replace(targetPath);
+    }
+
+    return null;
+  }
+
+  if (pathname === '/termos-de-servico') {
     return <TermsOfServicePage />;
   }
 

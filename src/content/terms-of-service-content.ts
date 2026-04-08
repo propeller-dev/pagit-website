@@ -1,8 +1,24 @@
-﻿import type { TermsOfServiceContent } from '../types/terms-of-service';
+﻿declare const __TERMS_LAST_UPDATED_ISO__: string;
+
+import type { TermsOfServiceContent } from '../types/terms-of-service';
+
+const TERMS_LAST_UPDATED_FALLBACK = '2026-03-31';
+
+function formatTermsLastUpdated(isoDate: string) {
+  const normalizedIsoDate = /^\d{4}-\d{2}-\d{2}$/.test(isoDate) ? isoDate : TERMS_LAST_UPDATED_FALLBACK;
+  const updatedAt = new Date(`${normalizedIsoDate}T00:00:00Z`);
+
+  return updatedAt.toLocaleDateString('pt-BR', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+    timeZone: 'UTC',
+  });
+}
 
 export const termsOfServiceContent: TermsOfServiceContent = {
   title: 'Termos de Uso e Serviços - Plataforma Pagit',
-  lastUpdated: 'Não informado no documento de referência',
+  lastUpdated: formatTermsLastUpdated(__TERMS_LAST_UPDATED_ISO__),
   intro: [
     'Estes Termos de Uso ("Contrato") regem a relação entre a PAGIT TECNOLOGIA E PAGAMENTOS LTDA ("Pagit") e você, pessoa jurídica ou profissional liberal ("Contratante"), que utiliza nossa plataforma de faturamento, gestão financeira e serviços de pagamento.',
     'Ao acessar ou utilizar os serviços, você declara estar de acordo com as cláusulas aqui descritas.',
@@ -112,3 +128,4 @@ export const termsOfServiceContent: TermsOfServiceContent = {
     },
   ],
 };
+
