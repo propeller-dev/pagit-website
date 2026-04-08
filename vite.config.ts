@@ -6,6 +6,8 @@ import {defineConfig, loadEnv} from 'vite';
 
 const TERMS_CONTENT_PATH = 'src/content/terms-of-service-content.ts';
 const TERMS_LAST_UPDATED_FALLBACK = '2026-03-31';
+const PRIVACY_CONTENT_PATH = 'src/content/privacy-policy-content.ts';
+const PRIVACY_LAST_UPDATED_FALLBACK = '2026-03-31';
 
 function getTermsLastUpdatedIso() {
   try {
@@ -24,6 +26,23 @@ function getTermsLastUpdatedIso() {
   return TERMS_LAST_UPDATED_FALLBACK;
 }
 
+function getPrivacyLastUpdatedIso() {
+  try {
+    const output = execSync(`git log -1 --format=%cs -- ${PRIVACY_CONTENT_PATH}`, {
+      encoding: 'utf8',
+      stdio: ['ignore', 'pipe', 'ignore'],
+    }).trim();
+
+    if (/^\d{4}-\d{2}-\d{2}$/.test(output)) {
+      return output;
+    }
+  } catch {
+    // Fall back when git metadata is unavailable in the build environment.
+  }
+
+  return PRIVACY_LAST_UPDATED_FALLBACK;
+}
+
 export default defineConfig(({mode}) => {
   const env = loadEnv(mode, '.', '');
   return {
@@ -31,6 +50,7 @@ export default defineConfig(({mode}) => {
     define: {
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
       __TERMS_LAST_UPDATED_ISO__: JSON.stringify(getTermsLastUpdatedIso()),
+      __PRIVACY_LAST_UPDATED_ISO__: JSON.stringify(getPrivacyLastUpdatedIso()),
     },
     resolve: {
       alias: {

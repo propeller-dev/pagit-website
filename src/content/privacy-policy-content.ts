@@ -1,8 +1,24 @@
 import type { PrivacyPolicyContent } from '../types/privacy-policy';
 
+declare const __PRIVACY_LAST_UPDATED_ISO__: string;
+
+const PRIVACY_LAST_UPDATED_FALLBACK = '2026-03-31';
+
+function formatPrivacyLastUpdated(isoDate: string) {
+  const normalizedIsoDate = /^\d{4}-\d{2}-\d{2}$/.test(isoDate) ? isoDate : PRIVACY_LAST_UPDATED_FALLBACK;
+  const updatedAt = new Date(`${normalizedIsoDate}T00:00:00Z`);
+
+  return updatedAt.toLocaleDateString('pt-BR', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+    timeZone: 'UTC',
+  });
+}
+
 export const privacyPolicyContent: PrivacyPolicyContent = {
   title: 'Política de Privacidade e Proteção de Dados - Pagit',
-  lastUpdated: '31 de março de 2026',
+  lastUpdated: formatPrivacyLastUpdated(__PRIVACY_LAST_UPDATED_ISO__),
   intro: [
     'Bem-vindo à Pagit. Esta Política de Privacidade descreve como coletamos, usamos, armazenamos e protegemos seus dados pessoais.',
     'Operamos em estrita conformidade com a Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018), o Marco Civil da Internet (Lei nº 12.965/2014) e as regulamentações de segurança cibernética do Banco Central do Brasil (Resoluções BCB nº 85/2021 e nº 538/2025).',
