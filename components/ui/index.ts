@@ -13,3 +13,4 @@ export { SectionHeader } from "./SectionHeader";
 export { Section } from "./Section";
 export { Input, Textarea, FieldLabel } from "./Input";
 export { Logo } from "./Logo";
+export { Reveal, StaggerGroup, StaggerItem } from "./Reveal";
