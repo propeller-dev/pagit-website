@@ -1,0 +1,433 @@
+{
+  "meta": {
+    "title": "Pagit — Cobrança recorrente no Pix, direto na sua chave",
+    "description": "SaaS de automação de cobrança para empreendedores brasileiros. Pix recorrente com a sua chave, parcelamento em Pix, régua no WhatsApp. 2 meses grátis, sem cartão.",
+    "ogTitle": "Receber em dia virou a parte chata do seu negócio? A Pagit assume.",
+    "ogDescription": "Cobrança recorrente, parcelamento em Pix, régua automática no WhatsApp. Você só confere o dinheiro entrar.",
+    "siteName": "Pagit",
+    "locale": "pt-BR",
+    "twitterCard": "summary_large_image"
+  },
+
+  "nav": {
+    "items": [
+      { "label": "Funcionalidades", "href": "#funcionalidades" },
+      { "label": "Para quem", "href": "#para-quem" },
+      { "label": "Preços", "href": "#precos" },
+      { "label": "FAQ", "href": "#faq" }
+    ],
+    "ctaSecondary": { "label": "Entrar", "href": "https://dash.pagit.com.br" },
+    "ctaPrimary": { "label": "Começar grátis", "href": "https://dash.pagit.com.br/signup" },
+    "menuToggleOpen": "Abrir menu",
+    "menuToggleClose": "Fechar menu"
+  },
+
+  "hero": {
+    "eyebrow": "Cobrança automatizada para PMEs brasileiras",
+    "title": {
+      "lead": "Receber em dia virou a parte chata do seu negócio?",
+      "emphasis": "A Pagit assume pra você."
+    },
+    "subtitle": "Cobrança recorrente, parcelamento em Pix, régua automática no WhatsApp. Você só confere o dinheiro entrar.",
+    "ctaPrimary": { "label": "Começar grátis", "href": "https://dash.pagit.com.br/signup" },
+    "ctaSecondary": { "label": "Falar no WhatsApp", "href": "https://wa.me/5521936183583" },
+    "reassurance": "2 meses grátis. Sem cartão, sem custo por transação da Pagit.",
+    "visualAlt": "Prévia do painel da Pagit mostrando cobranças enviadas e recebidas"
+  },
+
+  "integrations": {
+    "label": "Integra com as ferramentas que você já usa",
+    "logos": [
+      { "name": "Stripe", "alt": "Stripe", "href": "https://stripe.com" },
+      { "name": "Woovi", "alt": "Woovi", "href": "https://woovi.com" },
+      { "name": "WhatsApp", "alt": "WhatsApp Business", "href": "https://business.whatsapp.com" },
+      { "name": "Resend", "alt": "Resend", "href": "https://resend.com" }
+    ],
+    "disclaimer": "Marcas de terceiros citadas para fins de integração técnica. Não representam endosso ou parceria comercial oficial."
+  },
+
+  "problem": {
+    "eyebrow": "O problema",
+    "title": "Receber parou de ser simples.",
+    "subtitle": "Três coisas estão acontecendo com quem cobra hoje no Brasil.",
+    "cards": [
+      {
+        "kicker": "Inadimplência em alta",
+        "title": "1 em cada 3 empresas brasileiras está negativada.",
+        "body": "8,9 milhões de empresas estão inadimplentes no país. 96% delas são micro e pequenas — como a sua.",
+        "source": "Serasa Experian, 2025",
+        "sourceHref": "https://www.serasaexperian.com.br/sala-de-imprensa/indicadores/recorde-historico-empresas-encerraram-2025-com-rdollar-213-bilhoes-em-dividas-e-inadimplencia-no-maior-patamar-ja-registrado-aponta-serasa-experian/"
+      },
+      {
+        "kicker": "Tempo mal gasto",
+        "title": "Você abriu o negócio pra prestar serviço, não pra virar departamento financeiro.",
+        "body": "Mais da metade dos pequenos empreendedores misturam conta pessoal com a da empresa e controlam tudo em caderno ou planilha. Cobrar manualmente rouba o tempo que deveria ser do seu trabalho.",
+        "source": "Sebrae",
+        "sourceHref": "https://agenciasebrae.com.br/cultura-empreendedora/61-dos-empreendedores-brasileiros-fazem-pagamentos-da-empresa-com-a-conta-pessoal/"
+      },
+      {
+        "kicker": "Pix virou padrão",
+        "title": "Seu cliente já paga tudo no Pix. Falta você cobrar assim.",
+        "body": "Mais de 20 milhões de empresas no Brasil usam Pix. Mandar QR Code solto no WhatsApp e torcer pra ser pago não é mais estratégia.",
+        "source": "Banco Central, 2025",
+        "sourceHref": "https://www.bcb.gov.br/estabilidadefinanceira/estatisticaspix"
+      }
+    ]
+  },
+
+  "audience": {
+    "eyebrow": "Para quem é",
+    "title": "Feito pra quem vive de prestar serviço, não de cobrar.",
+    "subtitle": "Se você cobra todo mês, parcela em várias vezes ou tem uma carteira fixa de clientes, a Pagit encaixa.",
+    "cards": [
+      {
+        "icon": "user-focus",
+        "title": "Profissionais liberais",
+        "body": "Personal trainer, fisio, psicólogo, professor particular, terapeuta. Mensalidade no Pix, régua no WhatsApp, você no treino/atendimento."
+      },
+      {
+        "icon": "stethoscope",
+        "title": "Clínicas e consultórios",
+        "body": "Pacotes, sessões avulsas, plano mensal. A Pagit organiza recebíveis por paciente sem misturar com o prontuário."
+      },
+      {
+        "icon": "graduation-cap",
+        "title": "Academias, escolas e cursos",
+        "body": "Matrícula parcelada, mensalidade recorrente, cobrança por turma. Régua automatizada reduz a evasão por esquecimento."
+      },
+      {
+        "icon": "briefcase",
+        "title": "Contabilidades, agências e consultorias",
+        "body": "Carteira B2B com honorário mensal. Emite, cobra, concilia — sem depender de um financeiro dedicado."
+      },
+      {
+        "icon": "play-circle",
+        "title": "Infoprodutores e mentores",
+        "body": "Assinatura, turma fechada, mentoria contínua. Pix pra quem quer simples; cartão pra quem precisa parcelar."
+      },
+      {
+        "icon": "wrench",
+        "title": "Gráficas, oficinas e manutenção",
+        "body": "Parcelamento não-ortodoxo (semanal, quinzenal, entrada + saldo). Múltiplos QR Codes Pix que entregam um por vencimento."
+      }
+    ]
+  },
+
+  "howItWorks": {
+    "eyebrow": "Como funciona",
+    "title": "Do cadastro ao recibo, em 4 passos.",
+    "subtitle": "Você configura uma vez. A Pagit roda sozinha no seu dia a dia.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Conecte sua chave Pix",
+        "body": "Cadastre a chave Pix do seu negócio. É ela que vai receber o dinheiro — direto na sua conta, sem a Pagit no meio."
+      },
+      {
+        "number": "02",
+        "title": "Defina o que cobrar",
+        "body": "Mensalidade, serviço único, parcelado em Pix ou cartão. Configure o valor, o ciclo e os clientes uma única vez."
+      },
+      {
+        "number": "03",
+        "title": "A Pagit cobra por você",
+        "body": "QR Code gerado automaticamente, lembrete no WhatsApp antes e no vencimento, recibo verificado por IA assim que o cliente paga."
+      },
+      {
+        "number": "04",
+        "title": "Você confere o que entrou",
+        "body": "Painel limpo, conciliação automática, histórico completo. Zero planilha paralela."
+      }
+    ]
+  },
+
+  "features": {
+    "eyebrow": "Funcionalidades",
+    "title": "Tudo que a cobrança pedia. Automatizado.",
+    "subtitle": "Sem custo por transação da Pagit. Cartão via gateway integrado com taxa padrão de mercado.",
+    "cards": [
+      {
+        "icon": "repeat",
+        "title": "Cobrança recorrente no Pix",
+        "body": "Defina valor e ciclo. A Pagit gera o QR Code com a sua chave a cada período e dispara para o cliente automaticamente.",
+        "tag": "Pix"
+      },
+      {
+        "icon": "split",
+        "title": "Parcelamento em Pix",
+        "body": "Divida uma cobrança em várias parcelas. A Pagit gera um QR Code por parcela e envia cada um no vencimento certo — sem juros, sem cartão.",
+        "tag": "Pix"
+      },
+      {
+        "icon": "credit-card",
+        "title": "Cartão e boleto integrados",
+        "body": "Seu cliente paga como preferir. Cartão via gateway integrado com taxa padrão de mercado; boleto disponível. Você escolhe quais métodos aceitar.",
+        "tag": "Multi-canal"
+      },
+      {
+        "icon": "message-circle",
+        "title": "Régua no WhatsApp e e-mail",
+        "body": "Seis eventos configuráveis — cobrança criada, 7 dias antes, 3 dias antes, 1 dia antes, vence hoje e em atraso. Você ativa só os que fazem sentido.",
+        "tag": "WhatsApp"
+      },
+      {
+        "icon": "receipt",
+        "title": "Verificação de comprovante por IA",
+        "body": "Cliente mandou recibo? A IA lê, confere o valor e concilia sozinha. Casos limítrofes (valor divergente, comprovante ilegível) vão pra revisão manual.",
+        "tag": "IA"
+      },
+      {
+        "icon": "sparkles",
+        "title": "Operador-assistente",
+        "body": "Seu cliente pergunta coisa básica no WhatsApp e um assistente treinado responde. Você só entra quando realmente precisa.",
+        "tag": "IA"
+      },
+      {
+        "icon": "key",
+        "title": "Várias chaves Pix organizadas",
+        "body": "Receba em contas diferentes por plano, serviço, sócio ou unidade. Troque a chave padrão a qualquer momento sem afetar cobranças em andamento.",
+        "tag": "Organização"
+      },
+      {
+        "icon": "code",
+        "title": "API e webhooks",
+        "body": "Conecte a Pagit ao seu sistema. Endpoints REST documentados, webhooks para eventos de cobrança e pagamento. Integração de quem quer automatizar a ponta.",
+        "tag": "Para devs"
+      }
+    ]
+  },
+
+  "uauMoment": {
+    "eyebrow": "Veja na prática",
+    "title": "Digite um valor e veja a Pagit cobrando.",
+    "subtitle": "Simulador interativo. Escolha um cenário, defina o valor e acompanhe o que aconteceria na vida real.",
+    "scenarios": [
+      { "id": "recurrent", "label": "Mensalidade", "defaultValue": 200, "description": "Mesmo valor todo mês" },
+      { "id": "installments", "label": "Parcelado em Pix", "defaultValue": 1500, "description": "Divida em 3 parcelas" },
+      { "id": "oneTime", "label": "Serviço único", "defaultValue": 500, "description": "Cobrança avulsa" }
+    ],
+    "inputLabel": "Valor",
+    "customerLabel": "Cliente (exemplo)",
+    "customerDefault": "Maria Souza",
+    "timeline": [
+      {
+        "step": 1,
+        "title": "Cobrança criada",
+        "body": "QR Code Pix gerado com a sua chave. Vinculado ao cliente."
+      },
+      {
+        "step": 2,
+        "title": "Mensagem no WhatsApp",
+        "body": "Maria recebeu: \"Oi! Sua cobrança de {amount} está disponível. Pagamento em Pix — é só escanear o código.\""
+      },
+      {
+        "step": 3,
+        "title": "Lembrete 1 dia antes",
+        "body": "Mensagem automática lembra do vencimento. Sem você digitar nada."
+      },
+      {
+        "step": 4,
+        "title": "Pagamento recebido",
+        "body": "Maria pagou. O Pix entrou direto na sua conta — a Pagit não passou por esse dinheiro."
+      },
+      {
+        "step": 5,
+        "title": "Recibo conciliado",
+        "body": "Cobrança marcada como paga no painel. Histórico atualizado. Nada pendente."
+      }
+    ],
+    "replayLabel": "Rodar de novo",
+    "reducedMotionHint": "Você optou por reduzir animações. Mostramos o resultado final direto."
+  },
+
+  "pricing": {
+    "eyebrow": "Preços",
+    "title": "Simples. Mensalidade fixa.",
+    "subtitle": "Sem custo por transação da Pagit. Nenhum por cobrança emitida. Nenhum por régua disparada.",
+    "plans": [
+      {
+        "id": "piloto",
+        "name": "Piloto",
+        "tagline": "Pra testar de verdade, sem pressa",
+        "price": "Em breve",
+        "priceSuffix": "",
+        "highlight": "2 meses grátis — sem cartão",
+        "features": [
+          "Todas as funcionalidades liberadas",
+          "Cobrança recorrente e parcelamento em Pix",
+          "Régua no WhatsApp e e-mail",
+          "Verificação de comprovantes por IA",
+          "Operador-assistente",
+          "API e webhooks",
+          "Sem limite artificial pra avaliação"
+        ],
+        "cta": { "label": "Começar grátis", "href": "https://dash.pagit.com.br/signup" },
+        "featured": true
+      },
+      {
+        "id": "starter",
+        "name": "Starter",
+        "tagline": "Pra quem já validou e quer escalar",
+        "price": "Em breve",
+        "priceSuffix": "/mês",
+        "highlight": "Mensalidade fixa",
+        "features": [
+          "Cobrança ilimitada",
+          "Régua completa",
+          "Integração com cartão (taxa do gateway aplicada)",
+          "Múltiplas chaves Pix",
+          "Relatórios e conciliação",
+          "Suporte por WhatsApp"
+        ],
+        "cta": { "label": "Falar com a gente", "href": "https://wa.me/5521936183583" },
+        "featured": false
+      }
+    ],
+    "footnote": "Taxas de cartão (quando você ativar) seguem o padrão do gateway e ficam claramente exibidas antes de você habilitar. A Pagit não adiciona margem sobre elas."
+  },
+
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Tira-dúvidas honesto.",
+    "subtitle": "As perguntas que todo mundo faz antes de contratar — respondidas sem enrolar.",
+    "groups": [
+      {
+        "id": "how-it-works",
+        "title": "Como funciona",
+        "items": [
+          {
+            "q": "Preciso dar acesso à minha conta bancária pra usar a Pagit?",
+            "a": "Não. Você cadastra sua chave Pix (CPF/CNPJ, celular, e-mail ou aleatória) e a Pagit gera QR Codes que apontam pra ela. A Pagit não acessa extrato, saldo nem movimenta sua conta."
+          },
+          {
+            "q": "O dinheiro do Pix cai na minha conta ou na da Pagit?",
+            "a": "Direto na sua. Sem intermediário, sem conta Pagit no meio. Você usa a sua chave, seu cliente paga, o dinheiro entra na sua conta bancária na hora — como qualquer Pix comum."
+          },
+          {
+            "q": "Como funciona o parcelamento em Pix?",
+            "a": "A Pagit gera vários QR Codes — um por parcela — e dispara cada um no vencimento combinado. É um parcelamento operacional, não uma linha de crédito. Você recebe o valor inteiro de cada parcela, sem juros envolvidos na operação."
+          },
+          {
+            "q": "Como a cobrança chega até o meu cliente?",
+            "a": "Pelo WhatsApp, pelo e-mail ou por link compartilhável — você escolhe os canais. Cada cobrança vira uma mensagem com valor, vencimento e QR Code pronto pra pagar."
+          },
+          {
+            "q": "E se o cliente não pagar?",
+            "a": "A régua dispara lembretes automáticos (7 dias antes, 3 dias antes, 1 dia antes, no dia e no atraso — você configura quais). Se o cliente mandar um comprovante, a IA verifica e concilia. Decisões manuais ficam sob seu controle."
+          },
+          {
+            "q": "Precisa de cartão pra começar?",
+            "a": "Não. 2 meses grátis, sem cartão, sem pegadinha. Você só informa cartão (ou troca pra boleto/Pix) quando decidir seguir."
+          }
+        ]
+      },
+      {
+        "id": "regulation",
+        "title": "Regulação e segurança",
+        "items": [
+          {
+            "q": "A Pagit é um banco ou instituição financeira (PSP)?",
+            "a": "Não. A Pagit é uma plataforma de automação de cobrança. Quem transporta o dinheiro é o seu banco (no caso do Pix) e o gateway de cartão (quando você ativa). A Pagit orquestra, notifica e concilia — não guarda nem move saldo."
+          },
+          {
+            "q": "A Pagit faz \"Pix Automático\"?",
+            "a": "Não. Pix Automático é um produto regulamentado pelo Banco Central (Resolução BCB 505/2025) oferecido por instituições financeiras autorizadas. A Pagit faz algo diferente: lembretes automáticos de cobrança recorrente, usando QR Codes gerados com a sua chave Pix. A prática é semelhante no dia a dia; a tecnologia e a regulação são outras."
+          },
+          {
+            "q": "E \"Pix Parcelado\"?",
+            "a": "\"Pix Parcelado\" é nomenclatura reservada pra linhas de crédito reguladas pelo BC, que envolvem juros. A Pagit faz parcelamento operacional: divide o valor em várias cobranças Pix, uma por parcela, sem crédito envolvido. A diferença é importante — pra não confundir cliente e pra não prometer o que não somos."
+          },
+          {
+            "q": "Tem taxa por transação?",
+            "a": "Não da Pagit. Você paga só a mensalidade do plano. Se ativar pagamento por cartão, o gateway integrado cobra a taxa padrão de mercado (exibida antes da ativação) — a Pagit não adiciona margem sobre ela. Seu banco pode cobrar tarifas próprias sobre Pix PJ; isso fica entre você e ele."
+          },
+          {
+            "q": "Vocês emitem nota fiscal?",
+            "a": "A Pagit emite a nota fiscal da mensalidade que você paga pra gente. Pra emitir nota das suas vendas, use o emissor que já usa — a Pagit se integra via API e webhook."
+          },
+          {
+            "q": "Funciona pra quem vende sem CNPJ?",
+            "a": "Sim. A Pagit não exige CNPJ — nem pra começar, nem pra ativar cartão. Você pode operar como pessoa física usando chave Pix pessoal. A integração com gateway de cartão atende pessoa física também."
+          },
+          {
+            "q": "Como cancelo?",
+            "a": "Pelo próprio painel, a qualquer momento. Sem multa, sem fidelidade, sem precisar falar com ninguém pra cancelar. Você exporta seus dados antes, se quiser."
+          }
+        ]
+      }
+    ]
+  },
+
+  "ctaFinal": {
+    "eyebrow": "Última parada",
+    "title": "Bote a cobrança no automático hoje.",
+    "subtitle": "2 meses grátis. Sem cartão. Sem custo por transação da Pagit.",
+    "ctaPrimary": { "label": "Começar grátis", "href": "https://dash.pagit.com.br/signup" },
+    "ctaSecondary": { "label": "Falar no WhatsApp", "href": "https://wa.me/5521936183583" },
+    "reassurance": "Você cancela quando quiser, no painel. Sem fidelidade."
+  },
+
+  "footer": {
+    "tagline": "Cobrança automatizada para empreendedores brasileiros.",
+    "sections": [
+      {
+        "title": "Produto",
+        "links": [
+          { "label": "Funcionalidades", "href": "#funcionalidades" },
+          { "label": "Para quem", "href": "#para-quem" },
+          { "label": "Preços", "href": "#precos" },
+          { "label": "FAQ", "href": "#faq" }
+        ]
+      },
+      {
+        "title": "Contato",
+        "links": [
+          { "label": "WhatsApp", "href": "https://wa.me/5521936183583" },
+          { "label": "contato@pagit.com.br", "href": "mailto:contato@pagit.com.br" },
+          { "label": "Instagram", "href": "https://instagram.com/pagit.fin" }
+        ]
+      },
+      {
+        "title": "Legal",
+        "links": [
+          { "label": "Termos de uso", "href": "#" },
+          { "label": "Política de privacidade", "href": "#" },
+          { "label": "Status do sistema", "href": "#" }
+        ]
+      }
+    ],
+    "copy": "© {year} Pagit. Todos os direitos reservados.",
+    "localeHint": "Site em português do Brasil."
+  },
+
+  "a11y": {
+    "skipToContent": "Pular para o conteúdo",
+    "openMenu": "Abrir menu de navegação",
+    "closeMenu": "Fechar menu de navegação",
+    "externalLink": "abre em nova janela",
+    "decorativeImage": "",
+    "loading": "Carregando",
+    "expandFaq": "Expandir pergunta",
+    "collapseFaq": "Recolher pergunta",
+    "playSimulation": "Iniciar simulação",
+    "pauseSimulation": "Pausar simulação",
+    "replaySimulation": "Rodar simulação novamente"
+  },
+
+  "schema": {
+    "organization": {
+      "name": "Pagit",
+      "url": "https://pagit.com.br",
+      "logoPath": "/brand/pagit-icon.svg",
+      "sameAs": [
+        "https://instagram.com/pagit.fin"
+      ],
+      "contactEmail": "contato@pagit.com.br",
+      "contactPhone": "+55 21 93618-3583"
+    },
+    "product": {
+      "name": "Pagit",
+      "description": "Plataforma de automação de cobrança, recorrência e gestão de recebíveis para empreendedores brasileiros."
+    }
+  }
+}
