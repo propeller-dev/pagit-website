@@ -1,0 +1,12 @@
+export { Header } from "./Header";
+export { Hero } from "./Hero";
+export { Integrations } from "./Integrations";
+export { Problem } from "./Problem";
+export { Audience } from "./Audience";
+export { HowItWorks } from "./HowItWorks";
+export { Features } from "./Features";
+export { Pricing } from "./Pricing";
+export { Faq } from "./Faq";
+export { CtaFinal } from "./CtaFinal";
+export { Footer } from "./Footer";
+export { StructuredData } from "./StructuredData";

@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
-import { getTranslations, setRequestLocale } from "next-intl/server";
+import {
+  getMessages,
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import { routing, type AppLocale } from "@/i18n/routing";
@@ -81,13 +85,17 @@ export default async function LocaleLayout({
 
   setRequestLocale(locale as AppLocale);
 
+  const messages = await getMessages();
+
   return (
     <html
       lang={locale}
       className={`${geistSans.variable} ${geistMono.variable} ${inter.variable}`}
     >
       <body className="antialiased">
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          {children}
+        </NextIntlClientProvider>
       </body>
     </html>
   );
