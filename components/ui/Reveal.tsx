@@ -1,39 +1,27 @@
-"use client";
-
-import { motion, useReducedMotion } from "motion/react";
 import type { ReactNode } from "react";
+import { cn } from "@/lib/utils";
 
-type Props = {
-  children: ReactNode;
-  delay?: number;
-  className?: string;
-  as?: "div" | "section" | "article" | "li" | "ul" | "ol";
-  y?: number;
-};
-
-const easing = [0.22, 1, 0.36, 1] as const;
-
+/**
+ * Renderiza com fade+translateY suave usando CSS animation.
+ * Sem JS, sem flicker — anima da posição inicial para a final em 0.55s.
+ * Crawlers/no-JS veem o estado final pelo HTML; o CSS da animação respeita
+ * prefers-reduced-motion via globals.css.
+ */
 export function Reveal({
   children,
   delay = 0,
   className,
-  as = "div",
-  y = 24,
-}: Props) {
-  const reduced = useReducedMotion();
-  const Component = motion[as] as typeof motion.div;
-
-  if (reduced) {
-    return <div className={className}>{children}</div>;
-  }
-
+  as: Component = "div",
+}: {
+  children: ReactNode;
+  delay?: number;
+  className?: string;
+  as?: "div" | "section" | "header";
+}) {
   return (
     <Component
-      initial={{ opacity: 0, y }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-10% 0px -10% 0px" }}
-      transition={{ duration: 0.6, ease: easing, delay }}
-      className={className}
+      className={cn("pagit-reveal", className)}
+      style={delay ? { animationDelay: `${delay}s` } : undefined}
     >
       {children}
     </Component>
@@ -43,7 +31,6 @@ export function Reveal({
 export function StaggerGroup({
   children,
   className,
-  childStagger = 0.08,
   as = "div",
 }: {
   children: ReactNode;
@@ -51,54 +38,27 @@ export function StaggerGroup({
   childStagger?: number;
   as?: "div" | "ul" | "ol";
 }) {
-  const reduced = useReducedMotion();
-  const Component = motion[as] as typeof motion.div;
-
-  if (reduced) {
-    return <div className={className}>{children}</div>;
-  }
-
-  return (
-    <Component
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: "-10% 0px -10% 0px" }}
-      variants={{
-        hidden: {},
-        visible: { transition: { staggerChildren: childStagger } },
-      }}
-      className={className}
-    >
-      {children}
-    </Component>
-  );
+  const Component = as;
+  return <Component className={className}>{children}</Component>;
 }
 
 export function StaggerItem({
   children,
   className,
   as = "div",
-  y = 16,
+  delay = 0,
 }: {
   children: ReactNode;
   className?: string;
   as?: "div" | "li";
   y?: number;
+  delay?: number;
 }) {
-  const reduced = useReducedMotion();
-  const Component = motion[as] as typeof motion.div;
-
-  if (reduced) {
-    return <div className={className}>{children}</div>;
-  }
-
+  const Component = as;
   return (
     <Component
-      variants={{
-        hidden: { opacity: 0, y },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: easing } },
-      }}
-      className={className}
+      className={cn("pagit-reveal", className)}
+      style={delay ? { animationDelay: `${delay}s` } : undefined}
     >
       {children}
     </Component>

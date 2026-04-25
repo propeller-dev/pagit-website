@@ -38,8 +38,8 @@ export function Problem() {
           />
         </Reveal>
         <StaggerGroup className="grid grid-cols-1 gap-5 md:grid-cols-3">
-          {cards.map((card) => (
-            <StaggerItem key={card.kicker}>
+          {cards.map((card, idx) => (
+            <StaggerItem key={card.kicker} delay={idx * 0.08}>
               <Card variant="light" className="h-full">
                 <CardBody className="flex h-full flex-col gap-4">
                   <CardKicker>{card.kicker}</CardKicker>

@@ -35,10 +35,11 @@ export function HowItWorks() {
           className="grid gap-px overflow-hidden rounded-3xl border border-brand-800/80 bg-brand-800/60 sm:grid-cols-2 lg:grid-cols-4"
           childStagger={0.1}
         >
-          {steps.map((step) => (
+          {steps.map((step, idx) => (
             <StaggerItem
               key={step.number}
               as="li"
+              delay={idx * 0.1}
               className="bg-brand-900 p-6 sm:p-8"
             >
               <span className="font-mono text-sm font-semibold tracking-wider text-brand-300">

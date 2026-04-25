@@ -40,10 +40,10 @@ export function Features() {
           className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4"
           childStagger={0.06}
         >
-          {cards.map((card) => {
+          {cards.map((card, idx) => {
             const Icon = featureIconMap[card.icon];
             return (
-              <StaggerItem key={card.title}>
+              <StaggerItem key={card.title} delay={idx * 0.05}>
                 <Card
                   variant="light"
                   className="h-full transition-all hover:-translate-y-0.5 hover:shadow-md"

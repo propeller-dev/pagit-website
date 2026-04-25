@@ -35,10 +35,10 @@ export function Audience() {
           />
         </Reveal>
         <StaggerGroup className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {cards.map((card) => {
+          {cards.map((card, idx) => {
             const Icon = audienceIconMap[card.icon];
             return (
-              <StaggerItem key={card.title}>
+              <StaggerItem key={card.title} delay={idx * 0.06}>
                 <Card variant="light" className="h-full transition-shadow hover:shadow-md">
                   <CardBody className="flex h-full flex-col gap-4">
                     <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-50">
