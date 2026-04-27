@@ -49,7 +49,7 @@
     var(--font-inter), ui-sans-serif, system-ui, -apple-system, Segoe UI,
     sans-serif;
   --font-mono:
-    var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+    ui-monospace, SFMono-Regular, "JetBrains Mono", Menlo, Consolas, monospace;
 
   /* Radii */
   --radius-sm: 0.5rem;

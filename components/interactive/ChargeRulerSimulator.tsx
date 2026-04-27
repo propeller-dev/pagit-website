@@ -177,7 +177,7 @@ export function ChargeRulerSimulator() {
                       )}
                     >
                       <p className="font-medium text-white">{s.label}</p>
-                      <p className="text-xs text-brand-100/70">
+                      <p className="text-xs text-brand-50">
                         {s.description}
                       </p>
                     </button>
@@ -254,7 +254,7 @@ export function ChargeRulerSimulator() {
                       key={step.step}
                       initial={false}
                       animate={{
-                        opacity: visible ? 1 : 0.35,
+                        opacity: visible ? 1 : 0.6,
                         x: visible ? 0 : -6,
                       }}
                       transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
@@ -274,7 +274,7 @@ export function ChargeRulerSimulator() {
                         <p className="text-sm font-medium text-white">
                           {step.title}
                         </p>
-                        <p className="mt-0.5 text-xs leading-relaxed text-brand-100/70">
+                        <p className="mt-0.5 text-xs leading-relaxed text-brand-50">
                           {renderStepBody(step).replace("Maria", customer.split(" ")[0] || "Maria")}
                         </p>
                       </div>

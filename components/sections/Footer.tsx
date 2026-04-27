@@ -45,8 +45,8 @@ export function Footer() {
           ))}
         </div>
         <div className="mt-12 flex flex-col items-start justify-between gap-3 border-t border-line-200 pt-6 sm:flex-row sm:items-center">
-          <p className="text-xs text-ink-500">{copy}</p>
-          <p className="text-xs text-ink-400">{t("localeHint")}</p>
+          <p className="text-xs text-ink-600">{copy}</p>
+          <p className="text-xs text-ink-600">{t("localeHint")}</p>
         </div>
       </Container>
     </footer>

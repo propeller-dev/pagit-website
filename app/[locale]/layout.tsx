@@ -6,7 +6,7 @@ import {
   setRequestLocale,
 } from "next-intl/server";
 import { notFound } from "next/navigation";
-import { Geist, Geist_Mono, Inter } from "next/font/google";
+import { Geist, Inter } from "next/font/google";
 import { routing, type AppLocale } from "@/i18n/routing";
 import { SmoothScroll } from "@/components/interactive/SmoothScroll";
 import "../globals.css";
@@ -18,12 +18,6 @@ function isAppLocale(value: string): value is AppLocale {
 const geistSans = Geist({
   subsets: ["latin"],
   variable: "--font-geist",
-  display: "swap",
-});
-
-const geistMono = Geist_Mono({
-  subsets: ["latin"],
-  variable: "--font-geist-mono",
   display: "swap",
 });
 
@@ -91,7 +85,7 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
-      className={`${geistSans.variable} ${geistMono.variable} ${inter.variable}`}
+      className={`${geistSans.variable} ${inter.variable}`}
     >
       <body className="antialiased">
         <NextIntlClientProvider locale={locale} messages={messages}>

@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic";
 import { setRequestLocale } from "next-intl/server";
 import type { AppLocale } from "@/i18n/routing";
 import {
@@ -14,7 +15,14 @@ import {
   Problem,
   StructuredData,
 } from "@/components/sections";
-import { ChargeRulerSimulator } from "@/components/interactive/ChargeRulerSimulator";
+
+const ChargeRulerSimulator = dynamic(
+  () =>
+    import("@/components/interactive/ChargeRulerSimulator").then((m) => ({
+      default: m.ChargeRulerSimulator,
+    })),
+  { loading: () => <div className="h-[600px]" aria-hidden /> },
+);
 
 export default async function LandingPage({
   params,

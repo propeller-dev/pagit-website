@@ -34,10 +34,10 @@ export function HeroVisual({ amountLabel }: { amountLabel?: string }) {
               <span
                 className={
                   row.tone === "ok"
-                    ? "inline-flex items-center gap-1 rounded-full bg-brand-500/15 px-2.5 py-0.5 text-xs font-medium text-brand-200"
+                    ? "inline-flex items-center gap-1 rounded-full bg-brand-500/25 px-2.5 py-0.5 text-xs font-semibold text-brand-100"
                     : row.tone === "warn"
-                      ? "inline-flex items-center gap-1 rounded-full bg-amber/15 px-2.5 py-0.5 text-xs font-medium text-amber"
-                      : "inline-flex items-center gap-1 rounded-full bg-white/10 px-2.5 py-0.5 text-xs font-medium text-brand-100"
+                      ? "inline-flex items-center gap-1 rounded-full bg-amber-light px-2.5 py-0.5 text-xs font-semibold text-[#5C3A03]"
+                      : "inline-flex items-center gap-1 rounded-full bg-white/15 px-2.5 py-0.5 text-xs font-semibold text-brand-100"
                 }
               >
                 {row.tone === "ok" ? <IconCheck size={12} tone="current" /> : null}
