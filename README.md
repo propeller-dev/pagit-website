@@ -94,7 +94,49 @@ Para mudar um preço, CTA ou adicionar/remover uma pergunta do FAQ, basta editar
 
 ## Deploy
 
-(A ser documentado na Fase 9.)
+### Vercel (mais simples)
+
+1. Subir o repositório no GitHub.
+2. Importar em [vercel.com/new](https://vercel.com/new).
+3. Sem variáveis de ambiente necessárias. Build e deploy automáticos.
+
+### Docker (VPS próprio)
+
+```bash
+docker compose up -d --build
+```
+
+O container expõe a porta 3000. Coloque atrás de um proxy reverso
+(Caddy, Nginx, Traefik) para HTTPS. Build usa multi-stage com
+`output: "standalone"` para imagem pequena (~150MB).
+
+Para apontar `pagit.com.br` para o container:
+
+```nginx
+# Exemplo Nginx
+server {
+  listen 443 ssl http2;
+  server_name pagit.com.br;
+  # ssl_certificate / ssl_certificate_key...
+
+  location / {
+    proxy_pass http://localhost:3000;
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+  }
+}
+```
+
+### SEO
+
+`sitemap.xml` e `robots.txt` são gerados automaticamente:
+- `https://pagit.com.br/sitemap.xml`
+- `https://pagit.com.br/robots.txt`
+
+Submeta o sitemap no [Google Search Console](https://search.google.com/search-console)
+após o primeiro deploy.
 
 ## Links oficiais
 

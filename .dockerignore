@@ -1,0 +1,15 @@
+.next
+node_modules
+.git
+.gitignore
+.firecrawl
+.playwright-mcp
+.claude
+memory
+docs
+ref
+.env*
+*.log
+README.md
+CHANGELOG.md
+CLAUDE.md
