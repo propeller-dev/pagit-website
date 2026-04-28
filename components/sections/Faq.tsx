@@ -5,8 +5,11 @@ import { useState } from "react";
 import {
   Card,
   Container,
+  Reveal,
   Section,
   SectionHeader,
+  StaggerGroup,
+  StaggerItem,
 } from "@/components/ui";
 import { IconChevronDown } from "@/components/icons";
 import { cn } from "@/lib/utils";
@@ -55,34 +58,36 @@ export function Faq() {
   return (
     <Section id="faq">
       <Container size="narrow" className="space-y-12">
-        <SectionHeader
-          align="center"
-          eyebrow={t("eyebrow")}
-          title={t("title")}
-          subtitle={t("subtitle")}
-        />
+        <Reveal>
+          <SectionHeader
+            align="center"
+            eyebrow={t("eyebrow")}
+            title={t("title")}
+            subtitle={t("subtitle")}
+          />
+        </Reveal>
 
-        <div className="space-y-10">
-          {groups.map((group) => (
-            <div key={group.id} className="space-y-4">
+        <StaggerGroup className="space-y-10">
+          {groups.map((group, idx) => (
+            <StaggerItem key={group.id} delay={idx * 0.08} className="space-y-4">
               <h3 className="text-sm font-semibold tracking-[0.08em] text-brand-700 uppercase">
                 {group.title}
               </h3>
               <Card variant="light">
                 <ul className="divide-y divide-line-100 p-2">
-                  {group.items.map((item, idx) => (
+                  {group.items.map((item, itemIdx) => (
                     <FaqItemRow
                       key={item.q}
                       item={item}
-                      idx={idx}
+                      idx={itemIdx}
                       groupId={group.id}
                     />
                   ))}
                 </ul>
               </Card>
-            </div>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerGroup>
       </Container>
     </Section>
   );

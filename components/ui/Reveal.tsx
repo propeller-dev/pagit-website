@@ -1,12 +1,41 @@
-import type { ReactNode } from "react";
+"use client";
+
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
-/**
- * Renderiza com fade+translateY suave usando CSS animation.
- * Sem JS, sem flicker — anima da posição inicial para a final em 0.55s.
- * Crawlers/no-JS veem o estado final pelo HTML; o CSS da animação respeita
- * prefers-reduced-motion via globals.css.
- */
+function useRevealRef() {
+  const ref = useRef<HTMLElement | null>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const node = ref.current;
+    if (!node) return;
+
+    if (window.matchMedia?.("(prefers-reduced-motion: reduce)").matches) {
+      setVisible(true);
+      return;
+    }
+    if (typeof IntersectionObserver === "undefined") {
+      setVisible(true);
+      return;
+    }
+
+    const obs = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          setVisible(true);
+          obs.disconnect();
+        }
+      },
+      { rootMargin: "0px 0px -8% 0px", threshold: 0.05 },
+    );
+    obs.observe(node);
+    return () => obs.disconnect();
+  }, []);
+
+  return [ref, visible] as const;
+}
+
 export function Reveal({
   children,
   delay = 0,
@@ -18,10 +47,12 @@ export function Reveal({
   className?: string;
   as?: "div" | "section" | "header";
 }) {
+  const [ref, visible] = useRevealRef();
   return (
     <Component
-      className={cn("pagit-reveal", className)}
-      style={delay ? { animationDelay: `${delay}s` } : undefined}
+      ref={ref as never}
+      className={cn("pagit-reveal", visible && "pagit-reveal--in", className)}
+      style={delay ? { transitionDelay: `${delay}s` } : undefined}
     >
       {children}
     </Component>
@@ -31,21 +62,20 @@ export function Reveal({
 export function StaggerGroup({
   children,
   className,
-  as = "div",
+  as: Component = "div",
 }: {
   children: ReactNode;
   className?: string;
   childStagger?: number;
   as?: "div" | "ul" | "ol";
 }) {
-  const Component = as;
   return <Component className={className}>{children}</Component>;
 }
 
 export function StaggerItem({
   children,
   className,
-  as = "div",
+  as: Component = "div",
   delay = 0,
 }: {
   children: ReactNode;
@@ -54,11 +84,12 @@ export function StaggerItem({
   y?: number;
   delay?: number;
 }) {
-  const Component = as;
+  const [ref, visible] = useRevealRef();
   return (
     <Component
-      className={cn("pagit-reveal", className)}
-      style={delay ? { animationDelay: `${delay}s` } : undefined}
+      ref={ref as never}
+      className={cn("pagit-reveal", visible && "pagit-reveal--in", className)}
+      style={delay ? { transitionDelay: `${delay}s` } : undefined}
     >
       {children}
     </Component>

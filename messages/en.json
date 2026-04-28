@@ -36,12 +36,13 @@
   },
 
   "integrations": {
-    "label": "Integra com as ferramentas que você já usa",
+    "label": "Integra com as ferramentas que você conhece",
+    "tooltipLabel": "Sobre as marcas citadas",
     "logos": [
-      { "name": "Stripe", "alt": "Stripe", "href": "https://stripe.com" },
-      { "name": "Woovi", "alt": "Woovi", "href": "https://woovi.com" },
-      { "name": "WhatsApp", "alt": "WhatsApp Business", "href": "https://business.whatsapp.com" },
-      { "name": "Resend", "alt": "Resend", "href": "https://resend.com" }
+      { "name": "Stripe", "alt": "Stripe", "href": "https://stripe.com", "logo": "/integrations/stripe.svg" },
+      { "name": "Woovi", "alt": "Woovi", "href": "https://woovi.com", "logo": "/integrations/woovi.svg" },
+      { "name": "WhatsApp", "alt": "WhatsApp Business", "href": "https://business.whatsapp.com", "logo": "/integrations/whatsapp.svg" },
+      { "name": "Resend", "alt": "Resend", "href": "https://resend.com", "logo": "/integrations/resend.svg" }
     ],
     "disclaimer": "Marcas de terceiros citadas para fins de integração técnica. Não representam endosso ou parceria comercial oficial."
   },

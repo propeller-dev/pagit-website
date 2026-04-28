@@ -88,6 +88,9 @@ export default async function LocaleLayout({
       className={`${geistSans.variable} ${inter.variable}`}
     >
       <body className="antialiased">
+        <noscript>
+          <style>{`.pagit-reveal{opacity:1!important;transform:none!important}`}</style>
+        </noscript>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <SmoothScroll />
           {children}

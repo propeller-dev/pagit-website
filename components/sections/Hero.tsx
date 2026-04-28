@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl";
-import { Button, Container, Eyebrow } from "@/components/ui";
+import { Button, Container, Eyebrow, Reveal } from "@/components/ui";
 import { IconArrowRight, IconCheck } from "@/components/icons";
 import { HeroVisual } from "./HeroVisual";
 
@@ -13,7 +13,7 @@ export function Hero() {
         className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[640px] bg-[radial-gradient(60%_40%_at_50%_0%,rgba(16,185,129,0.18),transparent_70%)]"
       />
       <Container size="wide" className="grid items-center gap-12 lg:grid-cols-[1.1fr_1fr] lg:gap-16">
-        <div className="max-w-2xl">
+        <Reveal className="max-w-2xl">
           <Eyebrow className="mb-5">{t("eyebrow")}</Eyebrow>
           <h1 className="font-display text-4xl leading-[1.05] font-semibold tracking-[-0.02em] text-ink-900 sm:text-5xl lg:text-6xl">
             <span className="block">{t("title.lead")}</span>
@@ -37,9 +37,11 @@ export function Hero() {
             <IconCheck size={16} tone="brand" />
             {t("reassurance")}
           </p>
-        </div>
+        </Reveal>
 
-        <HeroVisual amountLabel={t("subtitle")} />
+        <Reveal delay={0.12}>
+          <HeroVisual amountLabel={t("subtitle")} />
+        </Reveal>
       </Container>
     </section>
   );

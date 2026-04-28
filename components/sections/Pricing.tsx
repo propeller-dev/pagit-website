@@ -5,8 +5,11 @@ import {
   Card,
   CardBody,
   Container,
+  Reveal,
   Section,
   SectionHeader,
+  StaggerGroup,
+  StaggerItem,
 } from "@/components/ui";
 import { IconCheck } from "@/components/icons";
 import { cn } from "@/lib/utils";
@@ -30,17 +33,19 @@ export function Pricing() {
   return (
     <Section id="precos" tone="muted">
       <Container size="narrow" className="space-y-12">
-        <SectionHeader
-          align="center"
-          eyebrow={t("eyebrow")}
-          title={t("title")}
-          subtitle={t("subtitle")}
-        />
+        <Reveal>
+          <SectionHeader
+            align="center"
+            eyebrow={t("eyebrow")}
+            title={t("title")}
+            subtitle={t("subtitle")}
+          />
+        </Reveal>
 
-        <div className="grid gap-5 md:grid-cols-2">
-          {plans.map((plan) => (
+        <StaggerGroup className="grid gap-5 md:grid-cols-2">
+          {plans.map((plan, idx) => (
+            <StaggerItem key={plan.id} delay={idx * 0.08}>
             <Card
-              key={plan.id}
               variant={plan.featured ? "light" : "outline"}
               className={cn(
                 "relative h-full transition-shadow",
@@ -99,8 +104,9 @@ export function Pricing() {
                 </div>
               </CardBody>
             </Card>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerGroup>
 
         <p className="text-center text-xs leading-relaxed text-ink-500">
           {t("footnote")}

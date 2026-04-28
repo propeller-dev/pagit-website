@@ -56,9 +56,13 @@ export function Header() {
             <a
               key={item.href}
               href={item.href}
-              className="text-sm font-medium text-ink-700 transition-colors hover:text-ink-900"
+              className="group relative text-sm font-medium text-ink-600 transition-colors hover:text-brand-700 focus-visible:text-brand-700"
             >
               {item.label}
+              <span
+                aria-hidden
+                className="absolute -bottom-1 left-0 h-[2px] w-full origin-left scale-x-0 rounded-full bg-brand-600 transition-transform duration-200 ease-out group-hover:scale-x-100 group-focus-visible:scale-x-100"
+              />
             </a>
           ))}
         </nav>
@@ -113,7 +117,7 @@ export function Header() {
                   key={item.href}
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className="rounded-lg px-3 py-3 text-base font-medium text-ink-800 hover:bg-surface-50"
+                  className="rounded-lg px-3 py-3 text-base font-medium text-ink-800 transition-colors hover:bg-brand-50 hover:text-brand-700 focus-visible:bg-brand-50 focus-visible:text-brand-700"
                 >
                   {item.label}
                 </a>
