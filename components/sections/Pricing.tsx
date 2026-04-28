@@ -67,7 +67,7 @@ export function Pricing() {
                 </div>
 
                 <div className="flex items-baseline gap-1">
-                  <span className="font-display text-4xl font-semibold tracking-[-0.02em] text-ink-900 sm:text-5xl">
+                  <span className="font-display text-4xl font-bold tracking-[-0.03em] text-ink-900 sm:text-5xl">
                     {plan.price}
                   </span>
                   {plan.priceSuffix ? (

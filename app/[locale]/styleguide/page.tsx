@@ -113,12 +113,12 @@ export default function Styleguide() {
           <Eyebrow>Tipografia</Eyebrow>
           <div className="space-y-6">
             <div>
-              <p className="text-xs text-ink-500">Display 6xl · Geist 600</p>
-              <p className="font-display text-6xl leading-tight font-semibold tracking-[-0.02em]">Pagit assume pra você.</p>
+              <p className="text-xs text-ink-500">Display 6xl · Geist 800</p>
+              <p className="font-display text-6xl leading-[1.02] font-extrabold tracking-[-0.035em]">Pagit assume pra você.</p>
             </div>
             <div>
-              <p className="text-xs text-ink-500">Display 4xl · Geist 600</p>
-              <p className="font-display text-4xl leading-tight font-semibold tracking-[-0.02em]">Receber em dia virou a parte chata?</p>
+              <p className="text-xs text-ink-500">Display 4xl · Geist 700</p>
+              <p className="font-display text-4xl leading-[1.05] font-bold tracking-[-0.03em]">Receber em dia virou a parte chata?</p>
             </div>
             <div>
               <p className="text-xs text-ink-500">Body lg · Inter 400</p>

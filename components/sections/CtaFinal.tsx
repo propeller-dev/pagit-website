@@ -20,7 +20,7 @@ export function CtaFinal() {
       <Container size="narrow">
         <Reveal className="space-y-8 text-center">
           <Eyebrow tone="inverse">{t("eyebrow")}</Eyebrow>
-          <h2 className="font-display text-3xl leading-tight font-semibold tracking-[-0.02em] text-white sm:text-4xl lg:text-5xl">
+          <h2 className="font-display text-3xl leading-[1.05] font-extrabold tracking-[-0.035em] text-white sm:text-4xl lg:text-5xl">
             {t("title")}
           </h2>
           <p className="mx-auto max-w-xl text-lg text-brand-100/80">
