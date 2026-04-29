@@ -180,7 +180,7 @@
       {
         "icon": "sparkles",
         "title": "Operador-assistente",
-        "body": "Seu cliente pergunta coisa básica no WhatsApp e um assistente treinado responde. Você só entra quando realmente precisa.",
+        "body": "Operador no WhatsApp: você cria cobrança, reagenda vencimento e consulta status por mensagem, sem abrir o painel.",
         "tag": "IA"
       },
       {
@@ -244,7 +244,7 @@
   "pricing": {
     "eyebrow": "Preços",
     "title": "Simples. Mensalidade fixa.",
-    "subtitle": "Sem custo por transação da Pagit. Nenhum por cobrança emitida. Nenhum por régua disparada.",
+    "subtitle": "Sem custo por transação da Pagit. Sem custo por cobrança emitida. Sem custo por régua disparada.",
     "plans": [
       {
         "id": "piloto",

@@ -1,0 +1,135 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e3]:
+      - paragraph [ref=e4]: type-lab · calibração
+      - heading "Unbounded em headings — preview de pesos, tracking e ritmo" [level=1] [ref=e5]
+      - paragraph [ref=e6]: Página descartável. Cada bloco mostra a Unbounded num cenário real do site, ao lado de um parágrafo em Inter, para validar o contraste display/corpo.
+    - generic [ref=e7]:
+      - heading "1. Hero h1 · variações de peso · tracking -0.04em" [level=2] [ref=e8]
+      - generic [ref=e9]:
+        - generic [ref=e10]:
+          - paragraph [ref=e11]: weight 700
+          - heading "Receber em dia virou a parte chata do seu negócio? A Pagit assume pra você." [level=3] [ref=e12]:
+            - generic [ref=e13]: Receber em dia virou a parte chata do seu negócio?
+            - generic [ref=e14]: A Pagit assume pra você.
+          - paragraph [ref=e15]: "Cobrança recorrente, parcelamento em Pix, régua automática no WhatsApp. Você só confere o dinheiro entrar, com acentos: ã õ ç é í ó ú."
+        - generic [ref=e16]:
+          - paragraph [ref=e17]: weight 800
+          - heading "Receber em dia virou a parte chata do seu negócio? A Pagit assume pra você." [level=3] [ref=e18]:
+            - generic [ref=e19]: Receber em dia virou a parte chata do seu negócio?
+            - generic [ref=e20]: A Pagit assume pra você.
+          - paragraph [ref=e21]: "Cobrança recorrente, parcelamento em Pix, régua automática no WhatsApp. Você só confere o dinheiro entrar, com acentos: ã õ ç é í ó ú."
+        - generic [ref=e22]:
+          - paragraph [ref=e23]: weight 900
+          - heading "Receber em dia virou a parte chata do seu negócio? A Pagit assume pra você." [level=3] [ref=e24]:
+            - generic [ref=e25]: Receber em dia virou a parte chata do seu negócio?
+            - generic [ref=e26]: A Pagit assume pra você.
+          - paragraph [ref=e27]: "Cobrança recorrente, parcelamento em Pix, régua automática no WhatsApp. Você só confere o dinheiro entrar, com acentos: ã õ ç é í ó ú."
+    - generic [ref=e28]:
+      - heading "2. Hero h1 · variações de tracking · weight 800" [level=2] [ref=e29]
+      - generic [ref=e30]:
+        - generic [ref=e31]:
+          - paragraph [ref=e32]: letter-spacing -0.02em
+          - heading "Receber em dia virou a parte chata do seu negócio? A Pagit assume pra você." [level=3] [ref=e33]:
+            - generic [ref=e34]: Receber em dia virou a parte chata do seu negócio?
+            - generic [ref=e35]: A Pagit assume pra você.
+        - generic [ref=e36]:
+          - paragraph [ref=e37]: letter-spacing -0.035em
+          - heading "Receber em dia virou a parte chata do seu negócio? A Pagit assume pra você." [level=3] [ref=e38]:
+            - generic [ref=e39]: Receber em dia virou a parte chata do seu negócio?
+            - generic [ref=e40]: A Pagit assume pra você.
+        - generic [ref=e41]:
+          - paragraph [ref=e42]: letter-spacing -0.05em
+          - heading "Receber em dia virou a parte chata do seu negócio? A Pagit assume pra você." [level=3] [ref=e43]:
+            - generic [ref=e44]: Receber em dia virou a parte chata do seu negócio?
+            - generic [ref=e45]: A Pagit assume pra você.
+        - generic [ref=e46]:
+          - paragraph [ref=e47]: letter-spacing -0.065em
+          - heading "Receber em dia virou a parte chata do seu negócio? A Pagit assume pra você." [level=3] [ref=e48]:
+            - generic [ref=e49]: Receber em dia virou a parte chata do seu negócio?
+            - generic [ref=e50]: A Pagit assume pra você.
+    - generic [ref=e51]:
+      - heading "3. Hero h1 · variações de line-height · weight 800 · tracking -0.05em" [level=2] [ref=e52]
+      - generic [ref=e53]:
+        - generic [ref=e54]:
+          - paragraph [ref=e55]: line-height 0.95
+          - heading "Receber em dia virou a parte chata do seu negócio? A Pagit assume pra você." [level=3] [ref=e56]:
+            - generic [ref=e57]: Receber em dia virou a parte chata do seu negócio?
+            - generic [ref=e58]: A Pagit assume pra você.
+        - generic [ref=e59]:
+          - paragraph [ref=e60]: line-height 1.0
+          - heading "Receber em dia virou a parte chata do seu negócio? A Pagit assume pra você." [level=3] [ref=e61]:
+            - generic [ref=e62]: Receber em dia virou a parte chata do seu negócio?
+            - generic [ref=e63]: A Pagit assume pra você.
+        - generic [ref=e64]:
+          - paragraph [ref=e65]: line-height 1.05
+          - heading "Receber em dia virou a parte chata do seu negócio? A Pagit assume pra você." [level=3] [ref=e66]:
+            - generic [ref=e67]: Receber em dia virou a parte chata do seu negócio?
+            - generic [ref=e68]: A Pagit assume pra você.
+        - generic [ref=e69]:
+          - paragraph [ref=e70]: line-height 1.1
+          - heading "Receber em dia virou a parte chata do seu negócio? A Pagit assume pra você." [level=3] [ref=e71]:
+            - generic [ref=e72]: Receber em dia virou a parte chata do seu negócio?
+            - generic [ref=e73]: A Pagit assume pra você.
+    - generic [ref=e74]:
+      - heading "4. H2 das seções · weight 700 · tracking -0.04em · line-height 1.1" [level=2] [ref=e75]
+      - generic [ref=e76]:
+        - generic [ref=e77]:
+          - paragraph [ref=e78]: O problema
+          - heading "Receber parou de ser simples." [level=3] [ref=e79]
+          - paragraph [ref=e80]: "Cobrança recorrente, parcelamento em Pix, régua automática no WhatsApp. Você só confere o dinheiro entrar, com acentos: ã õ ç é í ó ú."
+        - generic [ref=e81]:
+          - paragraph [ref=e82]: Funcionalidades
+          - heading "Tudo que a cobrança pedia. Automatizado." [level=3] [ref=e83]
+          - paragraph [ref=e84]: "Cobrança recorrente, parcelamento em Pix, régua automática no WhatsApp. Você só confere o dinheiro entrar, com acentos: ã õ ç é í ó ú."
+        - generic [ref=e85]:
+          - paragraph [ref=e86]: Para quem é
+          - heading "Feito pra quem vive de prestar serviço, não de cobrar." [level=3] [ref=e87]
+          - paragraph [ref=e88]: "Cobrança recorrente, parcelamento em Pix, régua automática no WhatsApp. Você só confere o dinheiro entrar, com acentos: ã õ ç é í ó ú."
+        - generic [ref=e89]:
+          - paragraph [ref=e90]: Como funciona
+          - heading "Do cadastro ao recibo, em 4 passos." [level=3] [ref=e91]
+          - paragraph [ref=e92]: "Cobrança recorrente, parcelamento em Pix, régua automática no WhatsApp. Você só confere o dinheiro entrar, com acentos: ã õ ç é í ó ú."
+        - generic [ref=e93]:
+          - paragraph [ref=e94]: Preços
+          - heading "Simples. Mensalidade fixa." [level=3] [ref=e95]
+          - paragraph [ref=e96]: "Cobrança recorrente, parcelamento em Pix, régua automática no WhatsApp. Você só confere o dinheiro entrar, com acentos: ã õ ç é í ó ú."
+        - generic [ref=e97]:
+          - paragraph [ref=e98]: FAQ
+          - heading "Tira-dúvidas honesto." [level=3] [ref=e99]
+          - paragraph [ref=e100]: "Cobrança recorrente, parcelamento em Pix, régua automática no WhatsApp. Você só confere o dinheiro entrar, com acentos: ã õ ç é í ó ú."
+        - generic [ref=e101]:
+          - paragraph [ref=e102]: Última parada
+          - heading "Bote a cobrança no automático hoje." [level=3] [ref=e103]
+          - paragraph [ref=e104]: "Cobrança recorrente, parcelamento em Pix, régua automática no WhatsApp. Você só confere o dinheiro entrar, com acentos: ã õ ç é í ó ú."
+    - generic [ref=e105]:
+      - heading "5. H3 cards · weight 700 · tracking -0.025em" [level=2] [ref=e106]
+      - generic [ref=e107]:
+        - generic [ref=e108]:
+          - heading "Cobrança recorrente no Pix" [level=3] [ref=e109]
+          - paragraph [ref=e110]: "Texto descritivo do card em Inter. Acentos: ã õ ç é í ó ú."
+        - generic [ref=e111]:
+          - heading "Régua no WhatsApp e e-mail" [level=3] [ref=e112]
+          - paragraph [ref=e113]: "Texto descritivo do card em Inter. Acentos: ã õ ç é í ó ú."
+        - generic [ref=e114]:
+          - heading "Verificação de comprovante por IA" [level=3] [ref=e115]
+          - paragraph [ref=e116]: "Texto descritivo do card em Inter. Acentos: ã õ ç é í ó ú."
+        - generic [ref=e117]:
+          - heading "Várias chaves Pix organizadas" [level=3] [ref=e118]
+          - paragraph [ref=e119]: "Texto descritivo do card em Inter. Acentos: ã õ ç é í ó ú."
+    - generic [ref=e120]:
+      - heading "6. Números grandes (pricing) · weight 700 · tracking -0.04em" [level=2] [ref=e121]
+      - generic [ref=e122]:
+        - generic [ref=e123]: R$ 89
+        - generic [ref=e124]: Em breve
+        - generic [ref=e125]: 2 meses grátis
+    - generic [ref=e126]:
+      - heading "7. Acentos PT-BR · cobertura latin-ext" [level=2] [ref=e127]
+      - generic [ref=e128]:
+        - paragraph [ref=e129]: ação · função · coração · você · três · após · também — peso 700
+        - paragraph [ref=e130]: ação · função · coração · você · três · após · também — peso 800
+        - paragraph [ref=e131]: ação · função · coração · você · três · após · também — peso 900
+    - generic [ref=e132]: Tire screenshots em 375px (mobile) e 1440px (desktop) e compare os blocos. Esta página será removida antes do commit final da V1.
+  - button "Open Next.js Dev Tools" [ref=e138] [cursor=pointer]:
+    - img [ref=e139]
+  - alert [ref=e142]
