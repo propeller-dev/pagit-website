@@ -33,7 +33,7 @@ export function SectionHeader({
       {eyebrow ? <Eyebrow tone={eyebrowTone}>{eyebrow}</Eyebrow> : null}
       <h2
         className={cn(
-          "font-display text-3xl leading-[1.1] font-bold tracking-[-0.03em] sm:text-4xl lg:text-[2.75rem]",
+          "font-display text-3xl leading-[1.1] font-bold tracking-[-0.04em] sm:text-4xl lg:text-[2.75rem]",
           titleColor,
         )}
       >

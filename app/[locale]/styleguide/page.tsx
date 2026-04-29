@@ -113,11 +113,11 @@ export default function Styleguide() {
           <Eyebrow>Tipografia</Eyebrow>
           <div className="space-y-6">
             <div>
-              <p className="text-xs text-ink-500">Display 6xl · Geist 800</p>
+              <p className="text-xs text-ink-500">Display 6xl · Unbounded 800</p>
               <p className="font-display text-6xl leading-[1.02] font-extrabold tracking-[-0.035em]">Pagit assume pra você.</p>
             </div>
             <div>
-              <p className="text-xs text-ink-500">Display 4xl · Geist 700</p>
+              <p className="text-xs text-ink-500">Display 4xl · Unbounded 700</p>
               <p className="font-display text-4xl leading-[1.05] font-bold tracking-[-0.03em]">Receber em dia virou a parte chata?</p>
             </div>
             <div>
@@ -129,7 +129,7 @@ export default function Styleguide() {
               <p className="text-base text-ink-700">Texto padrão usado em parágrafos, FAQ e descrições de cards.</p>
             </div>
             <div>
-              <p className="text-xs text-ink-500">Mono · Geist Mono · tabular-nums</p>
+              <p className="text-xs text-ink-500">Mono · system · tabular-nums</p>
               <p className="font-mono text-2xl tabular-nums">R$ 1.500,00</p>
             </div>
           </div>

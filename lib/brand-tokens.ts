@@ -54,9 +54,9 @@ export const colors = {
 } as const;
 
 export const fontFamily = {
-  display: ["Geist", "ui-sans-serif", "system-ui", "sans-serif"],
+  display: ["Unbounded", "ui-sans-serif", "system-ui", "sans-serif"],
   sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
-  mono: ["Geist Mono", "ui-monospace", "SFMono-Regular", "monospace"],
+  mono: ["ui-monospace", "SFMono-Regular", "JetBrains Mono", "monospace"],
 } as const;
 
 export const fontSize = {

@@ -15,7 +15,7 @@ export function Hero() {
       <Container size="wide" className="grid items-center gap-12 lg:grid-cols-[1.1fr_1fr] lg:gap-16">
         <Reveal className="max-w-2xl">
           <Eyebrow className="mb-5">{t("eyebrow")}</Eyebrow>
-          <h1 className="font-display text-4xl leading-[1.02] font-extrabold tracking-[-0.035em] text-ink-900 sm:text-5xl lg:text-6xl">
+          <h1 className="font-display text-4xl leading-[1.02] font-extrabold tracking-[-0.04em] text-ink-900 sm:text-5xl lg:text-6xl">
             <span className="block">{t("title.lead")}</span>
             <span className="mt-1 block bg-gradient-to-r from-brand-700 to-brand-500 bg-clip-text text-transparent">
               {t("title.emphasis")}

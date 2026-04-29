@@ -84,7 +84,7 @@ export function CardTitle({
   return (
     <Component
       className={cn(
-        "font-display text-xl leading-tight font-bold tracking-[-0.02em] sm:text-2xl",
+        "font-display text-xl leading-tight font-bold tracking-[-0.025em] sm:text-2xl",
         tone === "dark" ? "text-white" : "text-ink-900",
         className,
       )}

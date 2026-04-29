@@ -4,6 +4,17 @@ Todos os ajustes notáveis nesta entrega da landing da Pagit.
 
 Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/).
 
+## [0.1.1] — 2026-04-28
+
+### Alterado
+- Fonte de display trocada de **Geist** para **Unbounded** (grotesque
+  geométrica largada, Etcetera Type Company, Google Fonts) em todos
+  os headings do site. Inter permanece como fonte de corpo. Tracking
+  recalibrado para `-0.04em` em hero/section/pricing/cta e `-0.025em`
+  em cards. Pesos importados: 700 e 800 (subset `latin`).
+- Performance Lighthouse mobile: **82** (baseline anterior ~72),
+  CLS mantido em 0 — sem layout shift introduzido pela troca.
+
 ## [0.1.0] — 2026-04-25
 
 ### Adicionado

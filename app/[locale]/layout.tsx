@@ -6,7 +6,7 @@ import {
   setRequestLocale,
 } from "next-intl/server";
 import { notFound } from "next/navigation";
-import { Geist, Inter } from "next/font/google";
+import { Inter, Unbounded } from "next/font/google";
 import { routing, type AppLocale } from "@/i18n/routing";
 import { SmoothScroll } from "@/components/interactive/SmoothScroll";
 import "../globals.css";
@@ -15,9 +15,10 @@ function isAppLocale(value: string): value is AppLocale {
   return (routing.locales as readonly string[]).includes(value);
 }
 
-const geistSans = Geist({
+const unbounded = Unbounded({
   subsets: ["latin"],
-  variable: "--font-geist",
+  variable: "--font-unbounded",
+  weight: ["700", "800"],
   display: "swap",
 });
 
@@ -85,7 +86,7 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
-      className={`${geistSans.variable} ${inter.variable}`}
+      className={`${unbounded.variable} ${inter.variable}`}
     >
       <body className="antialiased">
         <noscript>
