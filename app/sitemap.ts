@@ -5,7 +5,7 @@ const BASE = "https://pagit.com.br";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
-  return routing.locales.map((locale) => {
+  const localeEntries = routing.locales.map((locale) => {
     const path = locale === routing.defaultLocale ? "" : `/${locale}`;
     return {
       url: `${BASE}${path}`,
@@ -22,4 +22,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       },
     };
   });
+
+  const legalEntries = ["/termos-de-servico", "/politica-de-privacidade"].map(
+    (path) => ({
+      url: `${BASE}${path}`,
+      lastModified: now,
+      changeFrequency: "yearly" as const,
+      priority: 0.3,
+    }),
+  );
+
+  return [...localeEntries, ...legalEntries];
 }

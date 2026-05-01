@@ -143,3 +143,48 @@ body {
     transition: none !important;
   }
 }
+
+/* Prose para páginas legais — segue tokens do design system */
+.prose-legal p {
+  line-height: 1.7;
+}
+.prose-legal p + p {
+  margin-top: 1rem;
+}
+.prose-legal strong {
+  color: var(--color-ink-900);
+  font-weight: 600;
+}
+.prose-legal em {
+  font-style: italic;
+}
+.prose-legal a {
+  color: var(--color-brand-700);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.prose-legal a:hover {
+  color: var(--color-brand-800);
+}
+.prose-legal ul,
+.prose-legal ol {
+  margin-top: 0.75rem;
+  padding-left: 1.25rem;
+}
+.prose-legal ul {
+  list-style: disc;
+}
+.prose-legal ol {
+  list-style: decimal;
+}
+.prose-legal li + li {
+  margin-top: 0.5rem;
+}
+.prose-legal li::marker {
+  color: var(--color-ink-400);
+}
+.prose-legal hr {
+  border: 0;
+  border-top: 1px solid var(--color-line-200);
+  margin: 1.5rem 0;
+}

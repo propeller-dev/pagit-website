@@ -255,6 +255,29 @@ export function IconExternal({ tone, ...rest }: IconProps) {
   );
 }
 
+/* Legal — Política / privacidade — Shield */
+export function IconShield({ tone, ...rest }: IconProps) {
+  const c = getColors(tone);
+  return (
+    <IconBase {...rest}>
+      <path d="M12 3l8 3v6c0 4.5-3.4 8.4-8 9-4.6-.6-8-4.5-8-9V6l8-3z" fill={c.fill} stroke={c.stroke} />
+      <path d="M9 12.5l2 2 4.5-4.5" stroke={c.stroke} />
+    </IconBase>
+  );
+}
+
+/* Legal — Termos / documento — Document */
+export function IconDocument({ tone, ...rest }: IconProps) {
+  const c = getColors(tone);
+  return (
+    <IconBase {...rest}>
+      <path d="M6 3h8l4 4v14H6V3z" fill={c.fill} stroke={c.stroke} />
+      <path d="M14 3v4h4" stroke={c.stroke} />
+      <path d="M9 12h6M9 15h6M9 18h4" stroke={c.stroke} />
+    </IconBase>
+  );
+}
+
 export function IconWhatsApp({ tone, ...rest }: IconProps) {
   const c = getColors(tone);
   return (

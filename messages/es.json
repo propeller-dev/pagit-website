@@ -391,8 +391,8 @@
       {
         "title": "Legal",
         "links": [
-          { "label": "Termos de uso", "href": "#" },
-          { "label": "Política de privacidade", "href": "#" },
+          { "label": "Termos de uso", "href": "/termos-de-servico" },
+          { "label": "Política de privacidade", "href": "/politica-de-privacidade" },
           { "label": "Status do sistema", "href": "#" }
         ]
       }

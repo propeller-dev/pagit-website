@@ -42,6 +42,10 @@ next-env.d.ts
 # local agent workspaces
 .firecrawl/
 .claude/settings.local.json
+.playwright-mcp/
+
+# screenshots de QA local (usadas em revisão, não comitadas)
+legal-*.png
 
 # IDE
 .idea/
