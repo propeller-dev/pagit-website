@@ -1,0 +1,11 @@
+node_modules
+.next
+out
+build
+dist
+public/brand
+ref
+memory
+*.log
+pnpm-lock.yaml
+package-lock.json

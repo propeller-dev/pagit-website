@@ -1,0 +1,411 @@
+- generic [active] [ref=e1]:
+  - link "Pular para o conteúdo" [ref=e2] [cursor=pointer]:
+    - /url: "#conteudo"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "Pagit" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img "Pagit" [ref=e6]
+      - navigation "Navegação principal" [ref=e39]:
+        - link "Funcionalidades" [ref=e40] [cursor=pointer]:
+          - /url: "#funcionalidades"
+        - link "Para quem" [ref=e41] [cursor=pointer]:
+          - /url: "#para-quem"
+        - link "Preços" [ref=e42] [cursor=pointer]:
+          - /url: "#precos"
+        - link "FAQ" [ref=e43] [cursor=pointer]:
+          - /url: "#faq"
+      - generic [ref=e44]:
+        - link "Entrar" [ref=e45] [cursor=pointer]:
+          - /url: https://dash.pagit.com.br
+        - link "Começar grátis" [ref=e46] [cursor=pointer]:
+          - /url: https://dash.pagit.com.br/signup
+  - main [ref=e47]:
+    - generic [ref=e49]:
+      - generic [ref=e50]:
+        - paragraph [ref=e51]: Cobrança automatizada para PMEs brasileiras
+        - heading "Receber em dia virou a parte chata do seu negócio? A Pagit assume pra você." [level=1] [ref=e52]:
+          - generic [ref=e53]: Receber em dia virou a parte chata do seu negócio?
+          - generic [ref=e54]: A Pagit assume pra você.
+        - paragraph [ref=e55]: Cobrança recorrente, parcelamento em Pix, régua automática no WhatsApp. Você só confere o dinheiro entrar.
+        - generic [ref=e56]:
+          - link "Começar grátis" [ref=e57] [cursor=pointer]:
+            - /url: https://dash.pagit.com.br/signup
+            - text: Começar grátis
+          - link "Falar no WhatsApp" [ref=e59] [cursor=pointer]:
+            - /url: https://wa.me/5521936183583
+        - paragraph [ref=e60]: 2 meses grátis. Sem cartão, sem custo por transação da Pagit.
+      - generic [ref=e62]:
+        - generic [ref=e63]:
+          - paragraph [ref=e66]: Painel · cobranças
+          - generic [ref=e68]:
+            - generic [ref=e69]:
+              - generic [ref=e70]:
+                - paragraph [ref=e71]: Maria Souza
+                - paragraph [ref=e72]: R$ 200,00
+              - generic [ref=e73]: Pago
+            - generic [ref=e75]:
+              - generic [ref=e76]:
+                - paragraph [ref=e77]: João Lima
+                - paragraph [ref=e78]: R$ 500,00
+              - generic [ref=e79]: Vence em 1d
+            - generic [ref=e80]:
+              - generic [ref=e81]:
+                - paragraph [ref=e82]: Estúdio Vértice
+                - paragraph [ref=e83]: R$ 1.500,00
+              - generic [ref=e84]: Recorrente
+        - generic [ref=e94]:
+          - paragraph [ref=e95]: WhatsApp · Pagit
+          - paragraph [ref=e96]: Oi Maria! Sua mensalidade venceu hoje. Tá aqui o Pix 💚
+        - generic [ref=e97]: Cobrança recorrente, parcelamento em Pix, régua automática no WhatsApp. Você só confere o dinheiro entrar.
+    - generic [ref=e99]:
+      - paragraph [ref=e100]: Integra com as ferramentas que você já usa
+      - list [ref=e101]:
+        - listitem [ref=e102]:
+          - link "Stripe" [ref=e103] [cursor=pointer]:
+            - /url: https://stripe.com
+        - listitem [ref=e104]:
+          - link "Woovi" [ref=e105] [cursor=pointer]:
+            - /url: https://woovi.com
+        - listitem [ref=e106]:
+          - link "WhatsApp Business" [ref=e107] [cursor=pointer]:
+            - /url: https://business.whatsapp.com
+            - text: WhatsApp
+        - listitem [ref=e108]:
+          - link "Resend" [ref=e109] [cursor=pointer]:
+            - /url: https://resend.com
+      - paragraph [ref=e110]: Marcas de terceiros citadas para fins de integração técnica. Não representam endosso ou parceria comercial oficial.
+    - generic [ref=e112]:
+      - generic [ref=e114]:
+        - paragraph [ref=e115]: O problema
+        - heading "Receber parou de ser simples." [level=2] [ref=e116]
+        - paragraph [ref=e117]: Três coisas estão acontecendo com quem cobra hoje no Brasil.
+      - generic [ref=e118]:
+        - generic [ref=e121]:
+          - paragraph [ref=e122]: Inadimplência em alta
+          - heading "1 em cada 3 empresas brasileiras está negativada." [level=3] [ref=e123]
+          - paragraph [ref=e124]: 8,9 milhões de empresas estão inadimplentes no país. 96% delas são micro e pequenas — como a sua.
+          - 'link "Fonte: Serasa Experian, 2025" [ref=e125] [cursor=pointer]':
+            - /url: https://www.serasaexperian.com.br/sala-de-imprensa/indicadores/recorde-historico-empresas-encerraram-2025-com-rdollar-213-bilhoes-em-dividas-e-inadimplencia-no-maior-patamar-ja-registrado-aponta-serasa-experian/
+            - text: "Fonte: Serasa Experian, 2025"
+        - generic [ref=e129]:
+          - paragraph [ref=e130]: Tempo mal gasto
+          - heading "Você abriu o negócio pra prestar serviço, não pra virar departamento financeiro." [level=3] [ref=e131]
+          - paragraph [ref=e132]: Mais da metade dos pequenos empreendedores misturam conta pessoal com a da empresa e controlam tudo em caderno ou planilha. Cobrar manualmente rouba o tempo que deveria ser do seu trabalho.
+          - 'link "Fonte: Sebrae" [ref=e133] [cursor=pointer]':
+            - /url: https://agenciasebrae.com.br/cultura-empreendedora/61-dos-empreendedores-brasileiros-fazem-pagamentos-da-empresa-com-a-conta-pessoal/
+            - text: "Fonte: Sebrae"
+        - generic [ref=e137]:
+          - paragraph [ref=e138]: Pix virou padrão
+          - heading "Seu cliente já paga tudo no Pix. Falta você cobrar assim." [level=3] [ref=e139]
+          - paragraph [ref=e140]: Mais de 20 milhões de empresas no Brasil usam Pix. Mandar QR Code solto no WhatsApp e torcer pra ser pago não é mais estratégia.
+          - 'link "Fonte: Banco Central, 2025" [ref=e141] [cursor=pointer]':
+            - /url: https://www.bcb.gov.br/estabilidadefinanceira/estatisticaspix
+            - text: "Fonte: Banco Central, 2025"
+    - generic [ref=e144]:
+      - generic [ref=e146]:
+        - paragraph [ref=e147]: Para quem é
+        - heading "Feito pra quem vive de prestar serviço, não de cobrar." [level=2] [ref=e148]
+        - paragraph [ref=e149]: Se você cobra todo mês, parcela em várias vezes ou tem uma carteira fixa de clientes, a Pagit encaixa.
+      - generic [ref=e150]:
+        - generic [ref=e153]:
+          - heading "Profissionais liberais" [level=3] [ref=e158]
+          - paragraph [ref=e159]: Personal trainer, fisio, psicólogo, professor particular, terapeuta. Mensalidade no Pix, régua no WhatsApp, você no treino/atendimento.
+        - generic [ref=e162]:
+          - heading "Clínicas e consultórios" [level=3] [ref=e167]
+          - paragraph [ref=e168]: Pacotes, sessões avulsas, plano mensal. A Pagit organiza recebíveis por paciente sem misturar com o prontuário.
+        - generic [ref=e171]:
+          - heading "Academias, escolas e cursos" [level=3] [ref=e175]
+          - paragraph [ref=e176]: Matrícula parcelada, mensalidade recorrente, cobrança por turma. Régua automatizada reduz a evasão por esquecimento.
+        - generic [ref=e179]:
+          - heading "Contabilidades, agências e consultorias" [level=3] [ref=e183]
+          - paragraph [ref=e184]: Carteira B2B com honorário mensal. Emite, cobra, concilia — sem depender de um financeiro dedicado.
+        - generic [ref=e187]:
+          - heading "Infoprodutores e mentores" [level=3] [ref=e191]
+          - paragraph [ref=e192]: Assinatura, turma fechada, mentoria contínua. Pix pra quem quer simples; cartão pra quem precisa parcelar.
+        - generic [ref=e195]:
+          - heading "Gráficas, oficinas e manutenção" [level=3] [ref=e199]
+          - paragraph [ref=e200]: Parcelamento não-ortodoxo (semanal, quinzenal, entrada + saldo). Múltiplos QR Codes Pix que entregam um por vencimento.
+    - generic [ref=e202]:
+      - generic [ref=e204]:
+        - paragraph [ref=e205]: Como funciona
+        - heading "Do cadastro ao recibo, em 4 passos." [level=2] [ref=e206]
+        - paragraph [ref=e207]: Você configura uma vez. A Pagit roda sozinha no seu dia a dia.
+      - list [ref=e208]:
+        - listitem [ref=e209]:
+          - text: "01"
+          - heading "Conecte sua chave Pix" [level=3] [ref=e210]
+          - paragraph [ref=e211]: Cadastre a chave Pix do seu negócio. É ela que vai receber o dinheiro — direto na sua conta, sem a Pagit no meio.
+        - listitem [ref=e212]:
+          - text: "02"
+          - heading "Defina o que cobrar" [level=3] [ref=e213]
+          - paragraph [ref=e214]: Mensalidade, serviço único, parcelado em Pix ou cartão. Configure o valor, o ciclo e os clientes uma única vez.
+        - listitem [ref=e215]:
+          - text: "03"
+          - heading "A Pagit cobra por você" [level=3] [ref=e216]
+          - paragraph [ref=e217]: QR Code gerado automaticamente, lembrete no WhatsApp antes e no vencimento, recibo verificado por IA assim que o cliente paga.
+        - listitem [ref=e218]:
+          - text: "04"
+          - heading "Você confere o que entrou" [level=3] [ref=e219]
+          - paragraph [ref=e220]: Painel limpo, conciliação automática, histórico completo. Zero planilha paralela.
+    - generic [ref=e222]:
+      - generic [ref=e224]:
+        - paragraph [ref=e225]: Funcionalidades
+        - heading "Tudo que a cobrança pedia. Automatizado." [level=2] [ref=e226]
+        - paragraph [ref=e227]: Sem custo por transação da Pagit. Cartão via gateway integrado com taxa padrão de mercado.
+      - generic [ref=e228]:
+        - generic [ref=e231]:
+          - heading "Cobrança recorrente no Pix" [level=3] [ref=e238]
+          - paragraph [ref=e239]: Defina valor e ciclo. A Pagit gera o QR Code com a sua chave a cada período e dispara para o cliente automaticamente.
+          - generic [ref=e241]: Pix
+        - generic [ref=e244]:
+          - heading "Parcelamento em Pix" [level=3] [ref=e248]
+          - paragraph [ref=e249]: Divida uma cobrança em várias parcelas. A Pagit gera um QR Code por parcela e envia cada um no vencimento certo — sem juros, sem cartão.
+          - generic [ref=e251]: Pix
+        - generic [ref=e254]:
+          - heading "Cartão e boleto integrados" [level=3] [ref=e258]
+          - paragraph [ref=e259]: Seu cliente paga como preferir. Cartão via gateway integrado com taxa padrão de mercado; boleto disponível. Você escolhe quais métodos aceitar.
+          - generic [ref=e261]: Multi-canal
+        - generic [ref=e264]:
+          - heading "Régua no WhatsApp e e-mail" [level=3] [ref=e271]
+          - paragraph [ref=e272]: Seis eventos configuráveis — cobrança criada, 7 dias antes, 3 dias antes, 1 dia antes, vence hoje e em atraso. Você ativa só os que fazem sentido.
+          - generic [ref=e274]: WhatsApp
+        - generic [ref=e277]:
+          - heading "Verificação de comprovante por IA" [level=3] [ref=e282]
+          - paragraph [ref=e283]: Cliente mandou recibo? A IA lê, confere o valor e concilia sozinha. Casos limítrofes (valor divergente, comprovante ilegível) vão pra revisão manual.
+          - generic [ref=e285]: IA
+        - generic [ref=e288]:
+          - heading "Operador-assistente" [level=3] [ref=e293]
+          - paragraph [ref=e294]: Seu cliente pergunta coisa básica no WhatsApp e um assistente treinado responde. Você só entra quando realmente precisa.
+          - generic [ref=e296]: IA
+        - generic [ref=e299]:
+          - heading "Várias chaves Pix organizadas" [level=3] [ref=e303]
+          - paragraph [ref=e304]: Receba em contas diferentes por plano, serviço, sócio ou unidade. Troque a chave padrão a qualquer momento sem afetar cobranças em andamento.
+          - generic [ref=e306]: Organização
+        - generic [ref=e309]:
+          - heading "API e webhooks" [level=3] [ref=e314]
+          - paragraph [ref=e315]: Conecte a Pagit ao seu sistema. Endpoints REST documentados, webhooks para eventos de cobrança e pagamento. Integração de quem quer automatizar a ponta.
+          - generic [ref=e317]: Para devs
+    - generic [ref=e319]:
+      - generic [ref=e320]:
+        - paragraph [ref=e321]: Veja na prática
+        - heading "Digite um valor e veja a Pagit cobrando." [level=2] [ref=e322]
+        - paragraph [ref=e323]: Simulador interativo. Escolha um cenário, defina o valor e acompanhe o que aconteceria na vida real.
+      - generic [ref=e324]:
+        - generic [ref=e325]:
+          - generic [ref=e326]:
+            - paragraph [ref=e327]: Cenário
+            - radiogroup "Selecionar cenário" [ref=e328]:
+              - radio "Mensalidade Mesmo valor todo mês" [checked] [ref=e329]:
+                - paragraph [ref=e330]: Mensalidade
+                - paragraph [ref=e331]: Mesmo valor todo mês
+              - radio "Parcelado em Pix Divida em 3 parcelas" [ref=e332]:
+                - paragraph [ref=e333]: Parcelado em Pix
+                - paragraph [ref=e334]: Divida em 3 parcelas
+              - radio "Serviço único Cobrança avulsa" [ref=e335]:
+                - paragraph [ref=e336]: Serviço único
+                - paragraph [ref=e337]: Cobrança avulsa
+          - generic [ref=e338]:
+            - generic [ref=e339]:
+              - text: Valor
+              - generic [ref=e340]:
+                - generic [ref=e341]: R$
+                - spinbutton "Valor" [ref=e342]: "200"
+            - generic [ref=e343]:
+              - text: Cliente (exemplo)
+              - textbox "Cliente (exemplo)" [ref=e344]: Maria Souza
+          - button "▶ Rodar de novo" [ref=e345]
+        - generic [ref=e346]:
+          - generic [ref=e347]:
+            - paragraph [ref=e348]: Linha do tempo
+            - list [ref=e349]:
+              - listitem [ref=e350]:
+                - generic [ref=e351]: "1"
+                - generic [ref=e352]:
+                  - paragraph [ref=e353]: Cobrança criada
+                  - paragraph [ref=e354]: QR Code Pix gerado com a sua chave. Vinculado ao cliente.
+              - listitem [ref=e355]:
+                - generic [ref=e356]: "2"
+                - generic [ref=e357]:
+                  - paragraph [ref=e358]: Mensagem no WhatsApp
+                  - paragraph [ref=e359]: "Maria recebeu: \"Oi! Sua cobrança de R$ 200,00 está disponível. Pagamento em Pix — é só escanear o código.\""
+              - listitem [ref=e360]:
+                - generic [ref=e361]: "3"
+                - generic [ref=e362]:
+                  - paragraph [ref=e363]: Lembrete 1 dia antes
+                  - paragraph [ref=e364]: Mensagem automática lembra do vencimento. Sem você digitar nada.
+              - listitem [ref=e365]:
+                - generic [ref=e366]: "4"
+                - generic [ref=e367]:
+                  - paragraph [ref=e368]: Pagamento recebido
+                  - paragraph [ref=e369]: Maria pagou. O Pix entrou direto na sua conta — a Pagit não passou por esse dinheiro.
+              - listitem [ref=e370]:
+                - generic [ref=e371]: "5"
+                - generic [ref=e372]:
+                  - paragraph [ref=e373]: Recibo conciliado
+                  - paragraph [ref=e374]: Cobrança marcada como paga no painel. Histórico atualizado. Nada pendente.
+          - paragraph [ref=e376]: Conversa do Maria
+    - generic [ref=e378]:
+      - generic [ref=e379]:
+        - paragraph [ref=e380]: Preços
+        - heading "Simples. Mensalidade fixa." [level=2] [ref=e381]
+        - paragraph [ref=e382]: Sem custo por transação da Pagit. Nenhum por cobrança emitida. Nenhum por régua disparada.
+      - generic [ref=e383]:
+        - generic [ref=e384]:
+          - generic [ref=e386]: 2 meses grátis — sem cartão
+          - generic [ref=e387]:
+            - generic [ref=e388]:
+              - paragraph [ref=e389]: Piloto
+              - paragraph [ref=e390]: Pra testar de verdade, sem pressa
+            - generic [ref=e392]: Em breve
+            - list [ref=e393]:
+              - listitem [ref=e394]:
+                - generic [ref=e397]: Todas as funcionalidades liberadas
+              - listitem [ref=e398]:
+                - generic [ref=e401]: Cobrança recorrente e parcelamento em Pix
+              - listitem [ref=e402]:
+                - generic [ref=e405]: Régua no WhatsApp e e-mail
+              - listitem [ref=e406]:
+                - generic [ref=e409]: Verificação de comprovantes por IA
+              - listitem [ref=e410]:
+                - generic [ref=e413]: Operador-assistente
+              - listitem [ref=e414]:
+                - generic [ref=e417]: API e webhooks
+              - listitem [ref=e418]:
+                - generic [ref=e421]: Sem limite artificial pra avaliação
+            - link "Começar grátis" [ref=e423] [cursor=pointer]:
+              - /url: https://dash.pagit.com.br/signup
+        - generic [ref=e425]:
+          - generic [ref=e426]:
+            - paragraph [ref=e427]: Starter
+            - paragraph [ref=e428]: Pra quem já validou e quer escalar
+          - generic [ref=e429]:
+            - generic [ref=e430]: Em breve
+            - generic [ref=e431]: /mês
+          - paragraph [ref=e432]: Mensalidade fixa
+          - list [ref=e433]:
+            - listitem [ref=e434]:
+              - generic [ref=e437]: Cobrança ilimitada
+            - listitem [ref=e438]:
+              - generic [ref=e441]: Régua completa
+            - listitem [ref=e442]:
+              - generic [ref=e445]: Integração com cartão (taxa do gateway aplicada)
+            - listitem [ref=e446]:
+              - generic [ref=e449]: Múltiplas chaves Pix
+            - listitem [ref=e450]:
+              - generic [ref=e453]: Relatórios e conciliação
+            - listitem [ref=e454]:
+              - generic [ref=e457]: Suporte por WhatsApp
+          - link "Falar com a gente" [ref=e459] [cursor=pointer]:
+            - /url: https://wa.me/5521936183583
+      - paragraph [ref=e460]: Taxas de cartão (quando você ativar) seguem o padrão do gateway e ficam claramente exibidas antes de você habilitar. A Pagit não adiciona margem sobre elas.
+    - generic [ref=e462]:
+      - generic [ref=e463]:
+        - paragraph [ref=e464]: FAQ
+        - heading "Tira-dúvidas honesto." [level=2] [ref=e465]
+        - paragraph [ref=e466]: As perguntas que todo mundo faz antes de contratar — respondidas sem enrolar.
+      - generic [ref=e467]:
+        - generic [ref=e468]:
+          - heading "Como funciona" [level=3] [ref=e469]
+          - list [ref=e471]:
+            - listitem [ref=e472]:
+              - button "Preciso dar acesso à minha conta bancária pra usar a Pagit?" [ref=e473]:
+                - generic [ref=e474]: Preciso dar acesso à minha conta bancária pra usar a Pagit?
+            - listitem [ref=e477]:
+              - button "O dinheiro do Pix cai na minha conta ou na da Pagit?" [ref=e478]:
+                - generic [ref=e479]: O dinheiro do Pix cai na minha conta ou na da Pagit?
+            - listitem [ref=e482]:
+              - button "Como funciona o parcelamento em Pix?" [ref=e483]:
+                - generic [ref=e484]: Como funciona o parcelamento em Pix?
+            - listitem [ref=e487]:
+              - button "Como a cobrança chega até o meu cliente?" [ref=e488]:
+                - generic [ref=e489]: Como a cobrança chega até o meu cliente?
+            - listitem [ref=e492]:
+              - button "E se o cliente não pagar?" [ref=e493]:
+                - generic [ref=e494]: E se o cliente não pagar?
+            - listitem [ref=e497]:
+              - button "Precisa de cartão pra começar?" [ref=e498]:
+                - generic [ref=e499]: Precisa de cartão pra começar?
+        - generic [ref=e502]:
+          - heading "Regulação e segurança" [level=3] [ref=e503]
+          - list [ref=e505]:
+            - listitem [ref=e506]:
+              - button "A Pagit é um banco ou instituição financeira (PSP)?" [ref=e507]:
+                - generic [ref=e508]: A Pagit é um banco ou instituição financeira (PSP)?
+            - listitem [ref=e511]:
+              - button "A Pagit faz \"Pix Automático\"?" [ref=e512]:
+                - generic [ref=e513]: A Pagit faz "Pix Automático"?
+            - listitem [ref=e516]:
+              - button "E \"Pix Parcelado\"?" [ref=e517]:
+                - generic [ref=e518]: E "Pix Parcelado"?
+            - listitem [ref=e521]:
+              - button "Tem taxa por transação?" [ref=e522]:
+                - generic [ref=e523]: Tem taxa por transação?
+            - listitem [ref=e526]:
+              - button "Vocês emitem nota fiscal?" [ref=e527]:
+                - generic [ref=e528]: Vocês emitem nota fiscal?
+            - listitem [ref=e531]:
+              - button "Funciona pra quem vende sem CNPJ?" [ref=e532]:
+                - generic [ref=e533]: Funciona pra quem vende sem CNPJ?
+            - listitem [ref=e536]:
+              - button "Como cancelo?" [ref=e537]:
+                - generic [ref=e538]: Como cancelo?
+    - generic [ref=e542]:
+      - paragraph [ref=e543]: Última parada
+      - heading "Bote a cobrança no automático hoje." [level=2] [ref=e544]
+      - paragraph [ref=e545]: 2 meses grátis. Sem cartão. Sem custo por transação da Pagit.
+      - generic [ref=e546]:
+        - link "Começar grátis" [ref=e547] [cursor=pointer]:
+          - /url: https://dash.pagit.com.br/signup
+          - text: Começar grátis
+        - link "Falar no WhatsApp" [ref=e549] [cursor=pointer]:
+          - /url: https://wa.me/5521936183583
+      - paragraph [ref=e550]: Você cancela quando quiser, no painel. Sem fidelidade.
+  - contentinfo [ref=e552]:
+    - generic [ref=e553]:
+      - generic [ref=e554]:
+        - generic [ref=e555]:
+          - img "Pagit" [ref=e556]
+          - paragraph [ref=e589]: Cobrança automatizada para empreendedores brasileiros.
+        - generic [ref=e590]:
+          - heading "Produto" [level=3] [ref=e591]
+          - list [ref=e592]:
+            - listitem [ref=e593]:
+              - link "Funcionalidades" [ref=e594] [cursor=pointer]:
+                - /url: "#funcionalidades"
+            - listitem [ref=e595]:
+              - link "Para quem" [ref=e596] [cursor=pointer]:
+                - /url: "#para-quem"
+            - listitem [ref=e597]:
+              - link "Preços" [ref=e598] [cursor=pointer]:
+                - /url: "#precos"
+            - listitem [ref=e599]:
+              - link "FAQ" [ref=e600] [cursor=pointer]:
+                - /url: "#faq"
+        - generic [ref=e601]:
+          - heading "Contato" [level=3] [ref=e602]
+          - list [ref=e603]:
+            - listitem [ref=e604]:
+              - link "WhatsApp" [ref=e605] [cursor=pointer]:
+                - /url: https://wa.me/5521936183583
+            - listitem [ref=e606]:
+              - link "contato@pagit.com.br" [ref=e607] [cursor=pointer]:
+                - /url: mailto:contato@pagit.com.br
+            - listitem [ref=e608]:
+              - link "Instagram" [ref=e609] [cursor=pointer]:
+                - /url: https://instagram.com/pagit.fin
+        - generic [ref=e610]:
+          - heading "Legal" [level=3] [ref=e611]
+          - list [ref=e612]:
+            - listitem [ref=e613]:
+              - link "Termos de uso" [ref=e614] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e615]:
+              - link "Política de privacidade" [ref=e616] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e617]:
+              - link "Status do sistema" [ref=e618] [cursor=pointer]:
+                - /url: "#"
+      - generic [ref=e619]:
+        - paragraph [ref=e620]: © 2026 Pagit. Todos os direitos reservados.
+        - paragraph [ref=e621]: Site em português do Brasil.

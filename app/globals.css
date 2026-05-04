@@ -1,0 +1,190 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand — emerald anchor derivado da logo */
+  --color-brand-50: #ecfdf5;
+  --color-brand-100: #d1fae5;
+  --color-brand-200: #a7f3d0;
+  --color-brand-300: #6ee7b7;
+  --color-brand-400: #34d399;
+  --color-brand-500: #10b981;
+  --color-brand-600: #059669;
+  --color-brand-700: #047857;
+  --color-brand-800: #065f46;
+  --color-brand-900: #064e3b;
+  --color-brand-950: #022c22;
+
+  /* Ink — neutros escuros */
+  --color-ink-100: #f1f5f9;
+  --color-ink-200: #e2e8f0;
+  --color-ink-300: #cbd5e1;
+  --color-ink-400: #94a3b8;
+  --color-ink-500: #64748b;
+  --color-ink-600: #475569;
+  --color-ink-700: #334155;
+  --color-ink-800: #1e293b;
+  --color-ink-900: #0b1220;
+
+  /* Superfícies */
+  --color-surface: #ffffff;
+  --color-surface-50: #f8fafc;
+  --color-surface-100: #f1f5f9;
+
+  /* Linhas e bordas */
+  --color-line-100: #f1f5f9;
+  --color-line-200: #e2e8f0;
+  --color-line-300: #cbd5e1;
+
+  /* Feedback */
+  --color-amber: #f59e0b;
+  --color-amber-light: #fef3c7;
+  --color-danger: #dc2626;
+  --color-danger-light: #fee2e2;
+
+  /* Tipografia */
+  --font-display:
+    var(--font-unbounded), ui-sans-serif, system-ui, -apple-system, Segoe UI,
+    sans-serif;
+  --font-sans:
+    var(--font-inter), ui-sans-serif, system-ui, -apple-system, Segoe UI,
+    sans-serif;
+  --font-mono:
+    ui-monospace, SFMono-Regular, "JetBrains Mono", Menlo, Consolas, monospace;
+
+  /* Radii */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
+
+  /* Containers */
+  --container-reading: 42.5rem; /* 680px */
+  --container-narrow: 55rem; /* 880px */
+  --container-default: 75rem; /* 1200px */
+  --container-wide: 82.5rem; /* 1320px */
+}
+
+/* Respeitar prefers-reduced-motion de forma global */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html {
+  -webkit-tap-highlight-color: transparent;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-feature-settings:
+    "cv11" on,
+    "ss01" on;
+  background-color: var(--color-surface);
+  color: var(--color-ink-900);
+  font-family: var(--font-sans);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-brand-500);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Utilitário de skip link para a11y */
+.skip-to-content {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  z-index: 100;
+  padding: 0.75rem 1rem;
+  background: var(--color-ink-900);
+  color: var(--color-surface);
+  border-radius: var(--radius-md);
+  transition: top 150ms ease;
+}
+.skip-to-content:focus {
+  top: 1rem;
+}
+
+/* Tabular nums em valores financeiros */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Reveal: entrada por scroll (estado inicial oculto, .pagit-reveal--in revela) */
+.pagit-reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.pagit-reveal--in {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pagit-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* Prose para páginas legais — segue tokens do design system */
+.prose-legal p {
+  line-height: 1.7;
+}
+.prose-legal p + p {
+  margin-top: 1rem;
+}
+.prose-legal strong {
+  color: var(--color-ink-900);
+  font-weight: 600;
+}
+.prose-legal em {
+  font-style: italic;
+}
+.prose-legal a {
+  color: var(--color-brand-700);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.prose-legal a:hover {
+  color: var(--color-brand-800);
+}
+.prose-legal ul,
+.prose-legal ol {
+  margin-top: 0.75rem;
+  padding-left: 1.25rem;
+}
+.prose-legal ul {
+  list-style: disc;
+}
+.prose-legal ol {
+  list-style: decimal;
+}
+.prose-legal li + li {
+  margin-top: 0.5rem;
+}
+.prose-legal li::marker {
+  color: var(--color-ink-400);
+}
+.prose-legal hr {
+  border: 0;
+  border-top: 1px solid var(--color-line-200);
+  margin: 1.5rem 0;
+}

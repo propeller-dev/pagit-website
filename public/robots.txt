@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://pagit.com.br/sitemap.xml
