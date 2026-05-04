@@ -383,17 +383,23 @@
       {
         "title": "Contato",
         "links": [
-          { "label": "WhatsApp", "href": "https://wa.me/5521936183583" },
-          { "label": "contato@pagit.com.br", "href": "mailto:contato@pagit.com.br" },
-          { "label": "Instagram", "href": "https://instagram.com/pagit.fin" }
+          { "label": "+55 21 93618-3583", "href": "https://wa.me/5521936183583", "icon": "whatsapp" },
+          { "label": "contato@pagit.com.br", "href": "mailto:contato@pagit.com.br", "icon": "mail" },
+          { "label": "@pagit.fin", "href": "https://instagram.com/pagit.fin", "icon": "instagram" }
+        ]
+      },
+      {
+        "title": "Desenvolvedores",
+        "links": [
+          { "label": "Documentação", "disabled": true, "tooltip": "Em breve" },
+          { "label": "Status do sistema", "disabled": true, "tooltip": "Em breve" }
         ]
       },
       {
         "title": "Legal",
         "links": [
           { "label": "Termos de uso", "href": "/termos-de-servico" },
-          { "label": "Política de privacidade", "href": "/politica-de-privacidade" },
-          { "label": "Status do sistema", "href": "#" }
+          { "label": "Política de privacidade", "href": "/politica-de-privacidade" }
         ]
       }
     ],

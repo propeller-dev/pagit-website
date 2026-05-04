@@ -288,6 +288,29 @@ export function IconWhatsApp({ tone, ...rest }: IconProps) {
   );
 }
 
+/* Contato — E-mail / envelope */
+export function IconMail({ tone, ...rest }: IconProps) {
+  const c = getColors(tone);
+  return (
+    <IconBase {...rest}>
+      <rect x="3" y="5" width="18" height="14" rx="2.5" fill={c.fill} stroke={c.stroke} />
+      <path d="M3.5 7l8.5 6 8.5-6" stroke={c.stroke} />
+    </IconBase>
+  );
+}
+
+/* Contato — Instagram */
+export function IconInstagram({ tone, ...rest }: IconProps) {
+  const c = getColors(tone);
+  return (
+    <IconBase {...rest}>
+      <rect x="3" y="3" width="18" height="18" rx="5" fill={c.fill} stroke={c.stroke} />
+      <circle cx="12" cy="12" r="4" stroke={c.stroke} />
+      <circle cx="17.2" cy="6.8" r="0.9" fill={c.stroke} stroke="none" />
+    </IconBase>
+  );
+}
+
 export const featureIconMap = {
   repeat: IconRepeat,
   split: IconSplit,
