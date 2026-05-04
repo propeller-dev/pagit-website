@@ -3,10 +3,15 @@
 import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
-import { Button, Container, Logo } from "@/components/ui";
+import { Badge, Button, Container, Logo } from "@/components/ui";
 import { cn } from "@/lib/utils";
 
-type NavItem = { label: string; href: string };
+type NavItem = {
+  label: string;
+  href?: string;
+  disabled?: boolean;
+  tooltip?: string;
+};
 
 export function Header() {
   const t = useTranslations("nav");
@@ -52,19 +57,44 @@ export function Header() {
           aria-label="Navegação principal"
           className="hidden items-center gap-7 md:flex"
         >
-          {items.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              className="group relative text-sm font-medium text-ink-600 transition-colors hover:text-brand-700 focus-visible:text-brand-700"
-            >
-              {item.label}
-              <span
-                aria-hidden
-                className="absolute -bottom-1 left-0 h-[2px] w-full origin-left scale-x-0 rounded-full bg-brand-600 transition-transform duration-200 ease-out group-hover:scale-x-100 group-focus-visible:scale-x-100"
-              />
-            </a>
-          ))}
+          {items.map((item, idx) => {
+            if (item.disabled) {
+              const tipId = `nav-tip-${idx}`;
+              return (
+                <span key={item.label} className="group relative inline-block">
+                  <button
+                    type="button"
+                    aria-disabled="true"
+                    aria-label={`${item.label} — ${item.tooltip ?? ""}`}
+                    aria-describedby={tipId}
+                    className="cursor-not-allowed text-sm font-medium text-ink-600 opacity-60"
+                  >
+                    {item.label}
+                  </button>
+                  <span
+                    id={tipId}
+                    role="tooltip"
+                    className="pointer-events-none absolute top-full left-1/2 z-10 mt-2 -translate-x-1/2 rounded-md bg-ink-900 px-2 py-1 text-xs whitespace-nowrap text-white opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 motion-safe:transition-opacity motion-safe:duration-150"
+                  >
+                    {item.tooltip}
+                  </span>
+                </span>
+              );
+            }
+            return (
+              <a
+                key={item.href}
+                href={item.href}
+                className="group relative text-sm font-medium text-ink-600 transition-colors hover:text-brand-700 focus-visible:text-brand-700"
+              >
+                {item.label}
+                <span
+                  aria-hidden
+                  className="absolute -bottom-1 left-0 h-[2px] w-full origin-left scale-x-0 rounded-full bg-brand-600 transition-transform duration-200 ease-out group-hover:scale-x-100 group-focus-visible:scale-x-100"
+                />
+              </a>
+            );
+          })}
         </nav>
 
         <div className="hidden items-center gap-2 md:flex">
@@ -112,16 +142,30 @@ export function Header() {
         <div className="md:hidden">
           <Container className="space-y-4 pt-2 pb-6">
             <nav aria-label="Menu mobile" className="flex flex-col gap-1">
-              {items.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  onClick={() => setOpen(false)}
-                  className="rounded-lg px-3 py-3 text-base font-medium text-ink-800 transition-colors hover:bg-brand-50 hover:text-brand-700 focus-visible:bg-brand-50 focus-visible:text-brand-700"
-                >
-                  {item.label}
-                </a>
-              ))}
+              {items.map((item) => {
+                if (item.disabled) {
+                  return (
+                    <span
+                      key={item.label}
+                      aria-disabled="true"
+                      className="flex cursor-not-allowed items-center justify-between gap-2 rounded-lg px-3 py-3 text-base font-medium text-ink-800 opacity-60"
+                    >
+                      <span>{item.label}</span>
+                      <Badge variant="neutral">{item.tooltip}</Badge>
+                    </span>
+                  );
+                }
+                return (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    onClick={() => setOpen(false)}
+                    className="rounded-lg px-3 py-3 text-base font-medium text-ink-800 transition-colors hover:bg-brand-50 hover:text-brand-700 focus-visible:bg-brand-50 focus-visible:text-brand-700"
+                  >
+                    {item.label}
+                  </a>
+                );
+              })}
             </nav>
             <div className="flex flex-col gap-2 pt-2">
               <Button variant="secondary" href={ctaSecondary.href}>

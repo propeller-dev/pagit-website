@@ -14,7 +14,8 @@
       { "label": "Funcionalidades", "href": "#funcionalidades" },
       { "label": "Para quem", "href": "#para-quem" },
       { "label": "Preços", "href": "#precos" },
-      { "label": "FAQ", "href": "#faq" }
+      { "label": "Dúvidas?", "href": "#faq" },
+      { "label": "Desenvolvedores", "disabled": true, "tooltip": "Em breve" }
     ],
     "ctaSecondary": { "label": "Entrar", "href": "https://dash.pagit.com.br" },
     "ctaPrimary": { "label": "Começar grátis", "href": "https://dash.pagit.com.br/signup" },
