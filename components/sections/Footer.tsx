@@ -36,7 +36,7 @@ export function Footer() {
   return (
     <footer className="border-t border-line-200 bg-surface">
       <Container className="py-14">
-        <div className="grid gap-10 md:grid-cols-[1.5fr_repeat(4,1fr)]">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.5fr_repeat(4,1fr)]">
           <div className="space-y-4">
             <Logo />
             <p className="max-w-xs text-sm text-ink-600">{t("tagline")}</p>

@@ -26,7 +26,7 @@ export function Integrations() {
         <Reveal className="relative z-40">
           <p className="inline-flex items-center justify-center gap-2 text-xs font-semibold tracking-[0.12em] text-ink-500 uppercase">
             <span>{t("label")}</span>
-            <span className="group relative z-30 inline-flex">
+            <span className="group z-30 inline-flex">
               <button
                 type="button"
                 aria-label={tooltipLabel}

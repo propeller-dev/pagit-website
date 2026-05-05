@@ -55,7 +55,7 @@ export function Header() {
 
         <nav
           aria-label="Navegação principal"
-          className="hidden items-center gap-7 md:flex"
+          className="hidden items-center gap-7 lg:flex"
         >
           {items.map((item, idx) => {
             if (item.disabled) {
@@ -97,7 +97,7 @@ export function Header() {
           })}
         </nav>
 
-        <div className="hidden items-center gap-2 md:flex">
+        <div className="hidden items-center gap-2 lg:flex">
           <Button variant="ghost" size="sm" href={ctaSecondary.href}>
             {ctaSecondary.label}
           </Button>
@@ -111,7 +111,7 @@ export function Header() {
           aria-label={open ? t("menuToggleClose") : t("menuToggleOpen")}
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-line-200 bg-surface text-ink-900 md:hidden"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-line-200 bg-surface text-ink-900 lg:hidden"
         >
           <svg
             width="18"
@@ -139,7 +139,7 @@ export function Header() {
       </Container>
 
       {open ? (
-        <div className="md:hidden">
+        <div className="lg:hidden">
           <Container className="space-y-4 pt-2 pb-6">
             <nav aria-label="Menu mobile" className="flex flex-col gap-1">
               {items.map((item) => {
