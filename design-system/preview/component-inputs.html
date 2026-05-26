@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Pagit · Inputs</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;background:var(--color-surface);font-family:var(--font-sans);}
+  .wrap{padding:22px;display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .field{display:flex;flex-direction:column;gap:6px;}
+  label{font-size:13px;font-weight:500;color:var(--color-ink-800);}
+  label .req{color:var(--color-danger);margin-left:2px;}
+  input,textarea{width:100%;border:1px solid var(--color-line-200);border-radius:12px;background:#fff;padding:0 14px;font-family:inherit;font-size:14px;color:var(--color-ink-900);height:44px;box-sizing:border-box;transition:border 150ms,box-shadow 150ms;outline:none;}
+  textarea{height:auto;padding:10px 14px;resize:none;}
+  input::placeholder,textarea::placeholder{color:var(--color-ink-400);}
+  input.focus{border-color:var(--color-brand-500);box-shadow:0 0 0 3px rgba(16,185,129,.18);}
+  input.error{border-color:var(--color-danger);}
+  .hint{font-size:11px;color:var(--color-ink-500);}
+  .err{font-size:11px;color:var(--color-danger);}
+  .full{grid-column:1/-1;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="field">
+    <label>Nome <span class="req">*</span></label>
+    <input type="text" placeholder="Como você quer ser chamado">
+    <span class="hint">Aparece nas mensagens enviadas ao cliente.</span>
+  </div>
+  <div class="field">
+    <label>E-mail (foco)</label>
+    <input type="email" class="focus" value="raphael@pagit.com.br">
+  </div>
+  <div class="field">
+    <label>Valor da cobrança</label>
+    <input type="text" class="error" value="R$ 0,00">
+    <span class="err">Defina um valor maior que zero.</span>
+  </div>
+  <div class="field">
+    <label>Chave Pix</label>
+    <input type="text" placeholder="CPF, e-mail, celular ou aleatória">
+  </div>
+  <div class="field full">
+    <label>Mensagem ao cliente</label>
+    <textarea rows="3" placeholder="Adicione um recado opcional na cobrança"></textarea>
+  </div>
+</div>
+</body>
+</html>

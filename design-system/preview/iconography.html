@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Pagit · Iconography</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;background:var(--color-surface);font-family:var(--font-sans);}
+  .wrap{padding:18px;display:grid;grid-template-columns:repeat(8,1fr);gap:10px;}
+  .tile{display:flex;flex-direction:column;align-items:center;gap:6px;border:1px solid var(--color-line-200);border-radius:12px;padding:12px 4px 8px;background:#fff;}
+  .tile svg{display:block;}
+  .name{font-size:10px;color:var(--color-ink-500);font-family:var(--font-mono);}
+</style>
+</head>
+<body>
+<div class="wrap" id="grid"></div>
+<script>
+/* Duotone icons matching components/icons/index.tsx — ink/800 stroke + brand/100 fill */
+const ink="#1E293B",fill="#D1FAE5";
+function svg(inner){return `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="${ink}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">${inner}</svg>`;}
+const icons={
+  repeat:`<rect x="2" y="6" width="20" height="12" rx="3" fill="${fill}" stroke="none"/><path d="M7 4l-3 3 3 3"/><path d="M4 7h13a3 3 0 013 3v1"/><path d="M17 20l3-3-3-3"/><path d="M20 17H7a3 3 0 01-3-3v-1"/>`,
+  split:`<rect x="3" y="9" width="18" height="11" rx="2.5" fill="${fill}" stroke="none"/><path d="M3 13h18"/><path d="M9 16h2M14 16h3"/><path d="M12 4v3m-3 0h6"/>`,
+  card:`<rect x="2" y="5" width="20" height="14" rx="3" fill="${fill}" stroke="none"/><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M2 10h20"/><path d="M6 15h4"/>`,
+  msg:`<path d="M21 12a9 9 0 11-3.7-7.3L21 4l-1 4.4A8.96 8.96 0 0121 12z" fill="${fill}" stroke="none"/><path d="M21 12a9 9 0 11-3.7-7.3L21 4l-1 4.4A8.96 8.96 0 0121 12z"/><circle cx="9" cy="12" r="0.7" fill="${ink}" stroke="none"/><circle cx="13" cy="12" r="0.7" fill="${ink}" stroke="none"/><circle cx="17" cy="12" r="0.7" fill="${ink}" stroke="none"/>`,
+  receipt:`<path d="M5 3h14v18l-2.5-1.5L14 21l-2-1.5L10 21l-2.5-1.5L5 21V3z" fill="${fill}" stroke="none"/><path d="M5 3h14v18l-2.5-1.5L14 21l-2-1.5L10 21l-2.5-1.5L5 21V3z"/><path d="M9 8h6M9 12h6M9 16h3"/>`,
+  sparkles:`<path d="M12 3l1.8 4.2L18 9l-4.2 1.8L12 15l-1.8-4.2L6 9l4.2-1.8L12 3z" fill="${fill}" stroke="none"/><path d="M12 3l1.8 4.2L18 9l-4.2 1.8L12 15l-1.8-4.2L6 9l4.2-1.8L12 3z"/><path d="M19 16l.7 1.6L21.5 18l-1.7.7L19 20l-.7-1.6L16.5 18l1.8-.7L19 16zM5 16l.6 1.4L7 18l-1.4.6L5 20l-.6-1.4L3 18l1.4-.6L5 16z" fill="${fill}"/>`,
+  key:`<circle cx="8" cy="14" r="4" fill="${fill}"/><path d="M11 11l9-9M16 6l3 3M14 8l3 3"/>`,
+  code:`<rect x="2" y="4" width="20" height="16" rx="3" fill="${fill}" stroke="none"/><rect x="2" y="4" width="20" height="16" rx="3"/><path d="M9 10l-2 2 2 2M15 10l2 2-2 2M13 9l-2 6"/>`,
+  user:`<circle cx="12" cy="9" r="3.5" fill="${fill}"/><path d="M5 20c1.4-3.4 4.2-5 7-5s5.6 1.6 7 5"/><path d="M3 4h3M21 4h-3M3 20h3M21 20h-3"/>`,
+  stetho:`<path d="M5 4v5a4 4 0 008 0V4"/><path d="M9 13c0 4 3 7 7 7s7-3 7-7"/><circle cx="18" cy="6" r="2" fill="${fill}"/>`,
+  cap:`<path d="M2 9l10-4 10 4-10 4-10-4z" fill="${fill}"/><path d="M6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/><path d="M22 9v6"/>`,
+  brief:`<rect x="2" y="7" width="20" height="13" rx="2.5" fill="${fill}"/><path d="M9 7V5a2 2 0 012-2h2a2 2 0 012 2v2"/><path d="M2 13h20"/>`,
+  play:`<circle cx="12" cy="12" r="9" fill="${fill}"/><path d="M10 8.5v7l6-3.5-6-3.5z" fill="${ink}" stroke="none"/>`,
+  wrench:`<path d="M14 2a5 5 0 016.5 6.5L9 20l-5-5L15.5 3.5A5 5 0 0114 2z" fill="${fill}" stroke="none"/><path d="M14 2a5 5 0 016.5 6.5L9 20l-5-5L15.5 3.5A5 5 0 0114 2z"/>`,
+  arrow:`<path d="M5 12h14M13 6l6 6-6 6"/>`,
+  check:`<path d="M5 12l5 5L20 7"/>`,
+};
+const order=["repeat","split","card","msg","receipt","sparkles","key","code","user","stetho","cap","brief","play","wrench","arrow","check"];
+document.getElementById("grid").innerHTML=order.map(k=>`<div class="tile">${svg(icons[k])}<div class="name">${k}</div></div>`).join("");
+</script>
+</body>
+</html>

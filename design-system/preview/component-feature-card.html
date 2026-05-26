@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Pagit · Feature card</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;background:#f8fafc;font-family:var(--font-sans);}
+  .wrap{padding:22px;display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .card{background:#fff;border:1px solid var(--color-line-200);border-radius:16px;padding:20px;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;gap:12px;transition:all 150ms;min-height:170px;}
+  .card.hover{box-shadow:var(--shadow-md);transform:translateY(-2px);}
+  .iconwrap{width:44px;height:44px;border-radius:12px;background:var(--color-brand-50);display:flex;align-items:center;justify-content:center;}
+  .title{font-family:var(--font-display);font-size:17px;font-weight:700;letter-spacing:-0.02em;color:var(--color-ink-900);}
+  .body{font-size:13px;color:var(--color-ink-600);line-height:1.5;}
+  .badge{display:inline-flex;align-items:center;gap:6px;border-radius:9999px;padding:3px 10px;font-size:11px;font-weight:600;background:var(--color-brand-100);color:var(--color-brand-800);align-self:flex-start;margin-top:auto;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+    <div class="iconwrap">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#047857" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="6" width="20" height="12" rx="3" fill="#D1FAE5" stroke="none"/>
+        <path d="M7 4l-3 3 3 3"/><path d="M4 7h13a3 3 0 013 3v1"/>
+        <path d="M17 20l3-3-3-3"/><path d="M20 17H7a3 3 0 01-3-3v-1"/>
+      </svg>
+    </div>
+    <div class="title">Cobrança recorrente no Pix</div>
+    <div class="body">Defina valor e ciclo. A Pagit gera o QR Code com a sua chave a cada período e dispara automaticamente.</div>
+    <span class="badge">Pix</span>
+  </div>
+  <div class="card hover">
+    <div class="iconwrap">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#047857" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 3l1.8 4.2L18 9l-4.2 1.8L12 15l-1.8-4.2L6 9l4.2-1.8L12 3z" fill="#D1FAE5" stroke="none"/>
+        <path d="M12 3l1.8 4.2L18 9l-4.2 1.8L12 15l-1.8-4.2L6 9l4.2-1.8L12 3z"/>
+        <path d="M19 16l.7 1.6L21.5 18l-1.7.7L19 20l-.7-1.6L16.5 18l1.8-.7L19 16z" fill="#D1FAE5"/>
+      </svg>
+    </div>
+    <div class="title">Operador-assistente</div>
+    <div class="body">Crie cobrança, reagende vencimento e consulte status pelo WhatsApp — sem abrir o painel.</div>
+    <span class="badge">IA</span>
+  </div>
+</div>
+</body>
+</html>

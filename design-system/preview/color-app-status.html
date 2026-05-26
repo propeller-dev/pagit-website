@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Pagit · App status colors</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;background:var(--color-surface);font-family:var(--font-sans);color:var(--color-ink-900);}
+  .wrap{padding:22px;}
+  .lbl{font-size:11px;color:var(--color-ink-500);text-transform:uppercase;letter-spacing:.08em;font-weight:600;margin-bottom:10px;}
+  .row{display:flex;gap:8px;flex-wrap:wrap;}
+  .badge{padding:4px 10px;border-radius:6px;font-size:12px;font-weight:500;color:#fff;}
+  .badge.paid{background:#16a34a;}
+  .badge.pending{background:#eab308;}
+  .badge.review{background:#f97316;}
+  .badge.fail{background:#dc2626;}
+  .badge.canceled{background:#f1f5f9;color:#334155;border:1px solid #cbd5e1;}
+  .situation{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--color-ink-700);}
+  .dot{width:8px;height:8px;border-radius:9999px;}
+  .dot.attention{background:#f59e0b}
+  .dot.danger{background:#dc2626}
+  .dot.today{background:#0ea5e9}
+  .dot.upcoming{background:#64748b}
+  .dot.paid{background:#10b981}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .note{font-size:11px;color:var(--color-ink-500);margin-top:10px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="grid">
+    <div>
+      <div class="lbl">ChargeStatusBadge</div>
+      <div class="row">
+        <span class="badge paid">Pago</span>
+        <span class="badge pending">Pendente</span>
+        <span class="badge review">Em revisão</span>
+        <span class="badge fail">Falhou</span>
+        <span class="badge canceled">Cancelado</span>
+      </div>
+    </div>
+    <div>
+      <div class="lbl">Situation indicator</div>
+      <div class="row" style="flex-direction:column;gap:8px;align-items:flex-start">
+        <div class="situation"><span class="dot paid"></span>Pago em 12 mai</div>
+        <div class="situation"><span class="dot today"></span>Vence hoje</div>
+        <div class="situation"><span class="dot upcoming"></span>Vence em 3 dias</div>
+        <div class="situation"><span class="dot danger"></span>Atrasado há 2 dias</div>
+        <div class="situation"><span class="dot attention"></span>Ação necessária</div>
+      </div>
+    </div>
+  </div>
+  <p class="note">Dashboard uses saturated Tailwind defaults — more vivid than the marketing emerald so statuses read at table density.</p>
+</div>
+</body>
+</html>

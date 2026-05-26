@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Pagit · Badges</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;background:var(--color-surface);font-family:var(--font-sans);}
+  .wrap{padding:24px;display:flex;flex-direction:column;gap:14px;}
+  .row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;}
+  .row.dark{background:var(--color-brand-950);padding:12px;border-radius:12px;}
+  .badge{display:inline-flex;align-items:center;gap:6px;border-radius:9999px;padding:4px 12px;font-size:12px;font-weight:600;line-height:1;}
+  .brand{background:var(--color-brand-100);color:var(--color-brand-800);}
+  .amber{background:var(--color-amber-light);color:var(--color-amber);}
+  .neutral{background:var(--color-ink-100);color:var(--color-ink-700);}
+  .danger{background:var(--color-danger-light);color:var(--color-danger);}
+  .outline{background:#fff;color:var(--color-ink-700);border:1px solid var(--color-line-200);}
+  .inverse{background:var(--color-brand-800);color:var(--color-brand-100);border:1px solid rgba(4,120,87,.6);}
+  .lbl{font-size:10px;color:var(--color-ink-500);text-transform:uppercase;letter-spacing:.08em;font-weight:600;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div>
+    <div class="lbl">Variants</div>
+    <div class="row" style="margin-top:8px">
+      <span class="badge brand">Pix</span>
+      <span class="badge brand">✓ Ativo</span>
+      <span class="badge amber">2 meses grátis</span>
+      <span class="badge neutral">Em breve</span>
+      <span class="badge danger">Em atraso</span>
+      <span class="badge outline">Para devs</span>
+    </div>
+  </div>
+  <div class="row dark">
+    <span class="badge inverse">Sobre escuro</span>
+    <span class="badge inverse">Recorrente</span>
+  </div>
+</div>
+</body>
+</html>

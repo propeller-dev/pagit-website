@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Pagit · Voice samples</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;background:#fff;font-family:var(--font-sans);color:var(--color-ink-800);font-size:13px;line-height:1.5;}
+  .wrap{padding:22px;display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .sample{border:1px solid var(--color-line-200);border-radius:12px;padding:14px 16px;background:#fff;}
+  .sample.ok{border-color:var(--color-brand-200);background:var(--color-brand-50);}
+  .sample.bad{border-color:#fecaca;background:#fef2f2;}
+  .tag{display:inline-block;font-size:10px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;border-radius:9999px;margin-bottom:8px;}
+  .tag.ok{background:var(--color-brand-100);color:var(--color-brand-800);}
+  .tag.bad{background:#fee2e2;color:#991b1b;}
+  q{quotes:"\201C" "\201D";font-style:italic;color:var(--color-ink-800);}
+  .note{font-size:11px;color:var(--color-ink-500);margin-top:6px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="sample ok">
+    <span class="tag ok">Usa</span>
+    <q>Receber em dia virou a parte chata do seu negócio? A Pagit assume pra você.</q>
+    <div class="note">Hero · pergunta direta + verbo de ação.</div>
+  </div>
+  <div class="sample bad">
+    <span class="tag bad">Evita</span>
+    <q>Revolucione sua gestão financeira com nosso ecossistema completo.</q>
+    <div class="note">Anti-padrão listado no moodboard.</div>
+  </div>
+  <div class="sample ok">
+    <span class="tag ok">Usa</span>
+    <q>parcelamento em Pix</q> &nbsp; · &nbsp; <q>cobrança recorrente via Pix</q>
+    <div class="note">Descreve a função, sem violar termos do Banco Central.</div>
+  </div>
+  <div class="sample bad">
+    <span class="tag bad">Evita</span>
+    <q>Pix Automático</q> &nbsp; · &nbsp; <q>Pix Parcelado</q>
+    <div class="note">Termos regulamentados pelo BC — só BCs autorizados podem usar.</div>
+  </div>
+</div>
+</body>
+</html>

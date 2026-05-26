@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Pagit · Ink neutrals</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;background:var(--color-surface);font-family:var(--font-sans);color:var(--color-ink-900);}
+  .wrap{padding:24px;}
+  .ramp{display:grid;grid-template-columns:repeat(9,1fr);border-radius:var(--radius-md);overflow:hidden;box-shadow:var(--shadow-sm);}
+  .swatch{height:78px;display:flex;flex-direction:column;justify-content:flex-end;padding:8px 10px;font-size:11px;font-family:var(--font-mono);}
+  .swatch .stop{font-weight:600;font-family:var(--font-sans);font-size:10px;letter-spacing:.06em;text-transform:uppercase;}
+  .uses{display:flex;gap:18px;margin-top:14px;font-size:12px;color:var(--color-ink-600);flex-wrap:wrap;}
+  .u b{color:var(--color-ink-900);}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="ramp">
+    <div class="swatch" style="background:#f1f5f9;color:#0b1220"><span class="stop">100</span>#F1F5F9</div>
+    <div class="swatch" style="background:#e2e8f0;color:#0b1220"><span class="stop">200</span>#E2E8F0</div>
+    <div class="swatch" style="background:#cbd5e1;color:#0b1220"><span class="stop">300</span>#CBD5E1</div>
+    <div class="swatch" style="background:#94a3b8;color:#fff"><span class="stop">400</span>#94A3B8</div>
+    <div class="swatch" style="background:#64748b;color:#fff"><span class="stop">500</span>#64748B</div>
+    <div class="swatch" style="background:#475569;color:#fff"><span class="stop">600</span>#475569</div>
+    <div class="swatch" style="background:#334155;color:#fff"><span class="stop">700</span>#334155</div>
+    <div class="swatch" style="background:#1e293b;color:#fff"><span class="stop">800</span>#1E293B</div>
+    <div class="swatch" style="background:#0b1220;color:#fff"><span class="stop">900</span>#0B1220</div>
+  </div>
+  <div class="uses">
+    <span class="u"><b>900</b> · primary text</span>
+    <span class="u"><b>700</b> · subtitle / strong body</span>
+    <span class="u"><b>600</b> · secondary body</span>
+    <span class="u"><b>400</b> · muted / placeholder</span>
+    <span class="u"><b>200</b> · default border (line/200)</span>
+  </div>
+</div>
+</body>
+</html>

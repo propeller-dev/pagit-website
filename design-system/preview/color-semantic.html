@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Pagit · Semantic colors</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;background:var(--color-surface);font-family:var(--font-sans);color:var(--color-ink-900);}
+  .wrap{padding:22px;display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+  .row{display:flex;gap:12px;align-items:center;}
+  .chip{width:46px;height:46px;border-radius:var(--radius-md);box-shadow:0 0 0 1px rgba(0,0,0,.04) inset;flex-shrink:0;}
+  .meta{font-size:13px;line-height:1.35;}
+  .meta b{color:var(--color-ink-900);font-weight:600;}
+  .meta .hex{font-family:var(--font-mono);font-size:11px;color:var(--color-ink-500);}
+  .meta .use{color:var(--color-ink-600);font-size:12px;}
+  .pair{display:flex;gap:8px;}
+  .pair .chip{width:28px;height:28px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="row">
+    <div class="pair"><div class="chip" style="background:#fef3c7"></div><div class="chip" style="background:#f59e0b"></div></div>
+    <div class="meta"><b>Amber</b> · highlight<br>
+      <span class="hex">#FEF3C7 / #F59E0B</span><br>
+      <span class="use">"2 meses grátis", pricing badge</span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="pair"><div class="chip" style="background:#fee2e2"></div><div class="chip" style="background:#dc2626"></div></div>
+    <div class="meta"><b>Danger</b> · errors / overdue<br>
+      <span class="hex">#FEE2E2 / #DC2626</span><br>
+      <span class="use">Form errors, overdue charges</span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="pair"><div class="chip" style="background:#d1fae5"></div><div class="chip" style="background:#059669"></div></div>
+    <div class="meta"><b>Success</b> · paid / confirmed<br>
+      <span class="hex">#D1FAE5 / #059669</span><br>
+      <span class="use">Alias of brand/600 in marketing</span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="pair"><div class="chip" style="background:#f8fafc;border:1px solid #e2e8f0"></div><div class="chip" style="background:#ffffff;border:1px solid #e2e8f0"></div></div>
+    <div class="meta"><b>Surface</b> · base / alt<br>
+      <span class="hex">#FFFFFF / #F8FAFC</span><br>
+      <span class="use">Section alternation, card fill</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Pagit · Brand</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;background:var(--color-surface);font-family:var(--font-sans);color:var(--color-ink-900);}
+  .grid{padding:24px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px 22px;}
+  .cell{display:flex;flex-direction:column;gap:8px;}
+  .label{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--color-ink-500);}
+  .label.dark{color:var(--color-brand-300);}
+  .panel{border:1px solid var(--color-line-200);background:var(--color-surface);border-radius:var(--radius-lg);height:110px;display:flex;align-items:center;justify-content:center;}
+  .panel.dark{background:var(--color-brand-950);border-color:var(--color-brand-900);}
+  .panel svg{display:block;}
+  .panel .wordmark{height:32px;width:auto;}
+  .panel .symbol{height:60px;width:60px;}
+  .chip{width:80px;height:80px;border-radius:20px;display:flex;align-items:center;justify-content:center;}
+  .chip.emerald{background:var(--color-brand-600);}
+  .chip.circle{border-radius:9999px;}
+  .note{font-size:11px;color:var(--color-ink-500);line-height:1.4;margin-top:-2px;}
+</style>
+</head>
+<body>
+<div class="grid">
+
+  <!-- Wordmark · light (original) -->
+  <div class="cell">
+    <div class="label">Wordmark · light</div>
+    <div class="panel"><div id="wordmark-light" class="wordmark"></div></div>
+    <div class="note">Original SVG · emerald base + 75% white overlay (duotone).</div>
+  </div>
+
+  <!-- Wordmark · dark (recolored to preserve duotone) -->
+  <div class="cell">
+    <div class="label dark">Wordmark · dark</div>
+    <div class="panel dark"><div id="wordmark-dark" class="wordmark"></div></div>
+    <div class="note">Recolored — base swapped to brand/300, white overlay kept. Duotone reads as light-on-dark.</div>
+  </div>
+
+  <!-- Wordmark · brand chip -->
+  <div class="cell">
+    <div class="label">Wordmark · monochrome white</div>
+    <div class="panel dark"><div id="wordmark-mono" class="wordmark"></div></div>
+    <div class="note">Fallback for tiny sizes / single-color contexts — solid white with overlay removed.</div>
+  </div>
+
+  <!-- Symbol · light (original w/ white plate) -->
+  <div class="cell">
+    <div class="label">Symbol · light</div>
+    <div class="panel"><div id="symbol-light" class="symbol"></div></div>
+    <div class="note">Original — emerald shapes on a white plate.</div>
+  </div>
+
+  <!-- Symbol · dark — transparent (light shapes) -->
+  <div class="cell">
+    <div class="label dark">Symbol · dark · transparent</div>
+    <div class="panel dark"><div id="symbol-dark-flat" class="symbol"></div></div>
+    <div class="note">Plate removed, emerald shapes brightened to brand/300, white overlay kept.</div>
+  </div>
+
+  <!-- Symbol · dark — rounded chip -->
+  <div class="cell">
+    <div class="label dark">Symbol · dark · rounded chip</div>
+    <div class="panel dark">
+      <div class="chip emerald"><div id="symbol-dark-chip" class="symbol" style="height:48px;width:48px;"></div></div>
+    </div>
+    <div class="note">Keep colored symbol inside a brand/600 rounded chip (radius 20px). Use this when the symbol needs to appear "on a card."</div>
+  </div>
+
+</div>
+
+<script>
+/* The SVGs use Fabric.js entities — load them, then mutate fills. */
+async function load(url){
+  const r = await fetch(url);
+  return await r.text();
+}
+
+function tweak(svgText, opts){
+  let s = svgText;
+  // Strip the white background rect if asked
+  if (opts.stripPlate) {
+    s = s.replace(/<rect[^>]*fill:#ffffff[^>]*width="67\.628761"[^>]*><\/rect>/, "");
+  }
+  // Replace emerald base with target color
+  if (opts.baseColor) {
+    s = s.replace(/#059669/gi, opts.baseColor);
+  }
+  // Replace white overlays
+  if (opts.overlayColor !== undefined) {
+    if (opts.overlayColor === null) {
+      // remove overlay groups (white fill-opacity:0.75 and 0.5)
+      s = s.replace(/fill:#ffffff;fill-opacity:0\.(75|5)/g, "fill:transparent;fill-opacity:0");
+    } else {
+      s = s.replace(/#ffffff/g, opts.overlayColor);
+    }
+  }
+  return s;
+}
+
+(async () => {
+  const ICON = await load("../assets/pagit-icon.svg");
+  const MARK = await load("../assets/pagit-logo.svg");
+
+  // Wordmark · light (untouched)
+  document.getElementById("wordmark-light").innerHTML = MARK;
+
+  // Wordmark · dark — brand/300 base + white@75 overlay still works (it's already white in SVG)
+  // Recolor base to brand/300 so the duotone reads on dark; keep white overlay.
+  document.getElementById("wordmark-dark").innerHTML = tweak(MARK, { baseColor: "#34D399" });
+
+  // Wordmark · monochrome white (no duotone, single color)
+  document.getElementById("wordmark-mono").innerHTML = tweak(MARK, { baseColor: "#FFFFFF", overlayColor: null });
+
+  // Symbol · light (untouched)
+  document.getElementById("symbol-light").innerHTML = ICON;
+
+  // Symbol · dark · transparent (strip white plate, brighten base, keep white overlay)
+  document.getElementById("symbol-dark-flat").innerHTML = tweak(ICON, { stripPlate: true, baseColor: "#34D399" });
+
+  // Symbol · dark · chip — original colors but plate stripped (the chip provides the bg)
+  // Keep base emerald, strip plate so the chip's emerald shows through
+  document.getElementById("symbol-dark-chip").innerHTML = tweak(ICON, { stripPlate: true, baseColor: "#FFFFFF", overlayColor: null });
+
+  // size <svg>s
+  document.querySelectorAll(".panel svg").forEach(svg => {
+    svg.removeAttribute("width");
+    svg.removeAttribute("height");
+    svg.style.width = "100%";
+    svg.style.height = "100%";
+    svg.setAttribute("preserveAspectRatio", "xMidYMid meet");
+  });
+})();
+</script>
+</body>
+</html>

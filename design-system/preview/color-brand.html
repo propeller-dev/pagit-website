@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Pagit · Brand color</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;background:var(--color-surface);font-family:var(--font-sans);color:var(--color-ink-900);}
+  .wrap{padding:24px;}
+  .ramp{display:grid;grid-template-columns:repeat(11,1fr);border-radius:var(--radius-md);overflow:hidden;box-shadow:var(--shadow-sm);}
+  .swatch{height:80px;display:flex;flex-direction:column;justify-content:flex-end;padding:8px 10px;font-size:11px;font-family:var(--font-mono);}
+  .swatch .stop{font-weight:600;font-family:var(--font-sans);font-size:10px;letter-spacing:.06em;text-transform:uppercase;}
+  .anchor-row{display:flex;gap:14px;margin-top:18px;align-items:center;}
+  .anchor{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--color-ink-700);}
+  .dot{width:18px;height:18px;border-radius:9999px;border:1px solid rgba(0,0,0,.06);}
+  .dot.anchor600{background:var(--color-brand-600);}
+  .dot.btn700{background:var(--color-brand-700);}
+  .dot.dark950{background:var(--color-brand-950);}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="ramp">
+    <div class="swatch" style="background:#ecfdf5;color:#064e3b"><span class="stop">50</span>#ECFDF5</div>
+    <div class="swatch" style="background:#d1fae5;color:#064e3b"><span class="stop">100</span>#D1FAE5</div>
+    <div class="swatch" style="background:#a7f3d0;color:#064e3b"><span class="stop">200</span>#A7F3D0</div>
+    <div class="swatch" style="background:#6ee7b7;color:#064e3b"><span class="stop">300</span>#6EE7B7</div>
+    <div class="swatch" style="background:#34d399;color:#022c22"><span class="stop">400</span>#34D399</div>
+    <div class="swatch" style="background:#10b981;color:#fff"><span class="stop">500</span>#10B981</div>
+    <div class="swatch" style="background:#059669;color:#fff"><span class="stop">600 ★</span>#059669</div>
+    <div class="swatch" style="background:#047857;color:#fff"><span class="stop">700</span>#047857</div>
+    <div class="swatch" style="background:#065f46;color:#fff"><span class="stop">800</span>#065F46</div>
+    <div class="swatch" style="background:#064e3b;color:#d1fae5"><span class="stop">900</span>#064E3B</div>
+    <div class="swatch" style="background:#022c22;color:#6ee7b7"><span class="stop">950</span>#022C22</div>
+  </div>
+  <div class="anchor-row">
+    <div class="anchor"><span class="dot anchor600"></span><b style="color:var(--color-ink-900)">600 logo</b> · #059669</div>
+    <div class="anchor"><span class="dot btn700"></span><b style="color:var(--color-ink-900)">700 CTA</b> · #047857</div>
+    <div class="anchor"><span class="dot dark950"></span><b style="color:var(--color-ink-900)">950 dark moment</b> · #022C22</div>
+  </div>
+</div>
+</body>
+</html>

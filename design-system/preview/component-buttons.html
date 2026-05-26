@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Pagit · Buttons</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;background:var(--color-surface);font-family:var(--font-sans);}
+  .wrap{padding:22px;display:flex;flex-direction:column;gap:14px;}
+  .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;}
+  .row.dark{background:var(--color-brand-950);padding:14px;border-radius:14px;}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:500;border-radius:12px;height:44px;padding:0 20px;font-size:15px;cursor:default;border:0;transition:all 150ms;}
+  .btn.sm{height:36px;padding:0 16px;font-size:14px;}
+  .btn.lg{height:48px;padding:0 24px;font-size:15px;}
+  .primary{background:var(--color-brand-700);color:#fff;box-shadow:var(--shadow-sm);}
+  .secondary{background:#fff;color:var(--color-ink-900);border:1px solid var(--color-line-200);}
+  .ghost{background:transparent;color:var(--color-ink-700);}
+  .link{background:transparent;color:var(--color-brand-700);text-decoration:underline;text-underline-offset:4px;padding:0;height:auto;}
+  .inverse{background:#fff;color:var(--color-brand-900);box-shadow:var(--shadow-sm);}
+  .ghost-dark{background:transparent;color:var(--color-brand-100);}
+  .lbl{font-size:10px;color:var(--color-ink-500);text-transform:uppercase;letter-spacing:.08em;font-weight:600;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div>
+    <div class="lbl">Variants</div>
+    <div class="row" style="margin-top:8px">
+      <button class="btn primary">Começar grátis →</button>
+      <button class="btn secondary">Falar no WhatsApp</button>
+      <button class="btn ghost">Saiba mais</button>
+      <button class="btn link">Saiba mais →</button>
+    </div>
+  </div>
+  <div>
+    <div class="lbl">Sizes</div>
+    <div class="row" style="margin-top:8px">
+      <button class="btn primary sm">Ação compacta</button>
+      <button class="btn primary">Ação média</button>
+      <button class="btn primary lg">Ação grande</button>
+    </div>
+  </div>
+  <div class="row dark">
+    <button class="btn inverse">CTA sobre escuro</button>
+    <button class="btn ghost-dark">Ghost dark</button>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Pagit · Charge row (app)</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;background:#fff;font-family:var(--font-sans);}
+  .wrap{padding:18px;}
+  table{width:100%;border-collapse:collapse;font-size:13px;}
+  thead th{font-size:11px;font-weight:500;color:var(--color-ink-500);text-align:left;padding:0 8px 10px;border-bottom:1px solid var(--color-line-200);text-transform:none;letter-spacing:0;}
+  tbody td{padding:12px 8px;border-bottom:1px solid var(--color-line-100);vertical-align:middle;}
+  .customer{font-weight:500;color:var(--color-ink-900);}
+  .situation{display:inline-flex;align-items:center;gap:8px;color:var(--color-ink-700);}
+  .dot{width:8px;height:8px;border-radius:9999px;flex-shrink:0;}
+  .dot.paid{background:#10b981}.dot.today{background:#0ea5e9}.dot.upcoming{background:#64748b}.dot.danger{background:#dc2626}
+  .badge{display:inline-block;padding:3px 8px;font-size:11px;font-weight:500;border-radius:6px;color:#fff;}
+  .badge.paid{background:#16a34a}.badge.pending{background:#eab308}.badge.review{background:#f97316}.badge.canceled{background:#f1f5f9;color:#334155;border:1px solid #cbd5e1}
+  .money{font-variant-numeric:tabular-nums;font-weight:500;color:var(--color-ink-900);text-align:right;}
+  .origin{font-size:11px;color:var(--color-ink-600);background:var(--color-ink-100);padding:2px 8px;border-radius:6px;display:inline-block;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <table>
+    <thead>
+      <tr><th>Cliente</th><th>Situação</th><th>Status</th><th>Origem</th><th style="text-align:right">Valor</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="customer">Maria Souza</td><td><span class="situation"><span class="dot paid"></span>Pago em 12 mai</span></td><td><span class="badge paid">Pago</span></td><td><span class="origin">Recorrente · mensal</span></td><td class="money">R$ 200,00</td></tr>
+      <tr><td class="customer">João Lima</td><td><span class="situation"><span class="dot today"></span>Vence hoje</span></td><td><span class="badge pending">Pendente</span></td><td><span class="origin">Avulsa</span></td><td class="money">R$ 500,00</td></tr>
+      <tr><td class="customer">Estúdio Vértice</td><td><span class="situation"><span class="dot upcoming"></span>Vence em 3d</span></td><td><span class="badge pending">Pendente</span></td><td><span class="origin">Parcela 1/3</span></td><td class="money">R$ 1.500,00</td></tr>
+      <tr><td class="customer">Clínica Aurora</td><td><span class="situation"><span class="dot danger"></span>Atrasado há 5d</span></td><td><span class="badge review">Em revisão</span></td><td><span class="origin">Recorrente · mensal</span></td><td class="money">R$ 380,00</td></tr>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>

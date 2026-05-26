@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Pagit · Mono &amp; tabular nums</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;background:var(--color-surface);}
+  .wrap{padding:24px;display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+  .lbl{font-size:10px;color:var(--color-ink-500);text-transform:uppercase;letter-spacing:.08em;font-weight:600;font-family:var(--font-sans);}
+  .money{font-family:var(--font-mono);font-variant-numeric:tabular-nums;font-weight:500;color:var(--color-ink-900);}
+  .pixkey{font-family:var(--font-mono);font-size:13px;background:var(--color-brand-50);color:var(--color-brand-800);padding:6px 10px;border-radius:8px;display:inline-block;}
+  table{border-collapse:collapse;font-size:13px;color:var(--color-ink-800);width:100%;}
+  td{padding:6px 0;border-bottom:1px solid var(--color-line-200);font-variant-numeric:tabular-nums;font-family:var(--font-mono);}
+  td.name{font-family:var(--font-sans);color:var(--color-ink-700);}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div>
+    <div class="lbl">Display money · 56/1 · tnum</div>
+    <div class="money" style="font-size:44px;letter-spacing:-0.02em">R$ 1.500,00</div>
+    <div class="money" style="font-size:24px;margin-top:8px;color:var(--color-ink-700)">R$ 200,00 / mês</div>
+  </div>
+  <div>
+    <div class="lbl">Pix key</div>
+    <div class="pixkey">a3c8b2e1-9f4d-4a72-b6c0-1d5e8a44b9e0</div>
+    <div class="lbl" style="margin-top:18px">Table column · tnum align</div>
+    <table>
+      <tr><td class="name">Maria Souza</td><td style="text-align:right">R$&nbsp;&nbsp;&nbsp;200,00</td></tr>
+      <tr><td class="name">João Lima</td><td style="text-align:right">R$&nbsp;&nbsp;&nbsp;500,00</td></tr>
+      <tr><td class="name">Estúdio Vértice</td><td style="text-align:right">R$ 1.500,00</td></tr>
+    </table>
+  </div>
+</div>
+</body>
+</html>
